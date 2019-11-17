@@ -34,6 +34,11 @@
 		3F2AB15435E962639E619592 /* ofxDatGuiSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiSlider.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiSlider.h; sourceTree = SOURCE_ROOT; };
 		434E5442237F13F40045EDC2 /* DEVELOPMENT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = DEVELOPMENT.md; path = ../DEVELOPMENT.md; sourceTree = "<group>"; };
 		434E5443237F13F40045EDC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		43D9C1F42381B8E600138F80 /* Operation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Operation.h; sourceTree = "<group>"; };
+		43D9C1F52381B8FD00138F80 /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
+		43D9C1F62381BA3700138F80 /* InputLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputLine.h; sourceTree = "<group>"; };
+		43D9C1F72381BA7600138F80 /* BasicOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicOperation.h; sourceTree = "<group>"; };
+		43D9C1F82381BA9300138F80 /* FunctionalOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionalOperation.h; sourceTree = "<group>"; };
 		5DAD1E8361C7D0ACC054D6A7 /* ofxDatGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGui.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/ofxDatGui.h; sourceTree = SOURCE_ROOT; };
 		62A36BA952840CA6DF0E724C /* ofxSmartFont.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSmartFont.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont/ofxSmartFont.h; sourceTree = SOURCE_ROOT; };
 		6344EE77AECC620870A64474 /* ofxDatGuiButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiButton.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiButton.h; sourceTree = SOURCE_ROOT; };
@@ -254,6 +259,80 @@
 				62A36BA952840CA6DF0E724C /* ofxSmartFont.h */,
 			);
 			name = ofxSmartFont;
+			sourceTree = "<group>";
+		};
+		43D9C1EB2381B79300138F80 /* CalculationUtil */ = {
+			isa = PBXGroup;
+			children = (
+				43D9C1EC2381B7D000138F80 /* interface */,
+				43D9C1ED2381B7E100138F80 /* src */,
+			);
+			path = CalculationUtil;
+			sourceTree = "<group>";
+		};
+		43D9C1EC2381B7D000138F80 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				43D9C1F42381B8E600138F80 /* Operation.h */,
+				43D9C1F52381B8FD00138F80 /* Matrix.h */,
+				43D9C1F62381BA3700138F80 /* InputLine.h */,
+				43D9C1F72381BA7600138F80 /* BasicOperation.h */,
+				43D9C1F82381BA9300138F80 /* FunctionalOperation.h */,
+			);
+			path = interface;
+			sourceTree = "<group>";
+		};
+		43D9C1ED2381B7E100138F80 /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		43D9C1EE2381B7E900138F80 /* GUIUtil */ = {
+			isa = PBXGroup;
+			children = (
+				43D9C1F32381B8AC00138F80 /* interface */,
+				43D9C1F22381B8A700138F80 /* src */,
+			);
+			path = GUIUtil;
+			sourceTree = "<group>";
+		};
+		43D9C1EF2381B88100138F80 /* SaveFileUtil */ = {
+			isa = PBXGroup;
+			children = (
+				43D9C1F12381B8A100138F80 /* interface */,
+				43D9C1F02381B89700138F80 /* src */,
+			);
+			path = SaveFileUtil;
+			sourceTree = "<group>";
+		};
+		43D9C1F02381B89700138F80 /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		43D9C1F12381B8A100138F80 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interface;
+			sourceTree = "<group>";
+		};
+		43D9C1F22381B8A700138F80 /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		43D9C1F32381B8AC00138F80 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interface;
 			sourceTree = "<group>";
 		};
 		69146F0BA46E48E576618E5E /* libs */ = {
@@ -628,6 +707,9 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				43D9C1EF2381B88100138F80 /* SaveFileUtil */,
+				43D9C1EE2381B7E900138F80 /* GUIUtil */,
+				43D9C1EB2381B79300138F80 /* CalculationUtil */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
