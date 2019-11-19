@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0FB39E9820869121EA0494EE /* ofxDatGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F219FA6820CB80923D89AC5 /* ofxDatGui.cpp */; };
+		43CA64132382F2FE0068C907 /* Operation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64122382F2FE0068C907 /* Operation.cpp */; };
+		43CA64152382F3120068C907 /* ArithmeticOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64142382F3120068C907 /* ArithmeticOperation.cpp */; };
+		43CA64172382F32C0068C907 /* FunctionalOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64162382F32C0068C907 /* FunctionalOperation.cpp */; };
+		43CA64192382F34E0068C907 /* OperationType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64182382F34E0068C907 /* OperationType.cpp */; };
+		43CA641F238341D90068C907 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA641E238341D90068C907 /* Matrix.cpp */; };
+		43CA642623846B1F0068C907 /* CoolUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA642523846B1F0068C907 /* CoolUtilities.cpp */; };
 		5BFE4CF783A143BD045698AD /* ofxSmartFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F26B3A537E22F654D99BAC19 /* ofxSmartFont.cpp */; };
 		930095D51DE2A0D7FCA77830 /* ofxDatGuiComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A710861D1963B50A1016BBDF /* ofxDatGuiComponent.cpp */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
@@ -34,11 +40,20 @@
 		3F2AB15435E962639E619592 /* ofxDatGuiSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiSlider.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiSlider.h; sourceTree = SOURCE_ROOT; };
 		434E5442237F13F40045EDC2 /* DEVELOPMENT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = DEVELOPMENT.md; path = ../DEVELOPMENT.md; sourceTree = "<group>"; };
 		434E5443237F13F40045EDC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		43CA64122382F2FE0068C907 /* Operation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Operation.cpp; sourceTree = "<group>"; };
+		43CA64142382F3120068C907 /* ArithmeticOperation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArithmeticOperation.cpp; sourceTree = "<group>"; };
+		43CA64162382F32C0068C907 /* FunctionalOperation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FunctionalOperation.cpp; sourceTree = "<group>"; };
+		43CA64182382F34E0068C907 /* OperationType.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OperationType.cpp; sourceTree = "<group>"; };
+		43CA641D238323C70068C907 /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
+		43CA641E238341D90068C907 /* Matrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
+		43CA6423238468490068C907 /* CoolUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoolUtilities.h; sourceTree = "<group>"; };
+		43CA642423846AA50068C907 /* InvalidCharacterException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidCharacterException.h; sourceTree = "<group>"; };
+		43CA642523846B1F0068C907 /* CoolUtilities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CoolUtilities.cpp; sourceTree = "<group>"; };
 		43D9C1F42381B8E600138F80 /* Operation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Operation.h; sourceTree = "<group>"; };
-		43D9C1F52381B8FD00138F80 /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 		43D9C1F62381BA3700138F80 /* InputLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputLine.h; sourceTree = "<group>"; };
-		43D9C1F72381BA7600138F80 /* BasicOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicOperation.h; sourceTree = "<group>"; };
 		43D9C1F82381BA9300138F80 /* FunctionalOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionalOperation.h; sourceTree = "<group>"; };
+		43D9C1F92381C66000138F80 /* ArithmeticOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArithmeticOperation.h; sourceTree = "<group>"; };
+		43D9C1FA2381C6A900138F80 /* OperationType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationType.h; sourceTree = "<group>"; };
 		5DAD1E8361C7D0ACC054D6A7 /* ofxDatGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGui.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/ofxDatGui.h; sourceTree = SOURCE_ROOT; };
 		62A36BA952840CA6DF0E724C /* ofxSmartFont.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSmartFont.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont/ofxSmartFont.h; sourceTree = SOURCE_ROOT; };
 		6344EE77AECC620870A64474 /* ofxDatGuiButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiButton.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiButton.h; sourceTree = SOURCE_ROOT; };
@@ -261,6 +276,79 @@
 			name = ofxSmartFont;
 			sourceTree = "<group>";
 		};
+		43CA64102382E8F90068C907 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				43D9C1F42381B8E600138F80 /* Operation.h */,
+				43D9C1F92381C66000138F80 /* ArithmeticOperation.h */,
+				43D9C1F82381BA9300138F80 /* FunctionalOperation.h */,
+				43D9C1FA2381C6A900138F80 /* OperationType.h */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		43CA64112382F2E30068C907 /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				43CA64122382F2FE0068C907 /* Operation.cpp */,
+				43CA64142382F3120068C907 /* ArithmeticOperation.cpp */,
+				43CA64162382F32C0068C907 /* FunctionalOperation.cpp */,
+				43CA64182382F34E0068C907 /* OperationType.cpp */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
+		43CA641A2383239D0068C907 /* MatrixUtil */ = {
+			isa = PBXGroup;
+			children = (
+				43CA641C238323B00068C907 /* interface */,
+				43CA641B238323AB0068C907 /* src */,
+			);
+			path = MatrixUtil;
+			sourceTree = "<group>";
+		};
+		43CA641B238323AB0068C907 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				43CA641E238341D90068C907 /* Matrix.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		43CA641C238323B00068C907 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				43CA641D238323C70068C907 /* Matrix.h */,
+			);
+			path = interface;
+			sourceTree = "<group>";
+		};
+		43CA6420238468230068C907 /* RandomUtils */ = {
+			isa = PBXGroup;
+			children = (
+				43CA6422238468330068C907 /* interface */,
+				43CA64212384682B0068C907 /* src */,
+			);
+			path = RandomUtils;
+			sourceTree = "<group>";
+		};
+		43CA64212384682B0068C907 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				43CA642523846B1F0068C907 /* CoolUtilities.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		43CA6422238468330068C907 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				43CA6423238468490068C907 /* CoolUtilities.h */,
+				43CA642423846AA50068C907 /* InvalidCharacterException.h */,
+			);
+			path = interface;
+			sourceTree = "<group>";
+		};
 		43D9C1EB2381B79300138F80 /* CalculationUtil */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,11 +361,8 @@
 		43D9C1EC2381B7D000138F80 /* interface */ = {
 			isa = PBXGroup;
 			children = (
-				43D9C1F42381B8E600138F80 /* Operation.h */,
-				43D9C1F52381B8FD00138F80 /* Matrix.h */,
+				43CA64102382E8F90068C907 /* Operations */,
 				43D9C1F62381BA3700138F80 /* InputLine.h */,
-				43D9C1F72381BA7600138F80 /* BasicOperation.h */,
-				43D9C1F82381BA9300138F80 /* FunctionalOperation.h */,
 			);
 			path = interface;
 			sourceTree = "<group>";
@@ -285,6 +370,7 @@
 		43D9C1ED2381B7E100138F80 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				43CA64112382F2E30068C907 /* Operation */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -707,6 +793,8 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				43CA6420238468230068C907 /* RandomUtils */,
+				43CA641A2383239D0068C907 /* MatrixUtil */,
 				43D9C1EF2381B88100138F80 /* SaveFileUtil */,
 				43D9C1EE2381B7E900138F80 /* GUIUtil */,
 				43D9C1EB2381B79300138F80 /* CalculationUtil */,
@@ -831,7 +919,13 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				930095D51DE2A0D7FCA77830 /* ofxDatGuiComponent.cpp in Sources */,
+				43CA64132382F2FE0068C907 /* Operation.cpp in Sources */,
+				43CA641F238341D90068C907 /* Matrix.cpp in Sources */,
+				43CA64192382F34E0068C907 /* OperationType.cpp in Sources */,
+				43CA642623846B1F0068C907 /* CoolUtilities.cpp in Sources */,
+				43CA64172382F32C0068C907 /* FunctionalOperation.cpp in Sources */,
 				5BFE4CF783A143BD045698AD /* ofxSmartFont.cpp in Sources */,
+				43CA64152382F3120068C907 /* ArithmeticOperation.cpp in Sources */,
 				0FB39E9820869121EA0494EE /* ofxDatGui.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
