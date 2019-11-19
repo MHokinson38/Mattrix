@@ -32,7 +32,7 @@ namespace MatrixUtil {
         //=============================
         // Constructors
         //=============================
-        Matrix() = default;
+        Matrix() : matrix(arma::mat(0, 0, arma::fill::zeros)), isScalar(false);
         Matrix(double scalar); //Scalar constructor
         Matrix(int row, int col); //Creates empty matrix of 0's
         Matrix(const arma::mat & mat) : matrix(mat), isScalar(false) {}
@@ -49,6 +49,8 @@ namespace MatrixUtil {
         //====================
         double getElement(int row, int col) {return matrix(row, col);}
         void setElement(int row, int col, double el) {matrix(row, col) = el;}
+        
+        bool getIsScalar() {return isScalar;}
 
         //====================
         // Operator Overloads
