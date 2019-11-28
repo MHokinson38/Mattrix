@@ -24,7 +24,7 @@ namespace CalculationUtil {
         //===================
         // Constructors
         //===================
-        FunctionalOperation(OperationType op, Matrix object, int exp = 0) : Operation(op), object(ob), pow(exp) {}
+        FunctionalOperation(OperationType op, Matrix ob, int exp = 0) : Operation(op), object(ob), pow(exp) {}
         
         //===================
         // Perform Overload

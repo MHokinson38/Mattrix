@@ -6,7 +6,7 @@
 //
 //Libraries
 #include <stdio.h>
-#include "catch.hpp"
+#include <catch.hpp>
 
 //My Files
 #include <../src/MatrixUtil/interface/Matrix.h>
@@ -16,6 +16,6 @@
 //====================
 TEST_CASE("Test Default Constructor") {
     MatrixUtil::Matrix testMat;
-    
+
     REQUIRE(testMat.getIsScalar() == false);
 }

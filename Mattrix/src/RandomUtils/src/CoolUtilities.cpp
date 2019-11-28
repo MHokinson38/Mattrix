@@ -40,13 +40,5 @@ int RandomUtils::getIntFromChar(char c) {
 }
 
 int RandomUtils::getIntFromString(const std::string & str) {
-    bool isNegative = str[0] == '-'; //Set to negative if appropriate
-    int returnNum = 0;
-    
-    for(auto& num : str.substr(1)) {
-        returnNum *= 10;
-        returnNum += getIntFromChar(num);
-    }
-    
-    return isNegative ? -1 * returnNum : returnNum;
+    return std::stoi(str);
 }

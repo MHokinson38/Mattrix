@@ -32,7 +32,7 @@ namespace MatrixUtil {
         //=============================
         // Constructors
         //=============================
-        Matrix() : matrix(arma::mat(0, 0, arma::fill::zeros)), isScalar(false);
+        Matrix() : matrix(arma::mat(0, 0, arma::fill::zeros)), isScalar(false) {}
         Matrix(double scalar); //Scalar constructor
         Matrix(int row, int col); //Creates empty matrix of 0's
         Matrix(const arma::mat & mat) : matrix(mat), isScalar(false) {}

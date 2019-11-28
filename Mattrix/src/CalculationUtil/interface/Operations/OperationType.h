@@ -11,6 +11,7 @@
 
 //Libraries
 #include <iostream>
+#include <map>
 
 namespace CalculationUtil {
     class OperationType {
@@ -43,6 +44,8 @@ namespace CalculationUtil {
         OpType getOperation() const {return operation;}
         void setOperation(OpType op) {operation = op;}
         
+        int getHierarchyLevel() {return pemdas[operation];}
+        
         //===================
         // Operator Overloads
         //===================
@@ -50,6 +53,14 @@ namespace CalculationUtil {
     
     private:
         OpType operation;
+        
+        //===================
+        // Order of Operation Hierarchy
+        //===================
+        std::map<OpType, int> pemdas = { {OpType::add, 0}, {OpType::subtract, 0},
+                                         {OpType::multiply, 1}, {OpType::divide, 1},
+                                         {OpType::inverse, 2}, {OpType::exponent, 2},
+                                         {OpType::transpose, 3}};
     };
 
     //=============

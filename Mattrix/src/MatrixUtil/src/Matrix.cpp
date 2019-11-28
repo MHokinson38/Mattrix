@@ -70,7 +70,6 @@ void Matrix::parseString(const std::string& matStr) {
     std::vector<std::vector<int>> rowVectors;
     std::vector<int> currentRow;
     std::string currentNumAsString = "";
-    int numberOfOpenBrackets = 0;
     
     for(auto& currentChar : matStr) {
         if(currentChar == ' ') {
@@ -78,17 +77,10 @@ void Matrix::parseString(const std::string& matStr) {
         }
         else if(currentChar == Matrix::OPENING_BRACKET) {
             currentRow.clear(); //Make sure row is cleared before starting new row
-            numberOfOpenBrackets++;
         }
         else if(currentChar == Matrix::CLOSING_BRACKET) {
             rowVectors.push_back(currentRow);
             currentRow.clear();
-            
-            numberOfOpenBrackets--;
-            
-            if(numberOfOpenBrackets == 0) {
-                break; //We have closed all brackets => done with parsing
-            }
         }
         else if(currentChar == Matrix::SEPERATION_CHARACTER) {
             currentRow.push_back(RandomUtils::getIntFromString(currentNumAsString));
@@ -112,6 +104,8 @@ void Matrix::setMatrix(const std::vector<std::vector<int>>& rowVectors) {
             matrix(row, col) = rowVectors[row][col];
         }
     }
+    
+    isScalar = numRows == 1 && numCols == 1;
 }
 
 //=================
