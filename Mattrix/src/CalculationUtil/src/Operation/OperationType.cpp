@@ -7,11 +7,24 @@
 //Libraries
 #include <stdio.h>
 #include <iostream>
+#include <map>
 
 //My Files
 #include "CalculationUtil/interface/Operations/OperationType.h"
 
 using OperationType = CalculationUtil::OperationType;
+
+//=================
+// Constructors
+//=================
+OperationType::OperationType(char c) {
+    if(isOperationCharacter(c)) {
+        operation = charToOpMap[c];
+    }
+    else {
+        //TODO add exception
+    }
+}
 
 //=================
 // Copy Assignment Operator
@@ -39,21 +52,17 @@ bool OperationType::isFunctional() {
 }
 
 //=================
-// Helping Functions
+// Static Helping Functions
 //=================
+bool OperationType::isOperationCharacter(char opChar) {
+    std::map<char, OpType>::iterator finder = charToOpMap.find(opChar);
+    
+    //If the finder is at the end, we went through the whole map without hitting char 
+    return finder != charToOpMap.end();
+}
+
 int OperationType::getPemdasFromChar(char opChar) {
-    switch(opChar) {
-        case '+':
-            return OperationType::pemdas[OpType::add];
-        case '-':
-            return OperationType::pemdas[OpType::subtract];
-        case '*':
-            return OperationType::pemdas[OpType::multiply];
-        case '/':
-            return OperationType::pemdas[OpType::divide];
-        case '^':
-            return OperationType::pemdas[OpType::exponent];
-    }
+    return pemdas[charToOpMap[opChar]];
 }
 
 //=================

@@ -10,6 +10,8 @@
 		0FB39E9820869121EA0494EE /* ofxDatGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F219FA6820CB80923D89AC5 /* ofxDatGui.cpp */; };
 		438480C82392F0050058563D /* Expression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 438480C72392F0050058563D /* Expression.cpp */; };
 		438480C92392F0050058563D /* Expression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 438480C72392F0050058563D /* Expression.cpp */; };
+		438480CB2394DCEF0058563D /* InputLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 438480CA2394DCEF0058563D /* InputLine.cpp */; };
+		438480CC2394DCEF0058563D /* InputLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 438480CA2394DCEF0058563D /* InputLine.cpp */; };
 		43A8A4A523848E2F003DAE34 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43A8A4A423848E2F003DAE34 /* main.cpp */; };
 		43A8A4AB23848EB8003DAE34 /* MatrixTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43A8A4AA23848EB8003DAE34 /* MatrixTest.cpp */; };
 		43CA64132382F2FE0068C907 /* Operation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64122382F2FE0068C907 /* Operation.cpp */; };
@@ -65,6 +67,7 @@
 		438480C5239060FB0058563D /* TestTarget */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestTarget; sourceTree = BUILT_PRODUCTS_DIR; };
 		438480C62392E79F0058563D /* Expression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Expression.h; sourceTree = "<group>"; };
 		438480C72392F0050058563D /* Expression.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Expression.cpp; sourceTree = "<group>"; };
+		438480CA2394DCEF0058563D /* InputLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputLine.cpp; sourceTree = "<group>"; };
 		43A8A4A223848E2F003DAE34 /* MattrixTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MattrixTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A8A4A423848E2F003DAE34 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		43A8A4AA23848EB8003DAE34 /* MatrixTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MatrixTest.cpp; sourceTree = "<group>"; };
@@ -426,6 +429,7 @@
 			children = (
 				43CA64112382F2E30068C907 /* Operation */,
 				438480C72392F0050058563D /* Expression.cpp */,
+				438480CA2394DCEF0058563D /* InputLine.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -1032,6 +1036,7 @@
 			files = (
 				43A8A4AB23848EB8003DAE34 /* MatrixTest.cpp in Sources */,
 				438480C92392F0050058563D /* Expression.cpp in Sources */,
+				438480CC2394DCEF0058563D /* InputLine.cpp in Sources */,
 				43A8A4A523848E2F003DAE34 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1040,6 +1045,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438480CB2394DCEF0058563D /* InputLine.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				930095D51DE2A0D7FCA77830 /* ofxDatGuiComponent.cpp in Sources */,

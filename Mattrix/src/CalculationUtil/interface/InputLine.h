@@ -42,11 +42,6 @@ namespace CalculationUtil {
         
     private:
         //==============
-        // Private Functions
-        //==============
-        
-        
-        //==============
         // Data Members
         //==============
         Expression exp;

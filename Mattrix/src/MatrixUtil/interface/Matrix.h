@@ -48,7 +48,7 @@ namespace MatrixUtil {
         // Assignment Operator Overloads
         //====================
         // Copy Assignment
-        Matrix& operator=(const matrix & other);
+        Matrix& operator=(const Matrix & other);
         
         //====================
         // Getters and Setters

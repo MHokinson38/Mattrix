@@ -23,6 +23,14 @@ namespace CalculationUtil {
     class Expression {
     public:
         //=============
+        // Constants
+        //=============
+        static inline const char OPENING_PARENTHESE = '(';
+        static inline const char CLOSING_PARENTHESE = ')';
+        static inline const char TRANSPOSE_CHARACTER = 'T';
+        static inline const char INVERSE_CHARACTER = '-';
+        
+        //=============
         // Constructors
         //=============
         Expression() = default;
@@ -60,7 +68,7 @@ namespace CalculationUtil {
         OperationType baseOperation; //Operation level with lowest order of ops (thing that is going to execute last in expression)
         
         bool isBase; //Contains only one matrix (Ends the splitting / parsing)
-        MatrixUtil::Matrix baseMatrix; //This may be empty 
+        MatrixUtil::Matrix baseMatrix; //This may be empty
     };
 }
 

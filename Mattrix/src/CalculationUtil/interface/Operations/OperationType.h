@@ -23,13 +23,15 @@ namespace CalculationUtil {
             divide,
             inverse,
             exponent,
-            transpose
+            transpose,
+            empty
         };
         
         //===================
         // Constructors
         //===================
         OperationType() = default;
+        OperationType(char c);
         OperationType(OpType op) : operation(op) {}
         OperationType(const OperationType & other) : operation(other.operation) {} //Copy Constructor
         
@@ -44,10 +46,16 @@ namespace CalculationUtil {
         OpType getOperation() const {return operation;}
         void setOperation(OpType op) {operation = op;}
         
+        char getOpAsChar();
+        
+        bool isNull() const {return operation == OpType::empty;}
+        
         int getHierarchyLevel() {return pemdas[operation];}
         
         bool isFunctional();
         bool isTranspose() {return operation == OpType::transpose;}
+        bool isInverse() {return operation == OpType::inverse;}
+        bool isExponent() {return operation == OpType::exponent;}
         
         //===================
         // Operator Overloads
@@ -63,6 +71,8 @@ namespace CalculationUtil {
         // Static Helping Functions
         //==============
         static int getPemdasFromChar(char opChar);
+        
+        static bool isOperationCharacter(char opChar);
     
     private:
         //==============
@@ -77,6 +87,13 @@ namespace CalculationUtil {
                                                      {OpType::multiply, 1}, {OpType::divide, 1},
                                                      {OpType::inverse, 2}, {OpType::exponent, 2},
                                                      {OpType::transpose, 2}};
+        
+        static inline std::map<char, OpType> charToOpMap = {{'+', OpType::add},
+                                                            {'-', OpType::subtract},
+                                                            {'*', OpType::multiply},
+                                                            {'/', OpType::divide},
+                                                            {'^', OpType::exponent},
+                                                            {'T', OpType::transpose}};
     };
 }
 
