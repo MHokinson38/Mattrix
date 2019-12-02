@@ -29,12 +29,12 @@ namespace CalculationUtil {
         //===================
         // Perform Overload
         //===================
-        std::vector<Matrix> perform();
+        Matrix perform();
         
         //===================
         // Ostream Print overload
         //===================
-        std::ostream& print(std::ostream& os);
+        std::ostream& print(std::ostream& os) const;
         
     private:
         Matrix lhs;

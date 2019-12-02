@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0FB39E9820869121EA0494EE /* ofxDatGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F219FA6820CB80923D89AC5 /* ofxDatGui.cpp */; };
+		438480C82392F0050058563D /* Expression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 438480C72392F0050058563D /* Expression.cpp */; };
+		438480C92392F0050058563D /* Expression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 438480C72392F0050058563D /* Expression.cpp */; };
 		43A8A4A523848E2F003DAE34 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43A8A4A423848E2F003DAE34 /* main.cpp */; };
 		43A8A4AB23848EB8003DAE34 /* MatrixTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43A8A4AA23848EB8003DAE34 /* MatrixTest.cpp */; };
 		43CA64132382F2FE0068C907 /* Operation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64122382F2FE0068C907 /* Operation.cpp */; };
@@ -58,9 +60,11 @@
 		20395D1D8EBE9B82BF52441D /* ofxDatGuiConstants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiConstants.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/core/ofxDatGuiConstants.h; sourceTree = SOURCE_ROOT; };
 		2767CD454DD9E6F5BF5FEF31 /* ofxDatGuiGroups.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiGroups.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiGroups.h; sourceTree = SOURCE_ROOT; };
 		3F2AB15435E962639E619592 /* ofxDatGuiSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiSlider.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiSlider.h; sourceTree = SOURCE_ROOT; };
-		434BC0BC238623AC00E709F6 /* TestTarget */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = TestTarget; path = "/Users/Mr.Awesome/Desktop/SoftwareDesignStudioWork/fantastic-finale-MHokinson38/Mattrix/bin/TestTarget"; sourceTree = "<absolute>"; };
 		434E5442237F13F40045EDC2 /* DEVELOPMENT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = DEVELOPMENT.md; path = ../DEVELOPMENT.md; sourceTree = "<group>"; };
 		434E5443237F13F40045EDC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		438480C5239060FB0058563D /* TestTarget */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestTarget; sourceTree = BUILT_PRODUCTS_DIR; };
+		438480C62392E79F0058563D /* Expression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Expression.h; sourceTree = "<group>"; };
+		438480C72392F0050058563D /* Expression.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Expression.cpp; sourceTree = "<group>"; };
 		43A8A4A223848E2F003DAE34 /* MattrixTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MattrixTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A8A4A423848E2F003DAE34 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		43A8A4AA23848EB8003DAE34 /* MatrixTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MatrixTest.cpp; sourceTree = "<group>"; };
@@ -412,6 +416,7 @@
 			children = (
 				43CA64102382E8F90068C907 /* Operations */,
 				43D9C1F62381BA3700138F80 /* InputLine.h */,
+				438480C62392E79F0058563D /* Expression.h */,
 			);
 			path = interface;
 			sourceTree = "<group>";
@@ -420,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				43CA64112382F2E30068C907 /* Operation */,
+				438480C72392F0050058563D /* Expression.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -838,6 +844,7 @@
 				E4B69B5B0A3A1756003C02F2 /* MattrixDebug.app */,
 				43A8A4A223848E2F003DAE34 /* MattrixTest */,
 				43A8A4A323848E2F003DAE34 /* MattrixTest */,
+				438480C5239060FB0058563D /* TestTarget */,
 			);
 			sourceTree = "<group>";
 		};
@@ -886,7 +893,7 @@
 			);
 			name = TestTarget;
 			productName = TestTarget;
-			productReference = 434BC0BC238623AC00E709F6 /* TestTarget */;
+			productReference = 438480C5239060FB0058563D /* TestTarget */;
 			productType = "com.apple.product-type.tool";
 		};
 		43A8A4A123848E2F003DAE34 /* MattrixTest */ = {
@@ -1024,6 +1031,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43A8A4AB23848EB8003DAE34 /* MatrixTest.cpp in Sources */,
+				438480C92392F0050058563D /* Expression.cpp in Sources */,
 				43A8A4A523848E2F003DAE34 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1039,6 +1047,7 @@
 				43CA641F238341D90068C907 /* Matrix.cpp in Sources */,
 				43CA64192382F34E0068C907 /* OperationType.cpp in Sources */,
 				43CA642623846B1F0068C907 /* CoolUtilities.cpp in Sources */,
+				438480C82392F0050058563D /* Expression.cpp in Sources */,
 				43CA64172382F32C0068C907 /* FunctionalOperation.cpp in Sources */,
 				5BFE4CF783A143BD045698AD /* ofxSmartFont.cpp in Sources */,
 				43CA64152382F3120068C907 /* ArithmeticOperation.cpp in Sources */,

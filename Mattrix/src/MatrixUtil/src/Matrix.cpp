@@ -28,6 +28,23 @@ Matrix::Matrix(int row, int col) {
 }
 
 //==================
+// Assignment Operators
+//==================
+Matrix& Matrix::operator=(const Matrix & other) {
+    this->matrix = other.matrix;
+    this->isScalar = other.isScalar;
+    
+    return *this;
+}
+
+//==================
+// Getters
+//===================
+int Matrix::getScalarValue() {
+    return isScalar ? matrix(1,1) : -1; //TODO add exceptions
+}
+
+//==================
 // Operator Overloads
 //==================
 Matrix Matrix::operator+(const Matrix & other) {
@@ -60,8 +77,27 @@ Matrix Matrix::transpose() {
 //=================
 // Printing
 //=================
-std::string Matrix::prettyPrint() {
+std::string Matrix::prettyPrint() const {
     //TODO this later
+}
+
+std::string Matrix::regularPrint() const {
+    std::string returnString = "";
+    
+    returnString += Matrix::OPENING_BRACKET;
+    
+    for(int col = 0; col < matrix.n_cols; ++col) {
+        if(!isScalar) {returnString += Matrix::OPENING_BRACKET;}
+        
+        for(int row = 0; row < matrix.n_rows; ++row) {
+            returnString += (row != 0 ? ", " : "");
+            returnString += matrix(row, col);
+        }
+        
+        if(!isScalar) {returnString += Matrix::CLOSING_BRACKET;}
+    }
+    
+    return returnString += Matrix::CLOSING_BRACKET;
 }
 
 void Matrix::parseString(const std::string& matStr) {
@@ -112,57 +148,25 @@ void Matrix::setMatrix(const std::vector<std::vector<int>>& rowVectors) {
 // Stream Overloads
 //=================
 std::ostream& MatrixUtil::operator<<(std::ostream& os, const Matrix & mat) {
-    os << Matrix::OPENING_BRACKET;
-    
-    for(int col = 0; col < mat.matrix.n_cols; ++col) {
-        if(!mat.isScalar) {os << Matrix::OPENING_BRACKET;}
-        
-        for(int row = 0; row < mat.matrix.n_rows; ++row) {
-            os << (row != 0 ? ", " : "") << mat.matrix(row, col);
-        }
-        
-        if(!mat.isScalar) {os << Matrix::CLOSING_BRACKET;}
-    }
-    
-    return os << Matrix::CLOSING_BRACKET;
+    return os << mat.regularPrint();
 }
 
 std::istream& MatrixUtil::operator>>(std::istream& is, Matrix & mat) {
-    int numCol = 0;
-    int numRows = 0;
-    std::vector<std::vector<int>> rowVectors;
-    std::vector<int> currentRow;
-    std::string currentNumAsString = "";
-    int numberOfOpenBrackets = 0;
+   int numberOfOpenBrackets = 0;
     
     char currentChar;
+    std::string matrixString = "";
+    
     while(is.get(currentChar)) {
-        if(currentChar == ' ') {
-            continue;
-        }
-        else if(currentChar == Matrix::OPENING_BRACKET) {
-            currentRow.clear(); //Make sure row is cleared before starting new row
-            numberOfOpenBrackets++;
-        }
-        else if(currentChar == Matrix::CLOSING_BRACKET) {
-            rowVectors.push_back(currentRow);
-            currentRow.clear();
-            
-            numberOfOpenBrackets--;
-            
-            if(numberOfOpenBrackets == 0) {
-                break; //We have closed all brackets => done with parsing
-            }
-        }
-        else if(currentChar == Matrix::SEPERATION_CHARACTER) {
-            currentRow.push_back(RandomUtils::getIntFromString(currentNumAsString));
-        }
-        else {
-            currentNumAsString += currentChar;
-        }
+        if(currentChar == Matrix::OPENING_BRACKET) {numberOfOpenBrackets++;}
+        else if(currentChar == Matrix::CLOSING_BRACKET) {numberOfOpenBrackets--;}
+        
+        matrixString += currentChar;
+        
+        if(numberOfOpenBrackets == 0) {break;}
     }
     
-    mat.setMatrix(rowVectors);
+    mat.parseString(matrixString);
     
     return is;
 }

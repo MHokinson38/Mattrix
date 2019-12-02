@@ -18,28 +18,21 @@
 using ArithmeticOperation = CalculationUtil::ArithmeticOperation;
 using Matrix = MatrixUtil::Matrix;
 
-std::vector<Matrix> ArithmeticOperation::perform() {
-    std::vector<Matrix> result;
+Matrix ArithmeticOperation::perform() {
     switch (operand.getOperation()) {
         case OperationType::add:
-            result.push_back(lhs + rhs);
-            break;
+            return lhs + rhs;
         case OperationType::subtract:
-            result.push_back(lhs - rhs);
-            break;
+            return lhs - rhs;
         case OperationType::multiply:
-            result.push_back(lhs * rhs); //Error will be thrown for dimension
-            break;
+            return lhs * rhs; //Error will be thrown for dimension
         case OperationType::divide:
-            result.push_back(lhs / rhs); //Error will be thrown if rhs is not scalar (1x1)
-            break;
+            return lhs / rhs; //Error will be thrown if rhs is not scalar (1x1)
         default:
-            break;
+            break; //TODO Add exception
     }
-    
-    return result;
 }
 
-std::ostream& ArithmeticOperation::print(std::ostream& os) {
+std::ostream& ArithmeticOperation::print(std::ostream& os) const {
     return os << operand;
 }

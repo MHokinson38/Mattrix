@@ -23,6 +23,40 @@ OperationType& OperationType::operator=(const OperationType& other) {
 }
 
 //=================
+// Getters
+//=================
+bool OperationType::isFunctional() {
+    switch(operation) {
+        case OpType::add:
+        case OpType::subtract:
+        case OpType::multiply:
+        case OpType::divide:
+            return false;
+        default:
+            return true;
+    }
+
+}
+
+//=================
+// Helping Functions
+//=================
+int OperationType::getPemdasFromChar(char opChar) {
+    switch(opChar) {
+        case '+':
+            return OperationType::pemdas[OpType::add];
+        case '-':
+            return OperationType::pemdas[OpType::subtract];
+        case '*':
+            return OperationType::pemdas[OpType::multiply];
+        case '/':
+            return OperationType::pemdas[OpType::divide];
+        case '^':
+            return OperationType::pemdas[OpType::exponent];
+    }
+}
+
+//=================
 // Ostream overload
 //=================
 std::ostream& CalculationUtil::operator<<(std::ostream &ostream, const OperationType &op) {

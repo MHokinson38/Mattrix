@@ -18,25 +18,22 @@
 using FunctionalOperation = CalculationUtil::FunctionalOperation;
 using Matrix = MatrixUtil::Matrix;
 
-std::vector<Matrix> FunctionalOperation::perform() {
-    std::vector<Matrix> result;
+Matrix FunctionalOperation::perform() {
     switch (operand.getOperation()) {
         case OperationType::exponent:
-            result.push_back(object^pow);
+            return object^pow;
             break;
         case OperationType::inverse:
-            result.push_back(object.inverse());
+            return object.inverse();
             break;
         case OperationType::transpose:
-            result.push_back(object.transpose());
+            return object.transpose();
         default:
-            break;
+            break; //TODO Add exception
     }
-    
-    return result;
 }
 
-std::ostream& FunctionalOperation::print(std::ostream& os) {
+std::ostream& FunctionalOperation::print(std::ostream& os) const {
     if(operand.getOperation() == OperationType::exponent ||
        operand.getOperation() == OperationType::inverse) {
         return os << object << operand;

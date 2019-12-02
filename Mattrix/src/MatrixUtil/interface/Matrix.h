@@ -45,12 +45,19 @@ namespace MatrixUtil {
         ~Matrix() = default;
         
         //====================
+        // Assignment Operator Overloads
+        //====================
+        // Copy Assignment
+        Matrix& operator=(const matrix & other);
+        
+        //====================
         // Getters and Setters
         //====================
         double getElement(int row, int col) {return matrix(row, col);}
         void setElement(int row, int col, double el) {matrix(row, col) = el;}
         
         bool getIsScalar() {return isScalar;}
+        int getScalarValue();
 
         //====================
         // Operator Overloads
@@ -73,7 +80,8 @@ namespace MatrixUtil {
         //====================
         // Functinons for printing
         //====================
-        std::string prettyPrint();
+        std::string prettyPrint() const; //TODO define 
+        std::string regularPrint() const;
         
         //====================
         // Reading input from string

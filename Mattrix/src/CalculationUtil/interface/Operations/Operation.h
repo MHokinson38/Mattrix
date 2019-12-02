@@ -27,10 +27,14 @@ namespace CalculationUtil {
         Operation(const OperationType & op) : operand(op) {}
         
         //=================
+        // Getters
+        //=================
+        bool isFunctional() {return operand.isFunctional();}
+        
+        //=================
         // Virtual Functions
         //=================
-        virtual std::vector<Matrix> perform() = 0; //Some operations return multiple vectors multiplied together
-        
+        virtual Matrix perform() = 0; //Some operations return multiple vectors multiplied together
         virtual std::ostream& print(std::ostream& os) const = 0;
         
         //=================

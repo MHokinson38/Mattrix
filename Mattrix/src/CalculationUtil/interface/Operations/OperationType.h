@@ -23,7 +23,7 @@ namespace CalculationUtil {
             divide,
             inverse,
             exponent,
-            transpose //TODO add the other operations
+            transpose
         };
         
         //===================
@@ -46,27 +46,38 @@ namespace CalculationUtil {
         
         int getHierarchyLevel() {return pemdas[operation];}
         
+        bool isFunctional();
+        bool isTranspose() {return operation == OpType::transpose;}
+        
         //===================
         // Operator Overloads
         //===================
         bool operator==(OperationType other) const {return operation == other.operation;}
+        
+        //=============
+        // Ostream Overload
+        //=============
+        friend std::ostream& operator<<(std::ostream& ostream, const OperationType & op);
+        
+        //==============
+        // Static Helping Functions
+        //==============
+        static int getPemdasFromChar(char opChar);
     
     private:
+        //==============
+        // Data Members
+        //==============
         OpType operation;
         
         //===================
         // Order of Operation Hierarchy
         //===================
-        std::map<OpType, int> pemdas = { {OpType::add, 0}, {OpType::subtract, 0},
-                                         {OpType::multiply, 1}, {OpType::divide, 1},
-                                         {OpType::inverse, 2}, {OpType::exponent, 2},
-                                         {OpType::transpose, 3}};
+        static inline std::map<OpType, int> pemdas = {{OpType::add, 0}, {OpType::subtract, 0},
+                                                     {OpType::multiply, 1}, {OpType::divide, 1},
+                                                     {OpType::inverse, 2}, {OpType::exponent, 2},
+                                                     {OpType::transpose, 2}};
     };
-
-    //=============
-    // Ostream Overload
-    //=============
-    std::ostream& operator<<(std::ostream& ostream, const OperationType & op);
 }
 
 
