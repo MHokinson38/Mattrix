@@ -29,11 +29,12 @@ int main( ){
     std::string matStr9 = "[4,4;4,4]/4"; //good
     std::string matStr10 = "[1,2;3,4]^2";
     std::string matStr11 = "([1,2;3,4]^T)^T"; //good
+    std::string matStr12 = "(([1,2,3;4,5,6;7,8,9]) + [1,2,3;4,5,6;7,8,9]) * [1,0,0;0,1,0;0,0,1]"; //Good
 
     
     CalculationUtil::InputLine inLine;
     
-    std::istrstream(matStr11.c_str()) >> inLine;
+    std::istrstream(matStr12.c_str()) >> inLine;
     
     std::cout << inLine;
 }

@@ -102,7 +102,25 @@ Matrix Matrix::transpose() {
 // Printing
 //=================
 std::string Matrix::prettyPrint() const {
-    return "Unimplemented - Matrix Pretty Print";
+    std::string returnString = "";
+    
+    returnString += "┌";
+    for(int i = 0; i < matrix.n_cols*9 + 1; ++i) {returnString += " ";}
+    returnString += "┐\n";
+    
+    for(int row = 0; row < matrix.n_rows; ++row) {
+        returnString += "│ ";
+        for(int col = 0; col < matrix.n_cols; ++col) {
+            returnString += RandomUtils::getStringFromDouble(matrix(row, col)) + " ";
+        }
+        returnString += "│\n";
+    }
+    
+    returnString += "└";
+    for(int i = 0; i < matrix.n_cols*9 + 1; ++i) {returnString += " ";}
+    returnString += "┘\n";
+    
+    return returnString;
 }
 
 std::string Matrix::regularPrint() const {
