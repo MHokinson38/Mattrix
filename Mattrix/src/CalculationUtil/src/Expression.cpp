@@ -16,12 +16,21 @@
 #include <CalculationUtil/interface/Operations/OperationType.h>
 #include <CalculationUtil/interface/Operations/ArithmeticOperation.h>
 #include <CalculationUtil/interface/Operations/FunctionalOperation.h>
+
 #include <CalculationUtil/interface/Expression.h>
+
+#include <MatrixUtil/interface/Matrix.h>
+
+#include <RandomUtils/interface/CoolUtilities.h>
+
 
 //==================
 // Constructors
 //==================
 CalculationUtil::Expression::Expression(const std::string & input) : inputLine(input) {
+    RandomUtils::removeWhiteSpace(inputLine);
+    RandomUtils::removeExcessParentheses(inputLine); //Takes off parentheses in from and back in needed
+    
     getBaseOperation();
     parseInputLine();
 }
@@ -36,11 +45,11 @@ MatrixUtil::Matrix CalculationUtil::Expression::evaluate() {
     else if(baseOperation.isFunctional()) {
         //If the base operation is functional, there should only be two internal expressions
         // The base, and the exponent
-        MatrixUtil::Matrix baseMatrix = internalExpressions[0].evaluate();
+        MatrixUtil::Matrix base = internalExpressions[0].evaluate();
         
-        Operation* opToPerform = baseOperation.isTranspose() ?
-                new FunctionalOperation(baseOperation, baseMatrix) :
-                new FunctionalOperation(baseOperation, baseMatrix,
+        Operation* opToPerform = (baseOperation.isTranspose() || baseOperation.isInverse()) ?
+                new FunctionalOperation(baseOperation, base) :
+                new FunctionalOperation(baseOperation, base,
                                         internalExpressions[1].evaluate().getScalarValue());
         
         return opToPerform->perform();
@@ -49,7 +58,7 @@ MatrixUtil::Matrix CalculationUtil::Expression::evaluate() {
         MatrixUtil::Matrix currentResult = internalExpressions[0].evaluate();
         
         for(int i = 0; i < internalExpressions.size() - 1; ++i) {
-            Operation* opToPerform = new ArithmeticOperation(baseOperation,
+            Operation* opToPerform = new ArithmeticOperation(operations[i],
                                                              currentResult,
                                                              internalExpressions[i+1].evaluate());
             
@@ -78,6 +87,11 @@ void CalculationUtil::Expression::getBaseOperation() {
         }
         else if(OperationType::isOperationCharacter(inputLine[i]) && numOpenParentheses == 0) {
             if(OperationType::getPemdasFromChar(inputLine[i]) < lowestOp.getHierarchyLevel()) {
+                if(OperationType(inputLine[i]).getOperation() == OperationType::OpType::subtract &&
+                   OperationType(inputLine[i-1]).getOperation() == OperationType::OpType::exponent) {
+                    continue;
+                }
+                
                 lowestOp = OperationType(inputLine[i]);
             }
             
@@ -112,24 +126,31 @@ void CalculationUtil::Expression::parseInputLine() {
         std::string currentInternalExp = "";
         int numOpenParentheses = 0;
         
-        for(auto& c : inputLine) {
-            if(c == OPENING_PARENTHESE) {
+        for(int i = 0; i < inputLine.size(); ++i) {
+            if(inputLine[i] == OPENING_PARENTHESE) {
                 numOpenParentheses++;
             }
-            else if(c == CLOSING_PARENTHESE) {
+            else if(inputLine[i] == CLOSING_PARENTHESE) {
                 numOpenParentheses--;
             }
-            else if(c == baseOperation.getOpAsChar() && numOpenParentheses == 0) {
+            else if(OperationType::isOperationCharacter(inputLine[i]) &&
+                    OperationType(inputLine[i]).getHierarchyLevel() == baseOperation.getHierarchyLevel() &&
+                     numOpenParentheses == 0) {
                 internalExpressions.push_back(Expression(currentInternalExp));
+                operations.push_back(OperationType(inputLine[i]));
                 currentInternalExp = "";
                 
                 if(baseOperation.isTranspose() ||
-                   baseOperation.isInverse()) {break;} //We are going to ignore the T
+                   baseOperation.isInverse()) {break;} //We are going to ignore the T/-1
                 
                 continue;
             }
             
-            currentInternalExp += c;
+            currentInternalExp += inputLine[i];
+            
+            if(i == (inputLine.size() - 1)) {
+                internalExpressions.push_back(Expression(currentInternalExp));
+            }
         }
     }
 }
@@ -143,7 +164,7 @@ std::istream& CalculationUtil::operator>>(std::istream& is, Expression & exp) {
     char currentChar;
     while(is.get(currentChar)) {inputLine += currentChar;}
     
-    exp.setInputLine(inputLine);
+    exp = Expression(inputLine);
     
     return is;
 }

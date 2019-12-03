@@ -12,12 +12,13 @@ namespace RandomUtils {
     //=================
     // Random Utility functions
     //=================
-
     int getIntFromChar(char c);
 
-    int getIntFromString(const std::string & str);
+    int getDoubleFromString(const std::string & str);
+    std::string getStringFromDouble(double num);
 
-    
+    void removeWhiteSpace(std::string & str);
+    void removeExcessParentheses(std::string & str);
 }
 
 

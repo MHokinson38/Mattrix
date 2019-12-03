@@ -21,7 +21,7 @@ using Matrix = MatrixUtil::Matrix;
 Matrix FunctionalOperation::perform() {
     switch (operand.getOperation()) {
         case OperationType::exponent:
-            return object^pow;
+            return object^(MatrixUtil::Matrix(pow));
             break;
         case OperationType::inverse:
             return object.inverse();

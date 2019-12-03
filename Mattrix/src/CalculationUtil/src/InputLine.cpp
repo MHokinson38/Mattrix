@@ -15,7 +15,7 @@
 // Stream Overloads
 //===================
 std::ostream& CalculationUtil::operator<<(std::ostream& os, const InputLine& line) {
-    return os << "TODO";
+    return os << line.output.regularPrint();
 }
 
 std::istream& CalculationUtil::operator>>(std::istream& is, InputLine& line) {

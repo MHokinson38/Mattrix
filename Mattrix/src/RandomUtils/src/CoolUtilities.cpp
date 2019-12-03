@@ -39,6 +39,29 @@ int RandomUtils::getIntFromChar(char c) {
     throw InvalidCharacterException(&"You entered a non-valid numberical character: " [ c]);
 }
 
-int RandomUtils::getIntFromString(const std::string & str) {
-    return std::stoi(str);
+int RandomUtils::getDoubleFromString(const std::string & str) {
+    return std::stod(str);
+}
+
+std::string RandomUtils::getStringFromDouble(double num) {
+    return std::to_string(num);
+}
+
+void RandomUtils::removeWhiteSpace(std::string &str) {
+    std::string condensed = "";
+    
+    for(auto& c : str) {
+        if(c != ' ') {condensed += c;}
+    }
+    
+    str = condensed;
+}
+
+void RandomUtils::removeExcessParentheses(std::string &str) {
+    //This works post white Space removal
+    bool hasRedundantParentheses = str[0] == '(' && str[str.size() - 1] == ')';
+    
+    if(hasRedundantParentheses) {
+        str = str.substr(1, str.size() - 2);
+    }
 }

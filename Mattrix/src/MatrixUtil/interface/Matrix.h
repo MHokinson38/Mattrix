@@ -57,7 +57,7 @@ namespace MatrixUtil {
         void setElement(int row, int col, double el) {matrix(row, col) = el;}
         
         bool getIsScalar() {return isScalar;}
-        int getScalarValue();
+        double getScalarValue() const;
 
         //====================
         // Operator Overloads
@@ -67,6 +67,9 @@ namespace MatrixUtil {
         Matrix operator*(const Matrix & rhs); //Needs Matrix Scalar or Matrix of valid Dimension 
         Matrix operator/(const Matrix & rhs); //Needs Matrix Scalar
         Matrix operator^(const Matrix & exp); //Needs Matrix Scalar
+        
+        //For Multiplying by scalar
+        Matrix scalarMultiply(double scalar) const;
         
         //Boolean operation
         bool operator==(const Matrix & rhs) {return arma::approx_equal(matrix, rhs.matrix, "absdiff", Matrix::APPROX_EQUAL_ALLOWANCE);}
@@ -87,7 +90,7 @@ namespace MatrixUtil {
         // Reading input from string
         //====================
         void parseString(const std::string & matStr);
-        void setMatrix(const std::vector<std::vector<int>> & rowVectors);
+        void setMatrix(const std::vector<std::vector<double>> & rowVectors);
         
         //====================
         // Reading and Writing

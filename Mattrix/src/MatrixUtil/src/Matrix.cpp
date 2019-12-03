@@ -20,11 +20,15 @@ using Matrix = MatrixUtil::Matrix;
 Matrix::Matrix(double scalar) : isScalar(true) {
     matrix = arma::mat(1,1, arma::fill::zeros);
     
-    matrix(1,1) = scalar;
+    matrix << scalar << arma::endr;
 }
 
 Matrix::Matrix(int row, int col) {
     matrix = arma::mat(row, col, arma::fill::zeros);
+}
+
+Matrix::Matrix(const std::string & matStr) {
+    parseString(matStr);
 }
 
 //==================
@@ -40,27 +44,47 @@ Matrix& Matrix::operator=(const Matrix & other) {
 //==================
 // Getters
 //===================
-int Matrix::getScalarValue() {
-    return isScalar ? matrix(1,1) : -1; //TODO add exceptions
+double Matrix::getScalarValue() const {
+    return isScalar ? matrix(0,0) : -1; //TODO add exceptions
 }
 
 //==================
 // Operator Overloads
 //==================
-Matrix Matrix::operator+(const Matrix & other) {
-    return Matrix(matrix + other.matrix);
+Matrix Matrix::operator+(const Matrix & rhs) {
+    return Matrix(matrix + rhs.matrix);
 }
 
-Matrix Matrix::operator-(const Matrix & other) {
-    return Matrix(matrix - other.matrix);
+Matrix Matrix::operator-(const Matrix & rhs) {
+    return Matrix(matrix - rhs.matrix);
 }
 
-Matrix Matrix::operator*(const Matrix & other) {
-    return Matrix(matrix * other.matrix);
+Matrix Matrix::operator*(const Matrix & rhs) {
+    if(isScalar) {return Matrix(rhs.scalarMultiply(getScalarValue()));}
+    if(rhs.isScalar) {return Matrix(scalarMultiply(rhs.getScalarValue()));}
+    
+    return Matrix(matrix * rhs.matrix); //Add Exception if Necessary
 }
 
-Matrix Matrix::operator/(const Matrix & other) {
-    return Matrix(matrix / other.matrix);
+Matrix Matrix::operator/(const Matrix & rhs) {
+    return Matrix(scalarMultiply(1.0 / rhs.getScalarValue())); //Add Exception
+}
+
+Matrix Matrix::operator^(const Matrix & exp) {
+    return Matrix(arma::pow(matrix, exp.getScalarValue()));
+}
+
+//For Scalar Multiplication
+Matrix Matrix::scalarMultiply(double scalar) const {
+    arma::mat newMat = matrix;
+    
+    for(int row = 0; row < matrix.n_rows; ++row) {
+        for(int col = 0; col < matrix.n_cols; ++col) {
+            newMat(row, col) = matrix(row, col) * scalar;
+        }
+    }
+    
+    return newMat;
 }
 
 //=================
@@ -78,7 +102,7 @@ Matrix Matrix::transpose() {
 // Printing
 //=================
 std::string Matrix::prettyPrint() const {
-    //TODO this later
+    return "Unimplemented - Matrix Pretty Print";
 }
 
 std::string Matrix::regularPrint() const {
@@ -86,12 +110,12 @@ std::string Matrix::regularPrint() const {
     
     returnString += Matrix::OPENING_BRACKET;
     
-    for(int col = 0; col < matrix.n_cols; ++col) {
+    for(int row = 0; row < matrix.n_cols; ++row) {
         if(!isScalar) {returnString += Matrix::OPENING_BRACKET;}
         
-        for(int row = 0; row < matrix.n_rows; ++row) {
-            returnString += (row != 0 ? ", " : "");
-            returnString += matrix(row, col);
+        for(int col = 0; col < matrix.n_rows; ++col) {
+            returnString += (col != 0 ? ", " : "");
+            returnString += RandomUtils::getStringFromDouble(matrix(row, col));
         }
         
         if(!isScalar) {returnString += Matrix::CLOSING_BRACKET;}
@@ -103,33 +127,44 @@ std::string Matrix::regularPrint() const {
 void Matrix::parseString(const std::string& matStr) {
     int numCol = 0;
     int numRows = 0;
-    std::vector<std::vector<int>> rowVectors;
-    std::vector<int> currentRow;
+    std::vector<std::vector<double>> rowVectors;
+    std::vector<double> currentRow;
     std::string currentNumAsString = "";
     
-    for(auto& currentChar : matStr) {
-        if(currentChar == ' ') {
+    for(int i = 0; i < matStr.size(); ++i) {
+        if(matStr[i] == ' ') {
             continue;
         }
-        else if(currentChar == Matrix::OPENING_BRACKET) {
+        else if(matStr[i] == Matrix::OPENING_BRACKET) {
             currentRow.clear(); //Make sure row is cleared before starting new row
         }
-        else if(currentChar == Matrix::CLOSING_BRACKET) {
+        else if(matStr[i] == Matrix::CLOSING_BRACKET || matStr[i] == Matrix::LINE_END_CHARACTER) {
+            currentRow.push_back(RandomUtils::getDoubleFromString(currentNumAsString));
+            currentNumAsString = "";
+            
             rowVectors.push_back(currentRow);
             currentRow.clear();
         }
-        else if(currentChar == Matrix::SEPERATION_CHARACTER) {
-            currentRow.push_back(RandomUtils::getIntFromString(currentNumAsString));
+        else if(matStr[i] == Matrix::SEPERATION_CHARACTER) {
+            currentRow.push_back(RandomUtils::getDoubleFromString(currentNumAsString));
+            currentNumAsString = "";
+        }
+        else if(i == (matStr.size() - 1)) { //For scalar use only (won't hit otherwise)
+            currentNumAsString += matStr[i];
+            
+            currentRow.push_back(RandomUtils::getDoubleFromString(currentNumAsString));
+            
+            rowVectors.push_back(currentRow);
         }
         else {
-            currentNumAsString += currentChar;
+            currentNumAsString += matStr[i];
         }
     }
     
     setMatrix(rowVectors);
 }
 
-void Matrix::setMatrix(const std::vector<std::vector<int>>& rowVectors) {
+void Matrix::setMatrix(const std::vector<std::vector<double>>& rowVectors) {
     int numRows = rowVectors.size();
     int numCols = rowVectors[0].size();
     

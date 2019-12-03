@@ -14,6 +14,7 @@
 
 //My files
 #include <MatrixUtil/interface/Matrix.h>
+#include <CalculationUtil/interface/Expression.h>
 
 namespace CalculationUtil {
     /**

@@ -51,6 +51,25 @@ bool OperationType::isFunctional() {
 
 }
 
+char OperationType::getOpAsChar() {
+    switch (operation) {
+        case OperationType::add:
+            return '+';
+        case OperationType::subtract:
+            return '-';
+        case OperationType::multiply:
+            return '*';
+        case OperationType::divide:
+            return '/';
+        case OperationType::exponent:
+        case OperationType::inverse:
+        case OperationType::transpose:
+            return '^';
+        default:
+            return ' ';
+    }
+}
+
 //=================
 // Static Helping Functions
 //=================

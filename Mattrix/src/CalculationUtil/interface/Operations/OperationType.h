@@ -35,9 +35,12 @@ namespace CalculationUtil {
         OperationType(OpType op) : operation(op) {}
         OperationType(const OperationType & other) : operation(other.operation) {} //Copy Constructor
         
+        ~OperationType() = default;
+        
         //===================
         // Assignment Overloads
         //===================
+        //Copy Assignment
         OperationType& operator=(const OperationType & other);
         
         //===================
@@ -86,7 +89,7 @@ namespace CalculationUtil {
         static inline std::map<OpType, int> pemdas = {{OpType::add, 0}, {OpType::subtract, 0},
                                                      {OpType::multiply, 1}, {OpType::divide, 1},
                                                      {OpType::inverse, 2}, {OpType::exponent, 2},
-                                                     {OpType::transpose, 2}};
+                                                     {OpType::transpose, 2}, {OpType::empty, 3}};
         
         static inline std::map<char, OpType> charToOpMap = {{'+', OpType::add},
                                                             {'-', OpType::subtract},

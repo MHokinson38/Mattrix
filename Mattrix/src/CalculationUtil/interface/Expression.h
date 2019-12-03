@@ -64,6 +64,7 @@ namespace CalculationUtil {
         //=============
         std::string inputLine;
         std::vector<Expression> internalExpressions;
+        std::vector<OperationType> operations;
         
         OperationType baseOperation; //Operation level with lowest order of ops (thing that is going to execute last in expression)
         
