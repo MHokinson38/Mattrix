@@ -71,6 +71,7 @@ Matrix Matrix::operator/(const Matrix & rhs) {
 }
 
 Matrix Matrix::operator^(const Matrix & exp) {
+    //As of right now, only going to support integer values 
     return Matrix(arma::pow(matrix, exp.getScalarValue()));
 }
 

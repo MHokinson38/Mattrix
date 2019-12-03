@@ -81,6 +81,11 @@ namespace MatrixUtil {
         Matrix transpose();
         
         //====================
+        // Factorizations and Decompositions
+        //====================
+        
+        
+        //====================
         // Functinons for printing
         //====================
         std::string prettyPrint() const; //TODO define 
