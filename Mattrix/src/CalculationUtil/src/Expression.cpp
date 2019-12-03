@@ -47,7 +47,7 @@ MatrixUtil::Matrix CalculationUtil::Expression::evaluate() {
         // The base, and the exponent
         MatrixUtil::Matrix base = internalExpressions[0].evaluate();
         
-        Operation* opToPerform = (baseOperation.isTranspose() || baseOperation.isInverse()) ?
+        Operation* opToPerform = baseOperation.isTranspose() ?
                 new FunctionalOperation(baseOperation, base) :
                 new FunctionalOperation(baseOperation, base,
                                         internalExpressions[1].evaluate().getScalarValue());
@@ -78,6 +78,10 @@ void CalculationUtil::Expression::getBaseOperation() {
     OperationType lowestOp(OperationType::OpType::empty);
     
     for(int i = 0; i < inputLine.size(); ++i) {
+        if(inputLine[i] == INVERSE_CHARACTER && i == 0) {
+            continue; //This is a minus sign, not subtraction (i.e. -5)
+        }
+        
         if(inputLine[i] == OPENING_PARENTHESE) {
             hasParenthese = true;
             numOpenParentheses++;
@@ -100,9 +104,6 @@ void CalculationUtil::Expression::getBaseOperation() {
                 try {
                     if(inputLine[i+1] == TRANSPOSE_CHARACTER) {
                         lowestOp = OperationType(OperationType::OpType::transpose);
-                    }
-                    else if(inputLine[i+1] == INVERSE_CHARACTER) {
-                        lowestOp = OperationType(OperationType::OpType::inverse);
                     }
                 }
                 catch(const std::out_of_range & excp) {
@@ -140,8 +141,7 @@ void CalculationUtil::Expression::parseInputLine() {
                 operations.push_back(OperationType(inputLine[i]));
                 currentInternalExp = "";
                 
-                if(baseOperation.isTranspose() ||
-                   baseOperation.isInverse()) {break;} //We are going to ignore the T/-1
+                if(baseOperation.isTranspose()) {break;} //We are going to ignore the T
                 
                 continue;
             }

@@ -12,13 +12,30 @@ namespace RandomUtils {
     //=================
     // Random Utility functions
     //=================
-    int getIntFromChar(char c);
+    //=============
+    // Constants
+    //=============
+    static const inline double DOUBLE_EPSILON = .0001;
 
+    //=============
+    // Casting
+    //=============
+    int getIntFromChar(char c);
     int getDoubleFromString(const std::string & str);
     std::string getStringFromDouble(double num);
 
+    //=============
+    // String Manipulation
+    //=============
     void removeWhiteSpace(std::string & str);
     void removeExcessParentheses(std::string & str);
+
+    //=============
+    // Number Checking
+    //=============
+    bool isIntegerValue(double val);
+
+    bool doubleEqual(double a, double b);
 }
 
 

@@ -5,8 +5,8 @@
 //  Created by Matthew Hokinson on 11/18/19.
 //
 //Libraries
-#include <stdio.h>
 #include <iostream>
+#include <cmath>
 
 //My files
 #include <MatrixUtil/interface/Matrix.h>
@@ -71,8 +71,26 @@ Matrix Matrix::operator/(const Matrix & rhs) {
 }
 
 Matrix Matrix::operator^(const Matrix & exp) {
-    //As of right now, only going to support integer values 
-    return Matrix(arma::pow(matrix, exp.getScalarValue()));
+    //As of right now, only going to support integer values
+    if(!exp.isScalar) {/*Add exception*/}
+    
+    if(!RandomUtils::isIntegerValue(exp.getScalarValue())) {
+        //Add exception
+    }
+    
+    if(RandomUtils::doubleEqual(exp.getScalarValue(), -1)) {
+        return inverse();
+    }
+    else if(exp.getScalarValue() < 0) {
+        *this = inverse();
+    }
+    
+    Matrix returnMat(matrix);
+    for(int i = 1; i < std::abs(exp.getScalarValue()); ++i) {
+        returnMat = returnMat * (*this);
+    }
+    
+    return returnMat;
 }
 
 //For Scalar Multiplication

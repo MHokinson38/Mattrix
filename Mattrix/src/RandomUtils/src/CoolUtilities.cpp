@@ -7,12 +7,15 @@
 //Libraries
 #include <string>
 #include <exception>
-#include <stdio.h>
+#include <cmath>
 
 //My Files
 #include <RandomUtils/interface/CoolUtilities.h>
 #include <RandomUtils/interface/InvalidCharacterException.h>
 
+//=================
+// Casting
+//=================
 int RandomUtils::getIntFromChar(char c) {
     switch(c) {
         case '0':
@@ -47,6 +50,9 @@ std::string RandomUtils::getStringFromDouble(double num) {
     return std::to_string(num);
 }
 
+//==============
+// String Manipulation
+//==============
 void RandomUtils::removeWhiteSpace(std::string &str) {
     std::string condensed = "";
     
@@ -64,4 +70,15 @@ void RandomUtils::removeExcessParentheses(std::string &str) {
     if(hasRedundantParentheses) {
         str = str.substr(1, str.size() - 2);
     }
+}
+
+//=============
+// Value Checking
+//=============
+bool RandomUtils::isIntegerValue(double val) {
+    return doubleEqual(val - std::floor(val), 0);
+}
+
+bool RandomUtils::doubleEqual(double a, double b) {
+    return std::abs(a - b) < DOUBLE_EPSILON;
 }

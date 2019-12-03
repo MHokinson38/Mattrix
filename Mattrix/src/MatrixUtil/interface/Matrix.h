@@ -35,7 +35,8 @@ namespace MatrixUtil {
         Matrix() : matrix(arma::mat(0, 0, arma::fill::zeros)), isScalar(false) {}
         Matrix(double scalar); //Scalar constructor
         Matrix(int row, int col); //Creates empty matrix of 0's
-        Matrix(const arma::mat & mat) : matrix(mat), isScalar(false) {}
+        Matrix(const arma::mat & mat) : matrix(mat), isScalar((mat.n_cols == 1) &&
+                                                              (mat.n_rows == 1)) {}
         Matrix(const std::string & matStr); //Constructor to parse a string
         
         //Copy Constructor
@@ -64,9 +65,9 @@ namespace MatrixUtil {
         //====================
         Matrix operator+(const Matrix & rhs);
         Matrix operator-(const Matrix & rhs);
-        Matrix operator*(const Matrix & rhs); //Needs Matrix Scalar or Matrix of valid Dimension 
+        Matrix operator*(const Matrix & rhs); //Needs Matrix Scalar or Matrix of valid Dimension
         Matrix operator/(const Matrix & rhs); //Needs Matrix Scalar
-        Matrix operator^(const Matrix & exp); //Needs Matrix Scalar
+        Matrix operator^(const Matrix & exp); //Needs Matrix Integer Scalar
         
         //For Multiplying by scalar
         Matrix scalarMultiply(double scalar) const;
