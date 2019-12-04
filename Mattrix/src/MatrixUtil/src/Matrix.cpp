@@ -186,7 +186,7 @@ std::string Matrix::regularPrint() const {
         if(!isScalar) {returnString += Matrix::CLOSING_BRACKET;}
     }
     
-    return returnString + Matrix::CLOSING_BRACKET + "\n";
+    return returnString + Matrix::CLOSING_BRACKET;
 }
 
 //==================

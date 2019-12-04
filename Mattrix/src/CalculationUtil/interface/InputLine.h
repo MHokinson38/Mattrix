@@ -28,9 +28,15 @@ namespace CalculationUtil {
         //Constructor
         //==============
         InputLine() = default;
+        InputLine(const std::string & input);
         
         //==============
-        // Public functions
+        // Setters / Calculator
+        //==============
+        void setInput(const std::string & input);
+        
+        //==============
+        // Getters
         //==============
         std::string getOutputPrettyPrint() {return output.prettyPrint();}
         std::string getOutputMatrixString() {return output.regularPrint();}

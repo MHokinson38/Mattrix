@@ -7,9 +7,29 @@
 //Libraries
 #include <stdio.h>
 #include <iostream>
+#include <string>
+#include <strstream>
 
 //My Files
 #include <CalculationUtil/interface/InputLine.h>
+
+//===================
+// Constructors
+//===================
+CalculationUtil::InputLine::InputLine(const std::string & input) {
+    std::istrstream(input.c_str()) >> exp;
+    
+    output = exp.evaluate();
+}
+
+//===================
+// Calculator
+//===================
+void CalculationUtil::InputLine::setInput(const std::string& input) {
+    std::istrstream(input.c_str()) >> exp;
+    
+    output = exp.evaluate();
+}
 
 //===================
 // Stream Overloads

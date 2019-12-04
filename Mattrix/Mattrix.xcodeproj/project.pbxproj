@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		0FB39E9820869121EA0494EE /* ofxDatGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F219FA6820CB80923D89AC5 /* ofxDatGui.cpp */; };
+		431D99BD239815E4009FA11E /* InputLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 438480CA2394DCEF0058563D /* InputLine.cpp */; };
+		431D99BF239815E4009FA11E /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+		431D99C0239815E4009FA11E /* ofxDatGuiComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A710861D1963B50A1016BBDF /* ofxDatGuiComponent.cpp */; };
+		431D99C1239815E4009FA11E /* Operation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64122382F2FE0068C907 /* Operation.cpp */; };
+		431D99C2239815E4009FA11E /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA641E238341D90068C907 /* Matrix.cpp */; };
+		431D99C3239815E4009FA11E /* OperationType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64182382F34E0068C907 /* OperationType.cpp */; };
+		431D99C4239815E4009FA11E /* CoolUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA642523846B1F0068C907 /* CoolUtilities.cpp */; };
+		431D99C5239815E4009FA11E /* Expression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 438480C72392F0050058563D /* Expression.cpp */; };
+		431D99C6239815E4009FA11E /* FunctionalOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64162382F32C0068C907 /* FunctionalOperation.cpp */; };
+		431D99C7239815E4009FA11E /* ofxSmartFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F26B3A537E22F654D99BAC19 /* ofxSmartFont.cpp */; };
+		431D99C8239815E4009FA11E /* ArithmeticOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64142382F3120068C907 /* ArithmeticOperation.cpp */; };
+		431D99C9239815E4009FA11E /* ofxDatGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F219FA6820CB80923D89AC5 /* ofxDatGui.cpp */; };
+		431D99D6239817AB009FA11E /* tests-main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 431D99D5239817AB009FA11E /* tests-main.cpp */; };
+		431D99D92398191A009FA11E /* InputLineEvalTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 431D99D82398191A009FA11E /* InputLineEvalTest.cpp */; };
 		438480C82392F0050058563D /* Expression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 438480C72392F0050058563D /* Expression.cpp */; };
 		438480CB2394DCEF0058563D /* InputLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 438480CA2394DCEF0058563D /* InputLine.cpp */; };
 		43CA64132382F2FE0068C907 /* Operation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64122382F2FE0068C907 /* Operation.cpp */; };
@@ -23,6 +37,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		431D99CC239815E4009FA11E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,6 +67,11 @@
 		431D99B52396CA10009FA11E /* COBMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COBMatrix.h; sourceTree = "<group>"; };
 		431D99B72397405B009FA11E /* InvalidSyntaxException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidSyntaxException.h; sourceTree = "<group>"; };
 		431D99B82397422C009FA11E /* UnsupportedComputationException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnsupportedComputationException.h; sourceTree = "<group>"; };
+		431D99D2239815E4009FA11E /* MattrixTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MattrixTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		431D99D3239815E4009FA11E /* Mattrix copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Mattrix copy-Info.plist"; path = "/Users/Mr.Awesome/Desktop/SoftwareDesignStudioWork/fantastic-finale-MHokinson38/Mattrix/Mattrix copy-Info.plist"; sourceTree = "<absolute>"; };
+		431D99D5239817AB009FA11E /* tests-main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "tests-main.cpp"; sourceTree = "<group>"; };
+		431D99D7239818CE009FA11E /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
+		431D99D82398191A009FA11E /* InputLineEvalTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputLineEvalTest.cpp; sourceTree = "<group>"; };
 		434E5442237F13F40045EDC2 /* DEVELOPMENT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = DEVELOPMENT.md; path = ../DEVELOPMENT.md; sourceTree = "<group>"; };
 		434E5443237F13F40045EDC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		438480C62392E79F0058563D /* Expression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Expression.h; sourceTree = "<group>"; };
@@ -266,6 +294,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		431D99CA239815E4009FA11E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,6 +335,16 @@
 				431D99B82397422C009FA11E /* UnsupportedComputationException.h */,
 			);
 			path = Exceptions;
+			sourceTree = "<group>";
+		};
+		431D99D423981771009FA11E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				431D99D7239818CE009FA11E /* catch.hpp */,
+				431D99D5239817AB009FA11E /* tests-main.cpp */,
+				431D99D82398191A009FA11E /* InputLineEvalTest.cpp */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		43CA64102382E8F90068C907 /* Operations */ = {
@@ -819,12 +864,15 @@
 				BB4B014C10F69532006C3DED /* addons */,
 				6948EE371B920CB800B5AC1A /* local_addons */,
 				E4B69B5B0A3A1756003C02F2 /* MattrixDebug.app */,
+				431D99D2239815E4009FA11E /* MattrixTest.app */,
+				431D99D3239815E4009FA11E /* Mattrix copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				431D99D423981771009FA11E /* Tests */,
 				43CA6420238468230068C907 /* RandomUtils */,
 				43CA641A2383239D0068C907 /* MatrixUtil */,
 				43D9C1EF2381B88100138F80 /* SaveFileUtil */,
@@ -853,6 +901,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		431D99BA239815E4009FA11E /* MattrixTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 431D99CE239815E4009FA11E /* Build configuration list for PBXNativeTarget "MattrixTest" */;
+			buildPhases = (
+				431D99BB239815E4009FA11E /* ShellScript */,
+				431D99BC239815E4009FA11E /* Sources */,
+				431D99CA239815E4009FA11E /* Frameworks */,
+				431D99CB239815E4009FA11E /* ShellScript */,
+				431D99CC239815E4009FA11E /* CopyFiles */,
+				431D99CD239815E4009FA11E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MattrixTest;
+			productName = myOFApp;
+			productReference = 431D99D2239815E4009FA11E /* MattrixTest.app */;
+			productType = "com.apple.product-type.application";
+		};
 		E4B69B5A0A3A1756003C02F2 /* Mattrix */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "Mattrix" */;
@@ -898,11 +966,51 @@
 			projectRoot = "";
 			targets = (
 				E4B69B5A0A3A1756003C02F2 /* Mattrix */,
+				431D99BA239815E4009FA11E /* MattrixTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		431D99BB239815E4009FA11E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xcodebuild -project \"$OF_PATH/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj\" -target openFrameworks -configuration \"${CONFIGURATION}\"";
+		};
+		431D99CB239815E4009FA11E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n# Copy default icon file into App/Resources\nrsync -aved \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n# Copy libfmod and change install directory for fmod to run\nrsync -aved \"$OF_PATH/libs/fmodex/lib/osx/libfmodex.dylib\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\";\ninstall_name_tool -change @executable_path/libfmodex.dylib @executable_path/../Frameworks/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\n\necho \"$GCC_PREPROCESSOR_DEFINITIONS\";\n";
+		};
+		431D99CD239815E4009FA11E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"$GCC_PREPROCESSOR_DEFINITIONS\";\nAPPSTORE=`expr \"$GCC_PREPROCESSOR_DEFINITIONS\" : \".*APPSTORE=\\([0-9]*\\)\"`\nif [ -z \"$APPSTORE\" ] ; then\necho \"Note: Not copying bin/data to App Package or doing App Code signing. Use AppStore target for AppStore distribution\";\nelse\n# Copy bin/data into App/Resources\nrsync -avz --exclude='.DS_Store' \"${SRCROOT}/bin/data/\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/data/\"\n\n# ---- Code Sign App Package ----\n\n# WARNING: You may have to run Clean in Xcode after changing CODE_SIGN_IDENTITY!\n\n# Verify that $CODE_SIGN_IDENTITY is set\nif [ -z \"${CODE_SIGN_IDENTITY}\" ] ; then\necho \"CODE_SIGN_IDENTITY needs to be set for framework code-signing\"\nexit 0\nfi\n\nif [ -z \"${CODE_SIGN_ENTITLEMENTS}\" ] ; then\necho \"CODE_SIGN_ENTITLEMENTS needs to be set for framework code-signing!\"\n\nif [ \"${CONFIGURATION}\" = \"Release\" ] ; then\nexit 1\nelse\n# Code-signing is optional for non-release builds.\nexit 0\nfi\nfi\n\nITEMS=\"\"\n\nFRAMEWORKS_DIR=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\necho \"$FRAMEWORKS_DIR\"\nif [ -d \"$FRAMEWORKS_DIR\" ] ; then\nFRAMEWORKS=$(find \"${FRAMEWORKS_DIR}\" -depth -type d -name \"*.framework\" -or -name \"*.dylib\" -or -name \"*.bundle\" | sed -e \"s/\\(.*framework\\)/\\1\\/Versions\\/A\\//\")\nRESULT=$?\nif [[ $RESULT != 0 ]] ; then\nexit 1\nfi\n\nITEMS=\"${FRAMEWORKS}\"\nfi\n\nLOGINITEMS_DIR=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Library/LoginItems/\"\nif [ -d \"$LOGINITEMS_DIR\" ] ; then\nLOGINITEMS=$(find \"${LOGINITEMS_DIR}\" -depth -type d -name \"*.app\")\nRESULT=$?\nif [[ $RESULT != 0 ]] ; then\nexit 1\nfi\n\nITEMS=\"${ITEMS}\"$'\\n'\"${LOGINITEMS}\"\nfi\n\n# Prefer the expanded name, if available.\nCODE_SIGN_IDENTITY_FOR_ITEMS=\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\"\nif [ \"${CODE_SIGN_IDENTITY_FOR_ITEMS}\" = \"\" ] ; then\n# Fall back to old behavior.\nCODE_SIGN_IDENTITY_FOR_ITEMS=\"${CODE_SIGN_IDENTITY}\"\nfi\n\necho \"Identity:\"\necho \"${CODE_SIGN_IDENTITY_FOR_ITEMS}\"\n\necho \"Entitlements:\"\necho \"${CODE_SIGN_ENTITLEMENTS}\"\n\necho \"Found:\"\necho \"${ITEMS}\"\n\n# Change the Internal Field Separator (IFS) so that spaces in paths will not cause problems below.\nSAVED_IFS=$IFS\nIFS=$(echo -en \"\\n\\b\")\n\n# Loop through all items.\nfor ITEM in $ITEMS;\ndo\necho \"Stripping invalid archs '${ITEM}'\"\nlipo -remove i386 \"${ITEM}\" -o \"${ITEM}\"\necho \"Signing '${ITEM}'\"\ncodesign --force --verbose --sign \"${CODE_SIGN_IDENTITY_FOR_ITEMS}\" --entitlements \"${CODE_SIGN_ENTITLEMENTS}\" \"${ITEM}\"\nRESULT=$?\nif [[ $RESULT != 0 ]] ; then\necho \"Failed to sign '${ITEM}'.\"\nIFS=$SAVED_IFS\nexit 1\nfi\ndone\n\n# Restore $IFS.\nIFS=$SAVED_IFS\n\nfi\n";
+		};
 		8466F1851C04CA0E00918B1C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 12;
@@ -945,6 +1053,27 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		431D99BC239815E4009FA11E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				431D99D6239817AB009FA11E /* tests-main.cpp in Sources */,
+				431D99BD239815E4009FA11E /* InputLine.cpp in Sources */,
+				431D99D92398191A009FA11E /* InputLineEvalTest.cpp in Sources */,
+				431D99BF239815E4009FA11E /* ofApp.cpp in Sources */,
+				431D99C0239815E4009FA11E /* ofxDatGuiComponent.cpp in Sources */,
+				431D99C1239815E4009FA11E /* Operation.cpp in Sources */,
+				431D99C2239815E4009FA11E /* Matrix.cpp in Sources */,
+				431D99C3239815E4009FA11E /* OperationType.cpp in Sources */,
+				431D99C4239815E4009FA11E /* CoolUtilities.cpp in Sources */,
+				431D99C5239815E4009FA11E /* Expression.cpp in Sources */,
+				431D99C6239815E4009FA11E /* FunctionalOperation.cpp in Sources */,
+				431D99C7239815E4009FA11E /* ofxSmartFont.cpp in Sources */,
+				431D99C8239815E4009FA11E /* ArithmeticOperation.cpp in Sources */,
+				431D99C9239815E4009FA11E /* ofxDatGui.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4B69B580A3A1756003C02F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -968,6 +1097,144 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		431D99CF239815E4009FA11E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					src,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/components,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/core,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/themes,
+					/usr/local/include,
+				);
+				ICON = "$(ICON_NAME_DEBUG)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "Mattrix copy-Info.plist";
+				INSTALL_PATH = /Applications;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib,
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF_DEBUG)",
+					"-larmadillo",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cc.openFrameworks.MattrixTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		431D99D0239815E4009FA11E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					src,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/components,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/core,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/themes,
+					/usr/local/include,
+				);
+				ICON = "$(ICON_NAME_RELEASE)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "Mattrix copy-Info.plist";
+				INSTALL_PATH = /Applications;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib,
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF)",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF)",
+					"-larmadillo",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cc.openFrameworks.MattrixTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+			};
+			name = Release;
+		};
+		431D99D1239815E4009FA11E /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "APPSTORE=1";
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					src,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/components,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/core,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont,
+					../../of_v20191107_osx_release/addons/ofxDatGui/src/themes,
+					/usr/local/include,
+				);
+				ICON = "$(ICON_NAME_RELEASE)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "Mattrix copy-Info.plist";
+				INSTALL_PATH = /Applications;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib,
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF)",
+					"-larmadillo",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cc.openFrameworks.MattrixTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+			};
+			name = AppStore;
+		};
 		99FA3DBB1C7456C400CFA0EE /* AppStore */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
@@ -1230,6 +1497,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		431D99CE239815E4009FA11E /* Build configuration list for PBXNativeTarget "MattrixTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				431D99CF239815E4009FA11E /* Debug */,
+				431D99D0239815E4009FA11E /* Release */,
+				431D99D1239815E4009FA11E /* AppStore */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "Mattrix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
