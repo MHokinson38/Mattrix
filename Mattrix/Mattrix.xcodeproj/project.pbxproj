@@ -64,6 +64,8 @@
 		3F2AB15435E962639E619592 /* ofxDatGuiSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiSlider.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiSlider.h; sourceTree = SOURCE_ROOT; };
 		431D99B42396C6E3009FA11E /* DiagonalizedMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiagonalizedMatrix.h; sourceTree = "<group>"; };
 		431D99B52396CA10009FA11E /* COBMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COBMatrix.h; sourceTree = "<group>"; };
+		431D99B72397405B009FA11E /* InvalidSyntaxException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidSyntaxException.h; sourceTree = "<group>"; };
+		431D99B82397422C009FA11E /* UnsupportedComputationException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnsupportedComputationException.h; sourceTree = "<group>"; };
 		434E5442237F13F40045EDC2 /* DEVELOPMENT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = DEVELOPMENT.md; path = ../DEVELOPMENT.md; sourceTree = "<group>"; };
 		434E5443237F13F40045EDC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		438480C5239060FB0058563D /* TestTarget */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestTarget; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,6 +334,15 @@
 			path = Decomposers;
 			sourceTree = "<group>";
 		};
+		431D99B62397403F009FA11E /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				431D99B72397405B009FA11E /* InvalidSyntaxException.h */,
+				431D99B82397422C009FA11E /* UnsupportedComputationException.h */,
+			);
+			path = Exceptions;
+			sourceTree = "<group>";
+		};
 		43A8A4A323848E2F003DAE34 /* MattrixTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +395,7 @@
 		43CA641C238323B00068C907 /* interface */ = {
 			isa = PBXGroup;
 			children = (
+				431D99B62397403F009FA11E /* Exceptions */,
 				431D99B32396C687009FA11E /* Decomposers */,
 				43CA641D238323C70068C907 /* Matrix.h */,
 				431D99B52396CA10009FA11E /* COBMatrix.h */,
