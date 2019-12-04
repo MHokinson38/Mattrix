@@ -12,6 +12,7 @@
 #include <MatrixUtil/interface/Matrix.h>
 #include <MatrixUtil/interface/Exceptions/InvalidSyntaxException.h>
 #include <MatrixUtil/interface/Exceptions/UnsupportedComputationException.h>
+#include <MatrixUtil/interface/Exceptions/ComputationalLogicException.h>
 
 #include <RandomUtils/interface/CoolUtilities.h>
 
@@ -48,7 +49,8 @@ Matrix& Matrix::operator=(const Matrix & other) {
 // Getters
 //===================
 double Matrix::getScalarValue() const {
-    return isScalar ? matrix(0,0) : -1; //TODO add exceptions
+    return isScalar ? matrix(0,0) :
+        throw ComputationalLogicException("Non-Scalar in Invalid Location!");
 }
 
 //==================
@@ -80,7 +82,7 @@ Matrix Matrix::operator*(const Matrix & rhs) {
         return Matrix(matrix * rhs.matrix);
     }
     catch(std::logic_error & er) {
-        throw InvalidSyntaxException(er.what());
+        throw ComputationalLogicException(er.what());
     }
 }
 
@@ -107,10 +109,20 @@ Matrix Matrix::operator^(const Matrix & exp) {
     }
     
     if(RandomUtils::doubleEqual(exp.getScalarValue(), -1)) {
-        return inverse();
+        try {
+            return inverse();
+        }
+        catch(std::runtime_error& er) {
+            throw ComputationalLogicException(er.what());
+        }
     }
     else if(exp.getScalarValue() < 0) {
-        *this = inverse();
+        try {
+            *this = inverse();
+        }
+        catch(std::runtime_error& er) {
+            throw ComputationalLogicException(er.what());
+        }
     }
     
     Matrix returnMat(matrix);

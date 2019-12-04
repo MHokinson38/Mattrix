@@ -72,6 +72,7 @@
 		431D99D5239817AB009FA11E /* tests-main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "tests-main.cpp"; sourceTree = "<group>"; };
 		431D99D7239818CE009FA11E /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
 		431D99D82398191A009FA11E /* InputLineEvalTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputLineEvalTest.cpp; sourceTree = "<group>"; };
+		431D99DA23986CB0009FA11E /* ComputationalLogicException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComputationalLogicException.h; sourceTree = "<group>"; };
 		434E5442237F13F40045EDC2 /* DEVELOPMENT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = DEVELOPMENT.md; path = ../DEVELOPMENT.md; sourceTree = "<group>"; };
 		434E5443237F13F40045EDC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		438480C62392E79F0058563D /* Expression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Expression.h; sourceTree = "<group>"; };
@@ -333,6 +334,7 @@
 			children = (
 				431D99B72397405B009FA11E /* InvalidSyntaxException.h */,
 				431D99B82397422C009FA11E /* UnsupportedComputationException.h */,
+				431D99DA23986CB0009FA11E /* ComputationalLogicException.h */,
 			);
 			path = Exceptions;
 			sourceTree = "<group>";

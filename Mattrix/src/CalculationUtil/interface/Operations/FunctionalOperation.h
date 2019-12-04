@@ -24,7 +24,7 @@ namespace CalculationUtil {
         //===================
         // Constructors
         //===================
-        FunctionalOperation(OperationType op, Matrix ob, int exp = 0) : Operation(op), object(ob), pow(exp) {}
+        FunctionalOperation(OperationType op, Matrix ob, double exp = 0) : Operation(op), object(ob), pow(exp) {}
         
         //===================
         // Perform Overload
@@ -39,7 +39,7 @@ namespace CalculationUtil {
     private:
         Matrix object;
         
-        int pow; //If doing an exponent operation
+        double pow; //If doing an exponent operation
     };
 }
 
