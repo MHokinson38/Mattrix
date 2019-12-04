@@ -42,8 +42,13 @@ int RandomUtils::getIntFromChar(char c) {
     throw InvalidCharacterException(&"You entered a non-valid numberical character: " [ c]);
 }
 
-int RandomUtils::getDoubleFromString(const std::string & str) {
-    return std::stod(str);
+double RandomUtils::getDoubleFromString(const std::string & str) {
+    try {
+        return std::stod(str);
+    }
+    catch(std::invalid_argument& err) {
+        throw InvalidCharacterException("Invalid Number Entered: " + str);
+    }
 }
 
 std::string RandomUtils::getStringFromDouble(double num) {

@@ -87,7 +87,7 @@ namespace MatrixUtil {
         
         
         //====================
-        // Functinons for printing
+        // Functions for printing
         //====================
         std::string prettyPrint() const; //TODO define 
         std::string regularPrint() const;

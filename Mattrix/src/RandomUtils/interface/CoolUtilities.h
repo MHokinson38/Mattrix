@@ -21,7 +21,7 @@ namespace RandomUtils {
     // Casting
     //=============
     int getIntFromChar(char c);
-    int getDoubleFromString(const std::string & str);
+    double getDoubleFromString(const std::string & str);
     std::string getStringFromDouble(double num);
 
     //=============

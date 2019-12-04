@@ -13,7 +13,7 @@
 #include <string>
 
 namespace MatrixUtil {
-    class UnsupportedComputationException : public Exception {
+    class UnsupportedComputationException : public std::exception {
     public:
         //================
         // Constructor

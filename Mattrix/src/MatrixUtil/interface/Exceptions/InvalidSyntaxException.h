@@ -13,7 +13,7 @@
 #include <string>
 
 namespace MatrixUtil {
-    class InvalidSyntaxException : public Exception {
+    class InvalidSyntaxException : public std::exception {
     public:
         //================
         // Constructor

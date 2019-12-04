@@ -10,6 +10,9 @@
 
 //My files
 #include <MatrixUtil/interface/Matrix.h>
+#include <MatrixUtil/interface/Exceptions/InvalidSyntaxException.h>
+#include <MatrixUtil/interface/Exceptions/UnsupportedComputationException.h>
+
 #include <RandomUtils/interface/CoolUtilities.h>
 
 using Matrix = MatrixUtil::Matrix;
@@ -52,30 +55,55 @@ double Matrix::getScalarValue() const {
 // Operator Overloads
 //==================
 Matrix Matrix::operator+(const Matrix & rhs) {
-    return Matrix(matrix + rhs.matrix);
+    try {
+        return Matrix(matrix + rhs.matrix);
+    }
+    catch(std::logic_error& err) {
+        throw InvalidSyntaxException(err.what());
+    }
 }
 
 Matrix Matrix::operator-(const Matrix & rhs) {
-    return Matrix(matrix - rhs.matrix);
+    try {
+        return Matrix(matrix - rhs.matrix);
+    }
+    catch(std::logic_error& err) {
+        throw InvalidSyntaxException(err.what());
+    }
 }
 
 Matrix Matrix::operator*(const Matrix & rhs) {
     if(isScalar) {return Matrix(rhs.scalarMultiply(getScalarValue()));}
     if(rhs.isScalar) {return Matrix(scalarMultiply(rhs.getScalarValue()));}
     
-    return Matrix(matrix * rhs.matrix); //Add Exception if Necessary
+    try {
+        return Matrix(matrix * rhs.matrix);
+    }
+    catch(std::logic_error & er) {
+        throw InvalidSyntaxException(er.what());
+    }
 }
 
 Matrix Matrix::operator/(const Matrix & rhs) {
-    return Matrix(scalarMultiply(1.0 / rhs.getScalarValue())); //Add Exception
+    if(!rhs.isScalar) {
+        throw InvalidSyntaxException("You cannot divide by a non-scalar!");
+    }
+    
+    return Matrix(scalarMultiply(1.0 / rhs.getScalarValue()));
 }
 
 Matrix Matrix::operator^(const Matrix & exp) {
     //As of right now, only going to support integer values
-    if(!exp.isScalar) {/*Add exception*/}
-    
+    if(!exp.isScalar) {
+        throw InvalidSyntaxException(
+                "You cannot raise to a non-scalar power!");
+    }
     if(!RandomUtils::isIntegerValue(exp.getScalarValue())) {
-        //Add exception
+        throw UnsupportedComputationException(
+                "Non-Integer powers are not currently supported");
+    }
+    if(matrix.n_cols != matrix.n_rows) {
+        throw InvalidSyntaxException("Matrix is not square");
     }
     
     if(RandomUtils::doubleEqual(exp.getScalarValue(), -1)) {
@@ -147,10 +175,10 @@ std::string Matrix::regularPrint() const {
     
     returnString += Matrix::OPENING_BRACKET;
     
-    for(int row = 0; row < matrix.n_cols; ++row) {
+    for(int row = 0; row < matrix.n_rows; ++row) {
         if(!isScalar) {returnString += Matrix::OPENING_BRACKET;}
         
-        for(int col = 0; col < matrix.n_rows; ++col) {
+        for(int col = 0; col < matrix.n_cols; ++col) {
             returnString += (col != 0 ? ", " : "");
             returnString += RandomUtils::getStringFromDouble(matrix(row, col));
         }
@@ -158,9 +186,12 @@ std::string Matrix::regularPrint() const {
         if(!isScalar) {returnString += Matrix::CLOSING_BRACKET;}
     }
     
-    return returnString += Matrix::CLOSING_BRACKET;
+    return returnString + Matrix::CLOSING_BRACKET + "\n";
 }
 
+//==================
+// String Parsing
+//==================
 void Matrix::parseString(const std::string& matStr) {
     int numCol = 0;
     int numRows = 0;
@@ -209,7 +240,12 @@ void Matrix::setMatrix(const std::vector<std::vector<double>>& rowVectors) {
     
     for(int row = 0; row < numRows; ++row) {
         for(int col = 0; col < numCols; ++col) {
-            matrix(row, col) = rowVectors[row][col];
+            try {
+                matrix(row, col) = rowVectors.at(row).at(col);
+            }
+            catch(std::out_of_range& er) {
+                throw InvalidSyntaxException("Inconsistent Matrix Dimension");
+            }
         }
     }
     
