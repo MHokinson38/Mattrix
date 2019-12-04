@@ -42,35 +42,36 @@ int main( ){
     std::string multiplicationDimensionError = "[1,2;3,4] * [1,0,0;0,1,0;0,0,1]"; //good
     std::string matrixDimensionError = "[1,2,3;1,2]"; //good
     std::string badInputLetters = "[1,2,3;jkflds,2,3]"; //good
+    std::string invalidMatrixSyntax = "-[1,2;3,4]"; //good
     
     CalculationUtil::InputLine inLine;
-    std::cout << "Input calculation" << std::endl;
-
-    while(1) {
-        std::string inputLine = "";
-        std::getline(std::cin, inputLine);
-
-        if(inputLine.compare(".") == 0) {break;}
-
-        try {
-            std::istrstream(inputLine.c_str()) >> inLine;
-            std::cout << inLine;
-        }
-        catch(MatrixUtil::InvalidSyntaxException& synError) {
-            std::cerr << synError.what() << std::endl;
-        }
-        catch(MatrixUtil::UnsupportedComputationException& compuError) {
-            std::cerr << compuError.what() << std::endl;
-        }
-        catch(RandomUtils::InvalidCharacterException& charError) {
-            std::cerr << charError.what() << std::endl;
-        }
-    }
-    std::cout << "Goodbye" << std::endl;
+//    std::cout << "Input calculation" << std::endl;
+//
+//    while(1) {
+//        std::string inputLine = "";
+//        std::getline(std::cin, inputLine);
+//
+//        if(inputLine.compare(".") == 0) {break;}
+//
+//        try {
+//            std::istrstream(inputLine.c_str()) >> inLine;
+//            std::cout << inLine;
+//        }
+//        catch(MatrixUtil::InvalidSyntaxException& synError) {
+//            std::cerr << synError.what() << std::endl;
+//        }
+//        catch(MatrixUtil::UnsupportedComputationException& compuError) {
+//            std::cerr << compuError.what() << std::endl;
+//        }
+//        catch(RandomUtils::InvalidCharacterException& charError) {
+//            std::cerr << charError.what() << std::endl;
+//        }
+//    }
+//    std::cout << "Goodbye" << std::endl;
     
     try {
-//        std::istrstream(matStr15.c_str()) >> inLine;
-//        std::cout << inLine;
+        std::istrstream(matStr15.c_str()) >> inLine;
+        std::cout << inLine;
     }
     catch(MatrixUtil::InvalidSyntaxException& synError) {
         std::cerr << synError.what() << std::endl;

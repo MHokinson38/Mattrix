@@ -96,6 +96,7 @@ namespace MatrixUtil {
         // Reading input from string
         //====================
         void parseString(const std::string & matStr);
+        void checkBasicSyntax(const std::string & matStr);
         void setMatrix(const std::vector<std::vector<double>> & rowVectors);
         
         //====================

@@ -199,6 +199,7 @@ void Matrix::parseString(const std::string& matStr) {
     std::vector<double> currentRow;
     std::string currentNumAsString = "";
     
+    checkBasicSyntax(matStr);
     for(int i = 0; i < matStr.size(); ++i) {
         if(matStr[i] == ' ') {
             continue;
@@ -230,6 +231,33 @@ void Matrix::parseString(const std::string& matStr) {
     }
     
     setMatrix(rowVectors);
+}
+
+void Matrix::checkBasicSyntax(const std::string &matStr) {
+    //Check to make sure it's a scalar
+    if(matStr.find(Matrix::OPENING_BRACKET) == std::string::npos) {
+        return;
+    }
+    
+    if(matStr[0] != Matrix::OPENING_BRACKET ||
+       matStr[matStr.size() - 1] != Matrix::CLOSING_BRACKET) {
+        throw InvalidSyntaxException("Invalid Matrix Syntax!");
+    }
+    
+    //Check that all brackets are closed
+    int numOpenBrackets = 0;
+    for(auto& c : matStr) {
+        if(c == Matrix::OPENING_BRACKET) {
+            numOpenBrackets++;
+        }
+        else if(c == Matrix::CLOSING_BRACKET) {
+            numOpenBrackets--;
+        }
+    }
+    
+    if(numOpenBrackets != 0) {
+        throw InvalidSyntaxException("Invalid Matrix Syntax!");
+    }
 }
 
 void Matrix::setMatrix(const std::vector<std::vector<double>>& rowVectors) {
