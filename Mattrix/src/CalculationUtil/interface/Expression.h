@@ -54,7 +54,7 @@ namespace CalculationUtil {
         
     private:
         //=============
-        // Private Functions
+        // Parsing Functions
         //=============
         void parseInputLine();
         void getBaseOperation();

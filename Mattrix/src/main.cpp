@@ -5,6 +5,8 @@
 #include <CalculationUtil/interface/InputLine.h>
 #include <MatrixUtil/interface/Exceptions/InvalidSyntaxException.h>
 #include <MatrixUtil/interface/Exceptions/UnsupportedComputationException.h>
+#include <MatrixUtil/interface/Exceptions/ComputationalLogicException.h>
+
 #include <RandomUtils/interface/InvalidCharacterException.h>
 
 //Libraries
@@ -31,13 +33,16 @@ int main( ){
 
         try {
             std::istrstream(inputLine.c_str()) >> inLine;
-            std::cout << inLine;
+            std::cout << inLine << std::endl;
         }
         catch(MatrixUtil::InvalidSyntaxException& synError) {
             std::cerr << synError.what() << std::endl;
         }
         catch(MatrixUtil::UnsupportedComputationException& compuError) {
             std::cerr << compuError.what() << std::endl;
+        }
+        catch(MatrixUtil::ComputationalLogicException& logError) {
+            std::cerr << logError.what() << std::endl;
         }
         catch(RandomUtils::InvalidCharacterException& charError) {
             std::cerr << charError.what() << std::endl;

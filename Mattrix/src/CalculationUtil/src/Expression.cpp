@@ -16,10 +16,10 @@
 #include <CalculationUtil/interface/Operations/OperationType.h>
 #include <CalculationUtil/interface/Operations/ArithmeticOperation.h>
 #include <CalculationUtil/interface/Operations/FunctionalOperation.h>
-
 #include <CalculationUtil/interface/Expression.h>
 
 #include <MatrixUtil/interface/Matrix.h>
+#include <MatrixUtil/interface/Exceptions/InvalidSyntaxException.h>
 
 #include <RandomUtils/interface/CoolUtilities.h>
 
@@ -45,6 +45,10 @@ MatrixUtil::Matrix CalculationUtil::Expression::evaluate() {
     else if(baseOperation.isFunctional()) {
         //If the base operation is functional, there should only be two internal expressions
         // The base, and the exponent
+        if(internalExpressions.size() > 2) {
+            throw MatrixUtil::InvalidSyntaxException("Invalid Syntax");
+        }
+        
         MatrixUtil::Matrix base = internalExpressions[0].evaluate();
         
         Operation* opToPerform = baseOperation.isTranspose() ?
@@ -111,6 +115,12 @@ void CalculationUtil::Expression::getBaseOperation() {
                 }
             }
         }
+    }
+    
+    //Do Parentheses Syntax Check
+    if(numOpenParentheses != 0) {
+        throw MatrixUtil::InvalidSyntaxException("Invalid Parentheses!");
+        
     }
     
     isBase = lowestOp.isNull() && !hasParenthese;
