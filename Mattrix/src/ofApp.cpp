@@ -29,16 +29,32 @@ void ofApp::setup(){
         
     // finally let's have it open by default //
         menu->expand();
+    
+    //=================
+    inputLine = new ofxDatGuiTextInput("Expression Input", "Enter Text Here");
+    inputLine->setWidth(ofGetWidth(), .25);
+    inputLine->setPosition(ofGetWidth() - inputLine->getWidth(), ofGetHeight() - inputLine->getHeight());
+    
+    inputLine->onTextInputEvent(this, &ofApp::onTextInputEvent);
+    
+    textOutput = new ofxDatGuiLabel("No Text Entered Yet");
+    textOutput->setWidth(ofGetWidth());
+    
+    font.load("ofxbraitsch/fonts/Verdana.ttf", 24);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
     menu->update();
+    inputLine->update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
     menu->draw();
+    inputLine->draw();
+    
+    textOutput->draw();
 }
 
 //--------------------------------------------------------------
@@ -98,7 +114,7 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 
 //---------------------------------------------------------------
 //TODO delete this later when I am not using it anymore
-string ofApp::getHex(int hex)
+std::string ofApp::getHex(int hex)
 {
 // convert decimal value to hex //
     std::stringstream ss;
@@ -112,5 +128,26 @@ void ofApp::onDropdownEvent(ofxDatGuiDropdownEvent e)
 {
     ofSetBackgroundColor(colors[e.child]);
     menu->setStripeColor(ofColor::white);
+}
+
+void ofApp::onTextInputEvent(ofxDatGuiTextInputEvent e)
+{
+// text input events carry the text of the input field //
+    std::cout << "From Event Object: " << e.text << std::endl;
+// although you can also retrieve it from the event target //
+    std::cout << "From Event Target: " << e.target->getText() << std::endl;
+    
+    inputLine->setText("");
+    
+    string output = "Text input: " + e.text;
+    std::cout << output << std::endl;
+    textOutput = new ofxDatGuiLabel(output);
+    textOutput->setWidth(ofGetWidth());
+    textOutput->draw();
+    
+//    std::string str = "Text Input: " + e.target->getText();
+//    ofSetColor(ofColor::blue);
+//    ofRectangle bounds = font.getStringBoundingBox(str, ofGetWidth()/2, ofGetHeight()/4);
+//    font.drawString(str, bounds.x-bounds.width/2, bounds.y-bounds.height/2);
 }
 

@@ -7,37 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0598F8BB2BD555C1C64C5765 /* OperationType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0610F645121ACCC6621B679C /* OperationType.cpp */; };
+		06461537AF161CF2158325C5 /* ofxPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEC492BAA5938FDD28F34576 /* ofxPanel.cpp */; };
 		0FB39E9820869121EA0494EE /* ofxDatGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F219FA6820CB80923D89AC5 /* ofxDatGui.cpp */; };
-		431D99BD239815E4009FA11E /* InputLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 438480CA2394DCEF0058563D /* InputLine.cpp */; };
-		431D99BF239815E4009FA11E /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
-		431D99C0239815E4009FA11E /* ofxDatGuiComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A710861D1963B50A1016BBDF /* ofxDatGuiComponent.cpp */; };
-		431D99C1239815E4009FA11E /* Operation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64122382F2FE0068C907 /* Operation.cpp */; };
-		431D99C2239815E4009FA11E /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA641E238341D90068C907 /* Matrix.cpp */; };
-		431D99C3239815E4009FA11E /* OperationType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64182382F34E0068C907 /* OperationType.cpp */; };
-		431D99C4239815E4009FA11E /* CoolUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA642523846B1F0068C907 /* CoolUtilities.cpp */; };
-		431D99C5239815E4009FA11E /* Expression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 438480C72392F0050058563D /* Expression.cpp */; };
-		431D99C6239815E4009FA11E /* FunctionalOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64162382F32C0068C907 /* FunctionalOperation.cpp */; };
-		431D99C7239815E4009FA11E /* ofxSmartFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F26B3A537E22F654D99BAC19 /* ofxSmartFont.cpp */; };
-		431D99C8239815E4009FA11E /* ArithmeticOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64142382F3120068C907 /* ArithmeticOperation.cpp */; };
-		431D99C9239815E4009FA11E /* ofxDatGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F219FA6820CB80923D89AC5 /* ofxDatGui.cpp */; };
-		431D99D6239817AB009FA11E /* tests-main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 431D99D5239817AB009FA11E /* tests-main.cpp */; };
-		431D99D92398191A009FA11E /* InputLineEvalTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 431D99D82398191A009FA11E /* InputLineEvalTest.cpp */; };
-		438480C82392F0050058563D /* Expression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 438480C72392F0050058563D /* Expression.cpp */; };
-		438480CB2394DCEF0058563D /* InputLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 438480CA2394DCEF0058563D /* InputLine.cpp */; };
-		43CA64132382F2FE0068C907 /* Operation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64122382F2FE0068C907 /* Operation.cpp */; };
-		43CA64152382F3120068C907 /* ArithmeticOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64142382F3120068C907 /* ArithmeticOperation.cpp */; };
-		43CA64172382F32C0068C907 /* FunctionalOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64162382F32C0068C907 /* FunctionalOperation.cpp */; };
-		43CA64192382F34E0068C907 /* OperationType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA64182382F34E0068C907 /* OperationType.cpp */; };
-		43CA641F238341D90068C907 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA641E238341D90068C907 /* Matrix.cpp */; };
-		43CA642623846B1F0068C907 /* CoolUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43CA642523846B1F0068C907 /* CoolUtilities.cpp */; };
+		13CCF81A48EDDB25B4237ED3 /* ofxBaseGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FE5AE0736F697707A795653 /* ofxBaseGui.cpp */; };
+		17819D6F620DD9535D03A3BC /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF792B0C594D4E7AE13058EE /* ofxLabel.cpp */; };
+		2562037A9F4E81F82BCF375F /* ArithmeticOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6230642C44948FE37AB02613 /* ArithmeticOperation.cpp */; };
+		3F0E121936709DA23DAD0B28 /* Operation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C503A7A6A3FF5CACCDC60 /* Operation.cpp */; };
+		431EFFDD239A3281000CD310 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+		431EFFDE239A3281000CD310 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DFF7D68E1481E5F90EA2F /* Matrix.cpp */; };
+		431EFFDF239A3281000CD310 /* Operation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C503A7A6A3FF5CACCDC60 /* Operation.cpp */; };
+		431EFFE0239A3281000CD310 /* OperationType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0610F645121ACCC6621B679C /* OperationType.cpp */; };
+		431EFFE1239A3281000CD310 /* FunctionalOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3982EBBD98EC714B2474AD0 /* FunctionalOperation.cpp */; };
+		431EFFE2239A3281000CD310 /* ArithmeticOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6230642C44948FE37AB02613 /* ArithmeticOperation.cpp */; };
+		431EFFE3239A3281000CD310 /* InputLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13782900E5E0D0C0AFDEAE84 /* InputLine.cpp */; };
+		431EFFE4239A3281000CD310 /* Expression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8499A3B9C7FDA9AF914A8863 /* Expression.cpp */; };
+		431EFFE5239A3281000CD310 /* tests-main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1809507B0B81716829CB5BF0 /* tests-main.cpp */; };
+		431EFFE6239A3281000CD310 /* InputLineEvalTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0E03E713E52E67F432AA457 /* InputLineEvalTest.cpp */; };
+		431EFFE7239A3281000CD310 /* CoolUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225D8201DBC34700692A772A /* CoolUtilities.cpp */; };
+		431EFFE8239A3281000CD310 /* ofxDatGuiComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A710861D1963B50A1016BBDF /* ofxDatGuiComponent.cpp */; };
+		431EFFE9239A3281000CD310 /* ofxSmartFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F26B3A537E22F654D99BAC19 /* ofxSmartFont.cpp */; };
+		431EFFEA239A3281000CD310 /* ofxDatGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F219FA6820CB80923D89AC5 /* ofxDatGui.cpp */; };
+		431EFFEB239A3281000CD310 /* ofxBaseGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FE5AE0736F697707A795653 /* ofxBaseGui.cpp */; };
+		431EFFEC239A3281000CD310 /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8758867C66012DA5F21A592F /* ofxButton.cpp */; };
+		431EFFED239A3281000CD310 /* ofxColorPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03BF5B7B3D75DA38F3BCECC4 /* ofxColorPicker.cpp */; };
+		431EFFEE239A3281000CD310 /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5AB7B8B6D9673B33203BB96 /* ofxGuiGroup.cpp */; };
+		431EFFEF239A3281000CD310 /* ofxInputField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F32F7981E3F4F7F703550B /* ofxInputField.cpp */; };
+		431EFFF0239A3281000CD310 /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF792B0C594D4E7AE13058EE /* ofxLabel.cpp */; };
+		431EFFF1239A3281000CD310 /* ofxPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEC492BAA5938FDD28F34576 /* ofxPanel.cpp */; };
+		431EFFF2239A3281000CD310 /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0BD8915A071D12EB64C73AC /* ofxSlider.cpp */; };
+		431EFFF3239A3281000CD310 /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB4A41F1CF18F9B93533C18F /* ofxSliderGroup.cpp */; };
+		431EFFF4239A3281000CD310 /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0797C48F82D8FCDFEE54643 /* ofxToggle.cpp */; };
 		5BFE4CF783A143BD045698AD /* ofxSmartFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F26B3A537E22F654D99BAC19 /* ofxSmartFont.cpp */; };
+		5C375BC7D931091E6989E054 /* InputLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13782900E5E0D0C0AFDEAE84 /* InputLine.cpp */; };
+		7A367330CDDE92899B1F65BB /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB4A41F1CF18F9B93533C18F /* ofxSliderGroup.cpp */; };
+		7DB96F601C672C0FDAFB4514 /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0797C48F82D8FCDFEE54643 /* ofxToggle.cpp */; };
+		8791B16C1220964E5E82363B /* ofxColorPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03BF5B7B3D75DA38F3BCECC4 /* ofxColorPicker.cpp */; };
+		87ADBCE5C5A463417B3DF3A9 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DFF7D68E1481E5F90EA2F /* Matrix.cpp */; };
+		9041B71CDA653AEE1CF96D72 /* ofxInputField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F32F7981E3F4F7F703550B /* ofxInputField.cpp */; };
 		930095D51DE2A0D7FCA77830 /* ofxDatGuiComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A710861D1963B50A1016BBDF /* ofxDatGuiComponent.cpp */; };
+		9413C165038B837789FCB731 /* FunctionalOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3982EBBD98EC714B2474AD0 /* FunctionalOperation.cpp */; };
+		9935445D4BC4DCD6ACCB170B /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8758867C66012DA5F21A592F /* ofxButton.cpp */; };
+		BBBE927DC14C817C3DB336C9 /* CoolUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225D8201DBC34700692A772A /* CoolUtilities.cpp */; };
+		BE1758CB3090B8684EFD05BA /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5AB7B8B6D9673B33203BB96 /* ofxGuiGroup.cpp */; };
+		BE7FD2CB0740B8655D0AEBAD /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0BD8915A071D12EB64C73AC /* ofxSlider.cpp */; };
+		C1B8E4E354044F81C7B9A2D2 /* Expression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8499A3B9C7FDA9AF914A8863 /* Expression.cpp */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		431D99CC239815E4009FA11E /* CopyFiles */ = {
+		431EFFF7239A3281000CD310 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
@@ -58,53 +78,72 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01E1572DB5A2BB55B603CE06 /* ofxButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxButton.h; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxButton.h; sourceTree = SOURCE_ROOT; };
+		03BF5B7B3D75DA38F3BCECC4 /* ofxColorPicker.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxColorPicker.cpp; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxColorPicker.cpp; sourceTree = SOURCE_ROOT; };
+		06055CFBB0C10F916B89BF71 /* ofxSliderGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSliderGroup.h; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxSliderGroup.h; sourceTree = SOURCE_ROOT; };
+		0610F645121ACCC6621B679C /* OperationType.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = OperationType.cpp; path = src/CalculationUtil/src/Operation/OperationType.cpp; sourceTree = SOURCE_ROOT; };
+		08AC073A2D34177492832335 /* ofxToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxToggle.h; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxToggle.h; sourceTree = SOURCE_ROOT; };
 		0D25C5D509407C8F18736F36 /* ofxDatGuiLabel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiLabel.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiLabel.h; sourceTree = SOURCE_ROOT; };
 		0F219FA6820CB80923D89AC5 /* ofxDatGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxDatGui.cpp; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/ofxDatGui.cpp; sourceTree = SOURCE_ROOT; };
+		1031F83AC82F95EF93B54D86 /* ofxGuiUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGuiUtils.h; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxGuiUtils.h; sourceTree = SOURCE_ROOT; };
+		13782900E5E0D0C0AFDEAE84 /* InputLine.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = InputLine.cpp; path = src/CalculationUtil/src/InputLine.cpp; sourceTree = SOURCE_ROOT; };
+		13AC046C1A4DB87CBB5A4333 /* Operation.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Operation.h; path = src/CalculationUtil/interface/Operations/Operation.h; sourceTree = SOURCE_ROOT; };
+		1809507B0B81716829CB5BF0 /* tests-main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "tests-main.cpp"; path = "src/Tests/tests-main.cpp"; sourceTree = SOURCE_ROOT; };
 		20395D1D8EBE9B82BF52441D /* ofxDatGuiConstants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiConstants.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/core/ofxDatGuiConstants.h; sourceTree = SOURCE_ROOT; };
+		225D8201DBC34700692A772A /* CoolUtilities.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CoolUtilities.cpp; path = src/RandomUtils/src/CoolUtilities.cpp; sourceTree = SOURCE_ROOT; };
+		23B492F440115AAFD8AD6C35 /* ArithmeticOperation.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ArithmeticOperation.h; path = src/CalculationUtil/interface/Operations/ArithmeticOperation.h; sourceTree = SOURCE_ROOT; };
 		2767CD454DD9E6F5BF5FEF31 /* ofxDatGuiGroups.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiGroups.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiGroups.h; sourceTree = SOURCE_ROOT; };
+		2A4D8E4897B837D60B03206F /* Expression.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Expression.h; path = src/CalculationUtil/interface/Expression.h; sourceTree = SOURCE_ROOT; };
+		349906B4997D3AAC030C6F02 /* CoolUtilities.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CoolUtilities.h; path = src/RandomUtils/interface/CoolUtilities.h; sourceTree = SOURCE_ROOT; };
+		39A646DF01DC66C182A93B77 /* ofxGuiGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGuiGroup.h; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxGuiGroup.h; sourceTree = SOURCE_ROOT; };
 		3F2AB15435E962639E619592 /* ofxDatGuiSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiSlider.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiSlider.h; sourceTree = SOURCE_ROOT; };
-		431D99B42396C6E3009FA11E /* DiagonalizedMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiagonalizedMatrix.h; sourceTree = "<group>"; };
-		431D99B52396CA10009FA11E /* COBMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COBMatrix.h; sourceTree = "<group>"; };
-		431D99B72397405B009FA11E /* InvalidSyntaxException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidSyntaxException.h; sourceTree = "<group>"; };
-		431D99B82397422C009FA11E /* UnsupportedComputationException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnsupportedComputationException.h; sourceTree = "<group>"; };
-		431D99D2239815E4009FA11E /* MattrixTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MattrixTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		431D99D3239815E4009FA11E /* Mattrix copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Mattrix copy-Info.plist"; path = "/Users/Mr.Awesome/Desktop/SoftwareDesignStudioWork/fantastic-finale-MHokinson38/Mattrix/Mattrix copy-Info.plist"; sourceTree = "<absolute>"; };
-		431D99D5239817AB009FA11E /* tests-main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "tests-main.cpp"; sourceTree = "<group>"; };
-		431D99D7239818CE009FA11E /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
-		431D99D82398191A009FA11E /* InputLineEvalTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputLineEvalTest.cpp; sourceTree = "<group>"; };
-		431D99DA23986CB0009FA11E /* ComputationalLogicException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComputationalLogicException.h; sourceTree = "<group>"; };
-		434E5442237F13F40045EDC2 /* DEVELOPMENT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = DEVELOPMENT.md; path = ../DEVELOPMENT.md; sourceTree = "<group>"; };
-		434E5443237F13F40045EDC2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		438480C62392E79F0058563D /* Expression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Expression.h; sourceTree = "<group>"; };
-		438480C72392F0050058563D /* Expression.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Expression.cpp; sourceTree = "<group>"; };
-		438480CA2394DCEF0058563D /* InputLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputLine.cpp; sourceTree = "<group>"; };
-		43CA64122382F2FE0068C907 /* Operation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Operation.cpp; sourceTree = "<group>"; };
-		43CA64142382F3120068C907 /* ArithmeticOperation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArithmeticOperation.cpp; sourceTree = "<group>"; };
-		43CA64162382F32C0068C907 /* FunctionalOperation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FunctionalOperation.cpp; sourceTree = "<group>"; };
-		43CA64182382F34E0068C907 /* OperationType.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OperationType.cpp; sourceTree = "<group>"; };
-		43CA641D238323C70068C907 /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
-		43CA641E238341D90068C907 /* Matrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
-		43CA6423238468490068C907 /* CoolUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoolUtilities.h; sourceTree = "<group>"; };
-		43CA642423846AA50068C907 /* InvalidCharacterException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvalidCharacterException.h; sourceTree = "<group>"; };
-		43CA642523846B1F0068C907 /* CoolUtilities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CoolUtilities.cpp; sourceTree = "<group>"; };
-		43D9C1F42381B8E600138F80 /* Operation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Operation.h; sourceTree = "<group>"; };
-		43D9C1F62381BA3700138F80 /* InputLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputLine.h; sourceTree = "<group>"; };
-		43D9C1F82381BA9300138F80 /* FunctionalOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionalOperation.h; sourceTree = "<group>"; };
-		43D9C1F92381C66000138F80 /* ArithmeticOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArithmeticOperation.h; sourceTree = "<group>"; };
-		43D9C1FA2381C6A900138F80 /* OperationType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationType.h; sourceTree = "<group>"; };
+		431E0000239A3714000CD310 /* DEVELOPMENT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = DEVELOPMENT.md; path = ../DEVELOPMENT.md; sourceTree = "<group>"; };
+		431EFFFD239A3281000CD310 /* MattrixTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MattrixTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		431EFFFE239A3281000CD310 /* Mattrix copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Mattrix copy2-Info.plist"; path = "/Users/Mr.Awesome/Desktop/SoftwareDesignStudioWork/fantastic-finale-MHokinson38/Mattrix/Mattrix copy2-Info.plist"; sourceTree = "<absolute>"; };
+		431EFFFF239A3708000CD310 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4BE228DF5B5907FAD285A5BC /* InvalidSyntaxException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = InvalidSyntaxException.h; path = src/MatrixUtil/interface/Exceptions/InvalidSyntaxException.h; sourceTree = SOURCE_ROOT; };
+		5376C4EA4AE0338F4920B9CF /* Matrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Matrix.h; path = src/MatrixUtil/interface/Matrix.h; sourceTree = SOURCE_ROOT; };
+		53F32F7981E3F4F7F703550B /* ofxInputField.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxInputField.cpp; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxInputField.cpp; sourceTree = SOURCE_ROOT; };
+		5861BF509B69321FDB473D1E /* DiagonalizedMatrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DiagonalizedMatrix.h; path = src/MatrixUtil/interface/Decomposers/DiagonalizedMatrix.h; sourceTree = SOURCE_ROOT; };
 		5DAD1E8361C7D0ACC054D6A7 /* ofxDatGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGui.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/ofxDatGui.h; sourceTree = SOURCE_ROOT; };
+		5F47A658D9844E9CCABAD272 /* ComputationalLogicException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ComputationalLogicException.h; path = src/MatrixUtil/interface/Exceptions/ComputationalLogicException.h; sourceTree = SOURCE_ROOT; };
+		5FE5AE0736F697707A795653 /* ofxBaseGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxBaseGui.cpp; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxBaseGui.cpp; sourceTree = SOURCE_ROOT; };
+		5FED63A69FB81856CF637FBF /* ofxPanel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxPanel.h; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxPanel.h; sourceTree = SOURCE_ROOT; };
+		6230642C44948FE37AB02613 /* ArithmeticOperation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ArithmeticOperation.cpp; path = src/CalculationUtil/src/Operation/ArithmeticOperation.cpp; sourceTree = SOURCE_ROOT; };
 		62A36BA952840CA6DF0E724C /* ofxSmartFont.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSmartFont.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont/ofxSmartFont.h; sourceTree = SOURCE_ROOT; };
 		6344EE77AECC620870A64474 /* ofxDatGuiButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiButton.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiButton.h; sourceTree = SOURCE_ROOT; };
+		6872EA8A76F0787F969D6E2A /* COBMatrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = COBMatrix.h; path = src/MatrixUtil/interface/COBMatrix.h; sourceTree = SOURCE_ROOT; };
+		6B1CEF3DC629472C9D0C4F4D /* InputLine.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = InputLine.h; path = src/CalculationUtil/interface/InputLine.h; sourceTree = SOURCE_ROOT; };
+		83503D5E8744A568E40C7C3F /* BasicOperation.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = BasicOperation.h; path = src/CalculationUtil/interface/BasicOperation.h; sourceTree = SOURCE_ROOT; };
+		8499A3B9C7FDA9AF914A8863 /* Expression.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Expression.cpp; path = src/CalculationUtil/src/Expression.cpp; sourceTree = SOURCE_ROOT; };
+		8758867C66012DA5F21A592F /* ofxButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxButton.cpp; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxButton.cpp; sourceTree = SOURCE_ROOT; };
+		87A877519864DDB83B46B01B /* ofxBaseGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxBaseGui.h; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxBaseGui.h; sourceTree = SOURCE_ROOT; };
 		899DBD1CD8D930D986470060 /* ofxDatGuiThemes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiThemes.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/themes/ofxDatGuiThemes.h; sourceTree = SOURCE_ROOT; };
+		8E5DFF7D68E1481E5F90EA2F /* Matrix.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Matrix.cpp; path = src/MatrixUtil/src/Matrix.cpp; sourceTree = SOURCE_ROOT; };
 		967C429EFB6FD86791D2093E /* ofxDatGuiFRM.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiFRM.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiFRM.h; sourceTree = SOURCE_ROOT; };
 		980C211C0BB139FCD2293B42 /* ofxDatGuiComponent.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiComponent.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/core/ofxDatGuiComponent.h; sourceTree = SOURCE_ROOT; };
 		9C8A5950DAC655768785B5F7 /* ofxDatGuiTextInputField.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiTextInputField.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiTextInputField.h; sourceTree = SOURCE_ROOT; };
+		9CCC42EAEDCE87D282785AED /* ofxSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSlider.h; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxSlider.h; sourceTree = SOURCE_ROOT; };
+		9F4C503A7A6A3FF5CACCDC60 /* Operation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Operation.cpp; path = src/CalculationUtil/src/Operation/Operation.cpp; sourceTree = SOURCE_ROOT; };
+		9FB4E96BE8B95B7E10F50C73 /* ofxColorPicker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxColorPicker.h; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxColorPicker.h; sourceTree = SOURCE_ROOT; };
+		A0797C48F82D8FCDFEE54643 /* ofxToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxToggle.cpp; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxToggle.cpp; sourceTree = SOURCE_ROOT; };
+		A423E12AC3A31C57A5820FFC /* ofxGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGui.h; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxGui.h; sourceTree = SOURCE_ROOT; };
 		A710861D1963B50A1016BBDF /* ofxDatGuiComponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxDatGuiComponent.cpp; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/core/ofxDatGuiComponent.cpp; sourceTree = SOURCE_ROOT; };
+		AA17A58416607CCC127D1E05 /* OperationType.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = OperationType.h; path = src/CalculationUtil/interface/Operations/OperationType.h; sourceTree = SOURCE_ROOT; };
 		AB8951A9293FB7F0DFC6EC57 /* ofxDatGuiIntObject.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiIntObject.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/core/ofxDatGuiIntObject.h; sourceTree = SOURCE_ROOT; };
 		AE9CB408F9167B3DBAB6E857 /* ofxDatGuiTheme.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiTheme.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/themes/ofxDatGuiTheme.h; sourceTree = SOURCE_ROOT; };
+		B1C2F6A04A11A22DA4802629 /* ofxInputField.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxInputField.h; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxInputField.h; sourceTree = SOURCE_ROOT; };
+		B5AB7B8B6D9673B33203BB96 /* ofxGuiGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxGuiGroup.cpp; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxGuiGroup.cpp; sourceTree = SOURCE_ROOT; };
 		BEBFDB3B8F9E28EBFA7C88E3 /* ofxDatGuiTimeGraph.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiTimeGraph.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiTimeGraph.h; sourceTree = SOURCE_ROOT; };
+		BF20DE2013DD9E978A60D3E9 /* catch.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = catch.hpp; path = src/Tests/catch.hpp; sourceTree = SOURCE_ROOT; };
+		C669CD2F2F951F5A42A64848 /* UnsupportedComputationException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = UnsupportedComputationException.h; path = src/MatrixUtil/interface/Exceptions/UnsupportedComputationException.h; sourceTree = SOURCE_ROOT; };
 		C9F2EB609FCA3238FE9708A1 /* ofxDatGuiTextInput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiTextInput.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiTextInput.h; sourceTree = SOURCE_ROOT; };
+		CEC492BAA5938FDD28F34576 /* ofxPanel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxPanel.cpp; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxPanel.cpp; sourceTree = SOURCE_ROOT; };
+		D0BD8915A071D12EB64C73AC /* ofxSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxSlider.cpp; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxSlider.cpp; sourceTree = SOURCE_ROOT; };
 		D0D8DFCBC5028913CD22BFAA /* ofxDatGuiColorPicker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiColorPicker.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiColorPicker.h; sourceTree = SOURCE_ROOT; };
+		DF904CFA3E114E1D936F7DF5 /* ofxLabel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxLabel.h; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxLabel.h; sourceTree = SOURCE_ROOT; };
+		E0E03E713E52E67F432AA457 /* InputLineEvalTest.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = InputLineEvalTest.cpp; path = src/Tests/InputLineEvalTest.cpp; sourceTree = SOURCE_ROOT; };
+		E3982EBBD98EC714B2474AD0 /* FunctionalOperation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = FunctionalOperation.cpp; path = src/CalculationUtil/src/Operation/FunctionalOperation.cpp; sourceTree = SOURCE_ROOT; };
 		E42962AC2163EDD300A6A9E2 /* ofCamera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ofCamera.cpp; path = ../../of_v20191107_osx_release/libs/openFrameworks/3d/ofCamera.cpp; sourceTree = SOURCE_ROOT; };
 		E42962AD2163EDD300A6A9E2 /* ofMesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ofMesh.h; path = ../../of_v20191107_osx_release/libs/openFrameworks/3d/ofMesh.h; sourceTree = SOURCE_ROOT; };
 		E42962AE2163EDD300A6A9E2 /* ofNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ofNode.h; path = ../../of_v20191107_osx_release/libs/openFrameworks/3d/ofNode.h; sourceTree = SOURCE_ROOT; };
@@ -289,13 +328,17 @@
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		E612739FAD4A1CB0E9ADE8B8 /* ofxDatGuiMatrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiMatrix.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiMatrix.h; sourceTree = SOURCE_ROOT; };
 		E8B2556724696D1EEF658DC9 /* ofxDatGuiScrollView.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiScrollView.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiScrollView.h; sourceTree = SOURCE_ROOT; };
+		EB4A41F1CF18F9B93533C18F /* ofxSliderGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxSliderGroup.cpp; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxSliderGroup.cpp; sourceTree = SOURCE_ROOT; };
+		F14C9D7EE8A3CB907ABD04A2 /* InvalidCharacterException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = InvalidCharacterException.h; path = src/RandomUtils/interface/InvalidCharacterException.h; sourceTree = SOURCE_ROOT; };
 		F26B3A537E22F654D99BAC19 /* ofxSmartFont.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxSmartFont.cpp; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont/ofxSmartFont.cpp; sourceTree = SOURCE_ROOT; };
 		F9FFCA40332904F9821E85F1 /* ofxDatGui2dPad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGui2dPad.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGui2dPad.h; sourceTree = SOURCE_ROOT; };
 		FAF51525517B96C14C3C02F6 /* ofxDatGuiControls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiControls.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiControls.h; sourceTree = SOURCE_ROOT; };
+		FCA616E9888625818682E809 /* FunctionalOperation.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = FunctionalOperation.h; path = src/CalculationUtil/interface/Operations/FunctionalOperation.h; sourceTree = SOURCE_ROOT; };
+		FF792B0C594D4E7AE13058EE /* ofxLabel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxLabel.cpp; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxLabel.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		431D99CA239815E4009FA11E /* Frameworks */ = {
+		431EFFF5239A3281000CD310 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -312,6 +355,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0449B4C24E7568342175567F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				8E5DFF7D68E1481E5F90EA2F /* Matrix.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
 		0EF29D3ABD6E4147AE024D7A /* ofxSmartFont */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,183 +372,61 @@
 			name = ofxSmartFont;
 			sourceTree = "<group>";
 		};
-		431D99B32396C687009FA11E /* Decomposers */ = {
+		34F7869F9733AAA2FAFA51DD /* Decomposers */ = {
 			isa = PBXGroup;
 			children = (
-				431D99B42396C6E3009FA11E /* DiagonalizedMatrix.h */,
+				5861BF509B69321FDB473D1E /* DiagonalizedMatrix.h */,
 			);
-			path = Decomposers;
+			name = Decomposers;
 			sourceTree = "<group>";
 		};
-		431D99B62397403F009FA11E /* Exceptions */ = {
+		361989FA9739ED0FF1128239 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				431D99B72397405B009FA11E /* InvalidSyntaxException.h */,
-				431D99B82397422C009FA11E /* UnsupportedComputationException.h */,
-				431D99DA23986CB0009FA11E /* ComputationalLogicException.h */,
+				FCA616E9888625818682E809 /* FunctionalOperation.h */,
+				23B492F440115AAFD8AD6C35 /* ArithmeticOperation.h */,
+				AA17A58416607CCC127D1E05 /* OperationType.h */,
+				13AC046C1A4DB87CBB5A4333 /* Operation.h */,
 			);
-			path = Exceptions;
+			name = Operations;
 			sourceTree = "<group>";
 		};
-		431D99D423981771009FA11E /* Tests */ = {
+		477FF00DD753DF1C5747EC54 /* interface */ = {
 			isa = PBXGroup;
 			children = (
-				431D99D7239818CE009FA11E /* catch.hpp */,
-				431D99D5239817AB009FA11E /* tests-main.cpp */,
-				431D99D82398191A009FA11E /* InputLineEvalTest.cpp */,
+				6B1CEF3DC629472C9D0C4F4D /* InputLine.h */,
+				361989FA9739ED0FF1128239 /* Operations */,
+				2A4D8E4897B837D60B03206F /* Expression.h */,
+				83503D5E8744A568E40C7C3F /* BasicOperation.h */,
 			);
-			path = Tests;
+			name = interface;
 			sourceTree = "<group>";
 		};
-		43CA64102382E8F90068C907 /* Operations */ = {
+		480A780D8D0308AE4A368801 /* ofxGui */ = {
 			isa = PBXGroup;
 			children = (
-				43D9C1F42381B8E600138F80 /* Operation.h */,
-				43D9C1F92381C66000138F80 /* ArithmeticOperation.h */,
-				43D9C1F82381BA9300138F80 /* FunctionalOperation.h */,
-				43D9C1FA2381C6A900138F80 /* OperationType.h */,
+				A763ED608B35AE3310251DEE /* src */,
 			);
-			path = Operations;
+			name = ofxGui;
 			sourceTree = "<group>";
 		};
-		43CA64112382F2E30068C907 /* Operation */ = {
+		5BA43A8D2A50260EEF08E9C9 /* CalculationUtil */ = {
 			isa = PBXGroup;
 			children = (
-				43CA64122382F2FE0068C907 /* Operation.cpp */,
-				43CA64142382F3120068C907 /* ArithmeticOperation.cpp */,
-				43CA64162382F32C0068C907 /* FunctionalOperation.cpp */,
-				43CA64182382F34E0068C907 /* OperationType.cpp */,
+				477FF00DD753DF1C5747EC54 /* interface */,
+				DED4AB97D75B9BAA2C964276 /* src */,
 			);
-			path = Operation;
+			name = CalculationUtil;
 			sourceTree = "<group>";
 		};
-		43CA641A2383239D0068C907 /* MatrixUtil */ = {
+		61CB3E3320CCF1E5261414C8 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				43CA641C238323B00068C907 /* interface */,
-				43CA641B238323AB0068C907 /* src */,
+				BF20DE2013DD9E978A60D3E9 /* catch.hpp */,
+				1809507B0B81716829CB5BF0 /* tests-main.cpp */,
+				E0E03E713E52E67F432AA457 /* InputLineEvalTest.cpp */,
 			);
-			path = MatrixUtil;
-			sourceTree = "<group>";
-		};
-		43CA641B238323AB0068C907 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				43CA641E238341D90068C907 /* Matrix.cpp */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		43CA641C238323B00068C907 /* interface */ = {
-			isa = PBXGroup;
-			children = (
-				431D99B62397403F009FA11E /* Exceptions */,
-				431D99B32396C687009FA11E /* Decomposers */,
-				43CA641D238323C70068C907 /* Matrix.h */,
-				431D99B52396CA10009FA11E /* COBMatrix.h */,
-			);
-			path = interface;
-			sourceTree = "<group>";
-		};
-		43CA6420238468230068C907 /* RandomUtils */ = {
-			isa = PBXGroup;
-			children = (
-				43CA6422238468330068C907 /* interface */,
-				43CA64212384682B0068C907 /* src */,
-			);
-			path = RandomUtils;
-			sourceTree = "<group>";
-		};
-		43CA64212384682B0068C907 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				43CA642523846B1F0068C907 /* CoolUtilities.cpp */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		43CA6422238468330068C907 /* interface */ = {
-			isa = PBXGroup;
-			children = (
-				43CA6423238468490068C907 /* CoolUtilities.h */,
-				43CA642423846AA50068C907 /* InvalidCharacterException.h */,
-			);
-			path = interface;
-			sourceTree = "<group>";
-		};
-		43D9C1EB2381B79300138F80 /* CalculationUtil */ = {
-			isa = PBXGroup;
-			children = (
-				43D9C1EC2381B7D000138F80 /* interface */,
-				43D9C1ED2381B7E100138F80 /* src */,
-			);
-			path = CalculationUtil;
-			sourceTree = "<group>";
-		};
-		43D9C1EC2381B7D000138F80 /* interface */ = {
-			isa = PBXGroup;
-			children = (
-				43CA64102382E8F90068C907 /* Operations */,
-				43D9C1F62381BA3700138F80 /* InputLine.h */,
-				438480C62392E79F0058563D /* Expression.h */,
-			);
-			path = interface;
-			sourceTree = "<group>";
-		};
-		43D9C1ED2381B7E100138F80 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				43CA64112382F2E30068C907 /* Operation */,
-				438480C72392F0050058563D /* Expression.cpp */,
-				438480CA2394DCEF0058563D /* InputLine.cpp */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		43D9C1EE2381B7E900138F80 /* GUIUtil */ = {
-			isa = PBXGroup;
-			children = (
-				43D9C1F32381B8AC00138F80 /* interface */,
-				43D9C1F22381B8A700138F80 /* src */,
-			);
-			path = GUIUtil;
-			sourceTree = "<group>";
-		};
-		43D9C1EF2381B88100138F80 /* SaveFileUtil */ = {
-			isa = PBXGroup;
-			children = (
-				43D9C1F12381B8A100138F80 /* interface */,
-				43D9C1F02381B89700138F80 /* src */,
-			);
-			path = SaveFileUtil;
-			sourceTree = "<group>";
-		};
-		43D9C1F02381B89700138F80 /* src */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		43D9C1F12381B8A100138F80 /* interface */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = interface;
-			sourceTree = "<group>";
-		};
-		43D9C1F22381B8A700138F80 /* src */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		43D9C1F32381B8AC00138F80 /* interface */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = interface;
+			name = Tests;
 			sourceTree = "<group>";
 		};
 		69146F0BA46E48E576618E5E /* libs */ = {
@@ -556,12 +485,80 @@
 			name = components;
 			sourceTree = "<group>";
 		};
+		986C49D91387568BCFCA07A3 /* RandomUtils */ = {
+			isa = PBXGroup;
+			children = (
+				D173E6FC4A03EF409A4106F7 /* interface */,
+				E0EA9B1BF28D57682AEA4166 /* src */,
+			);
+			name = RandomUtils;
+			sourceTree = "<group>";
+		};
+		9A5F636AC409CB4DD865A467 /* MatrixUtil */ = {
+			isa = PBXGroup;
+			children = (
+				BA41297227E06B3CB0C8C13E /* interface */,
+				0449B4C24E7568342175567F /* src */,
+			);
+			name = MatrixUtil;
+			sourceTree = "<group>";
+		};
+		A763ED608B35AE3310251DEE /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5FE5AE0736F697707A795653 /* ofxBaseGui.cpp */,
+				87A877519864DDB83B46B01B /* ofxBaseGui.h */,
+				8758867C66012DA5F21A592F /* ofxButton.cpp */,
+				01E1572DB5A2BB55B603CE06 /* ofxButton.h */,
+				03BF5B7B3D75DA38F3BCECC4 /* ofxColorPicker.cpp */,
+				9FB4E96BE8B95B7E10F50C73 /* ofxColorPicker.h */,
+				A423E12AC3A31C57A5820FFC /* ofxGui.h */,
+				B5AB7B8B6D9673B33203BB96 /* ofxGuiGroup.cpp */,
+				39A646DF01DC66C182A93B77 /* ofxGuiGroup.h */,
+				1031F83AC82F95EF93B54D86 /* ofxGuiUtils.h */,
+				53F32F7981E3F4F7F703550B /* ofxInputField.cpp */,
+				B1C2F6A04A11A22DA4802629 /* ofxInputField.h */,
+				FF792B0C594D4E7AE13058EE /* ofxLabel.cpp */,
+				DF904CFA3E114E1D936F7DF5 /* ofxLabel.h */,
+				CEC492BAA5938FDD28F34576 /* ofxPanel.cpp */,
+				5FED63A69FB81856CF637FBF /* ofxPanel.h */,
+				D0BD8915A071D12EB64C73AC /* ofxSlider.cpp */,
+				9CCC42EAEDCE87D282785AED /* ofxSlider.h */,
+				EB4A41F1CF18F9B93533C18F /* ofxSliderGroup.cpp */,
+				06055CFBB0C10F916B89BF71 /* ofxSliderGroup.h */,
+				A0797C48F82D8FCDFEE54643 /* ofxToggle.cpp */,
+				08AC073A2D34177492832335 /* ofxToggle.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		BA41297227E06B3CB0C8C13E /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				34F7869F9733AAA2FAFA51DD /* Decomposers */,
+				5376C4EA4AE0338F4920B9CF /* Matrix.h */,
+				FA42E9A4233704B9CE89EDCA /* Exceptions */,
+				6872EA8A76F0787F969D6E2A /* COBMatrix.h */,
+			);
+			name = interface;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
 				D8DD1043C333F6F63C8685E6 /* ofxDatGui */,
+				480A780D8D0308AE4A368801 /* ofxGui */,
 			);
 			name = addons;
+			sourceTree = "<group>";
+		};
+		D173E6FC4A03EF409A4106F7 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				F14C9D7EE8A3CB907ABD04A2 /* InvalidCharacterException.h */,
+				349906B4997D3AAC030C6F02 /* CoolUtilities.h */,
+			);
+			name = interface;
 			sourceTree = "<group>";
 		};
 		D8DD1043C333F6F63C8685E6 /* ofxDatGui */ = {
@@ -570,6 +567,24 @@
 				E9B32C117486580389FAFF01 /* src */,
 			);
 			name = ofxDatGui;
+			sourceTree = "<group>";
+		};
+		DED4AB97D75B9BAA2C964276 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F78307BA078A63E903ECBA62 /* Operation */,
+				13782900E5E0D0C0AFDEAE84 /* InputLine.cpp */,
+				8499A3B9C7FDA9AF914A8863 /* Expression.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		E0EA9B1BF28D57682AEA4166 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				225D8201DBC34700692A772A /* CoolUtilities.cpp */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 		E42962AA2163EDD300A6A9E2 /* openFrameworks */ = {
@@ -857,8 +872,8 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
-				434E5442237F13F40045EDC2 /* DEVELOPMENT.md */,
-				434E5443237F13F40045EDC2 /* README.md */,
+				431E0000239A3714000CD310 /* DEVELOPMENT.md */,
+				431EFFFF239A3708000CD310 /* README.md */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
@@ -866,23 +881,21 @@
 				BB4B014C10F69532006C3DED /* addons */,
 				6948EE371B920CB800B5AC1A /* local_addons */,
 				E4B69B5B0A3A1756003C02F2 /* MattrixDebug.app */,
-				431D99D2239815E4009FA11E /* MattrixTest.app */,
-				431D99D3239815E4009FA11E /* Mattrix copy-Info.plist */,
+				431EFFFD239A3281000CD310 /* MattrixTest.app */,
+				431EFFFE239A3281000CD310 /* Mattrix copy2-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				431D99D423981771009FA11E /* Tests */,
-				43CA6420238468230068C907 /* RandomUtils */,
-				43CA641A2383239D0068C907 /* MatrixUtil */,
-				43D9C1EF2381B88100138F80 /* SaveFileUtil */,
-				43D9C1EE2381B7E900138F80 /* GUIUtil */,
-				43D9C1EB2381B79300138F80 /* CalculationUtil */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				9A5F636AC409CB4DD865A467 /* MatrixUtil */,
+				5BA43A8D2A50260EEF08E9C9 /* CalculationUtil */,
+				61CB3E3320CCF1E5261414C8 /* Tests */,
+				986C49D91387568BCFCA07A3 /* RandomUtils */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -900,19 +913,40 @@
 			name = src;
 			sourceTree = "<group>";
 		};
+		F78307BA078A63E903ECBA62 /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				9F4C503A7A6A3FF5CACCDC60 /* Operation.cpp */,
+				0610F645121ACCC6621B679C /* OperationType.cpp */,
+				E3982EBBD98EC714B2474AD0 /* FunctionalOperation.cpp */,
+				6230642C44948FE37AB02613 /* ArithmeticOperation.cpp */,
+			);
+			name = Operation;
+			sourceTree = "<group>";
+		};
+		FA42E9A4233704B9CE89EDCA /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				5F47A658D9844E9CCABAD272 /* ComputationalLogicException.h */,
+				4BE228DF5B5907FAD285A5BC /* InvalidSyntaxException.h */,
+				C669CD2F2F951F5A42A64848 /* UnsupportedComputationException.h */,
+			);
+			name = Exceptions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		431D99BA239815E4009FA11E /* MattrixTest */ = {
+		431EFFD9239A3281000CD310 /* MattrixTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 431D99CE239815E4009FA11E /* Build configuration list for PBXNativeTarget "MattrixTest" */;
+			buildConfigurationList = 431EFFF9239A3281000CD310 /* Build configuration list for PBXNativeTarget "MattrixTest" */;
 			buildPhases = (
-				431D99BB239815E4009FA11E /* ShellScript */,
-				431D99BC239815E4009FA11E /* Sources */,
-				431D99CA239815E4009FA11E /* Frameworks */,
-				431D99CB239815E4009FA11E /* ShellScript */,
-				431D99CC239815E4009FA11E /* CopyFiles */,
-				431D99CD239815E4009FA11E /* ShellScript */,
+				431EFFDA239A3281000CD310 /* ShellScript */,
+				431EFFDB239A3281000CD310 /* Sources */,
+				431EFFF5239A3281000CD310 /* Frameworks */,
+				431EFFF6239A3281000CD310 /* ShellScript */,
+				431EFFF7239A3281000CD310 /* CopyFiles */,
+				431EFFF8239A3281000CD310 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -920,7 +954,7 @@
 			);
 			name = MattrixTest;
 			productName = myOFApp;
-			productReference = 431D99D2239815E4009FA11E /* MattrixTest.app */;
+			productReference = 431EFFFD239A3281000CD310 /* MattrixTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E4B69B5A0A3A1756003C02F2 /* Mattrix */ = {
@@ -949,7 +983,6 @@
 		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				DefaultBuildSystemTypeForWorkspace = Original;
 				LastUpgradeCheck = 0600;
 			};
 			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "Mattrix" */;
@@ -968,13 +1001,13 @@
 			projectRoot = "";
 			targets = (
 				E4B69B5A0A3A1756003C02F2 /* Mattrix */,
-				431D99BA239815E4009FA11E /* MattrixTest */,
+				431EFFD9239A3281000CD310 /* MattrixTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		431D99BB239815E4009FA11E /* ShellScript */ = {
+		431EFFDA239A3281000CD310 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -987,7 +1020,7 @@
 			shellPath = /bin/sh;
 			shellScript = "xcodebuild -project \"$OF_PATH/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj\" -target openFrameworks -configuration \"${CONFIGURATION}\"";
 		};
-		431D99CB239815E4009FA11E /* ShellScript */ = {
+		431EFFF6239A3281000CD310 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1000,7 +1033,7 @@
 			shellPath = /bin/sh;
 			shellScript = "mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n# Copy default icon file into App/Resources\nrsync -aved \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n# Copy libfmod and change install directory for fmod to run\nrsync -aved \"$OF_PATH/libs/fmodex/lib/osx/libfmodex.dylib\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\";\ninstall_name_tool -change @executable_path/libfmodex.dylib @executable_path/../Frameworks/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\n\necho \"$GCC_PREPROCESSOR_DEFINITIONS\";\n";
 		};
-		431D99CD239815E4009FA11E /* ShellScript */ = {
+		431EFFF8239A3281000CD310 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 12;
 			files = (
@@ -1055,24 +1088,34 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		431D99BC239815E4009FA11E /* Sources */ = {
+		431EFFDB239A3281000CD310 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431D99D6239817AB009FA11E /* tests-main.cpp in Sources */,
-				431D99BD239815E4009FA11E /* InputLine.cpp in Sources */,
-				431D99D92398191A009FA11E /* InputLineEvalTest.cpp in Sources */,
-				431D99BF239815E4009FA11E /* ofApp.cpp in Sources */,
-				431D99C0239815E4009FA11E /* ofxDatGuiComponent.cpp in Sources */,
-				431D99C1239815E4009FA11E /* Operation.cpp in Sources */,
-				431D99C2239815E4009FA11E /* Matrix.cpp in Sources */,
-				431D99C3239815E4009FA11E /* OperationType.cpp in Sources */,
-				431D99C4239815E4009FA11E /* CoolUtilities.cpp in Sources */,
-				431D99C5239815E4009FA11E /* Expression.cpp in Sources */,
-				431D99C6239815E4009FA11E /* FunctionalOperation.cpp in Sources */,
-				431D99C7239815E4009FA11E /* ofxSmartFont.cpp in Sources */,
-				431D99C8239815E4009FA11E /* ArithmeticOperation.cpp in Sources */,
-				431D99C9239815E4009FA11E /* ofxDatGui.cpp in Sources */,
+				431EFFDD239A3281000CD310 /* ofApp.cpp in Sources */,
+				431EFFDE239A3281000CD310 /* Matrix.cpp in Sources */,
+				431EFFDF239A3281000CD310 /* Operation.cpp in Sources */,
+				431EFFE0239A3281000CD310 /* OperationType.cpp in Sources */,
+				431EFFE1239A3281000CD310 /* FunctionalOperation.cpp in Sources */,
+				431EFFE2239A3281000CD310 /* ArithmeticOperation.cpp in Sources */,
+				431EFFE3239A3281000CD310 /* InputLine.cpp in Sources */,
+				431EFFE4239A3281000CD310 /* Expression.cpp in Sources */,
+				431EFFE5239A3281000CD310 /* tests-main.cpp in Sources */,
+				431EFFE6239A3281000CD310 /* InputLineEvalTest.cpp in Sources */,
+				431EFFE7239A3281000CD310 /* CoolUtilities.cpp in Sources */,
+				431EFFE8239A3281000CD310 /* ofxDatGuiComponent.cpp in Sources */,
+				431EFFE9239A3281000CD310 /* ofxSmartFont.cpp in Sources */,
+				431EFFEA239A3281000CD310 /* ofxDatGui.cpp in Sources */,
+				431EFFEB239A3281000CD310 /* ofxBaseGui.cpp in Sources */,
+				431EFFEC239A3281000CD310 /* ofxButton.cpp in Sources */,
+				431EFFED239A3281000CD310 /* ofxColorPicker.cpp in Sources */,
+				431EFFEE239A3281000CD310 /* ofxGuiGroup.cpp in Sources */,
+				431EFFEF239A3281000CD310 /* ofxInputField.cpp in Sources */,
+				431EFFF0239A3281000CD310 /* ofxLabel.cpp in Sources */,
+				431EFFF1239A3281000CD310 /* ofxPanel.cpp in Sources */,
+				431EFFF2239A3281000CD310 /* ofxSlider.cpp in Sources */,
+				431EFFF3239A3281000CD310 /* ofxSliderGroup.cpp in Sources */,
+				431EFFF4239A3281000CD310 /* ofxToggle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,26 +1123,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438480CB2394DCEF0058563D /* InputLine.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				87ADBCE5C5A463417B3DF3A9 /* Matrix.cpp in Sources */,
+				3F0E121936709DA23DAD0B28 /* Operation.cpp in Sources */,
+				0598F8BB2BD555C1C64C5765 /* OperationType.cpp in Sources */,
+				9413C165038B837789FCB731 /* FunctionalOperation.cpp in Sources */,
+				2562037A9F4E81F82BCF375F /* ArithmeticOperation.cpp in Sources */,
+				5C375BC7D931091E6989E054 /* InputLine.cpp in Sources */,
+				C1B8E4E354044F81C7B9A2D2 /* Expression.cpp in Sources */,
+				BBBE927DC14C817C3DB336C9 /* CoolUtilities.cpp in Sources */,
 				930095D51DE2A0D7FCA77830 /* ofxDatGuiComponent.cpp in Sources */,
-				43CA64132382F2FE0068C907 /* Operation.cpp in Sources */,
-				43CA641F238341D90068C907 /* Matrix.cpp in Sources */,
-				43CA64192382F34E0068C907 /* OperationType.cpp in Sources */,
-				43CA642623846B1F0068C907 /* CoolUtilities.cpp in Sources */,
-				438480C82392F0050058563D /* Expression.cpp in Sources */,
-				43CA64172382F32C0068C907 /* FunctionalOperation.cpp in Sources */,
 				5BFE4CF783A143BD045698AD /* ofxSmartFont.cpp in Sources */,
-				43CA64152382F3120068C907 /* ArithmeticOperation.cpp in Sources */,
 				0FB39E9820869121EA0494EE /* ofxDatGui.cpp in Sources */,
+				13CCF81A48EDDB25B4237ED3 /* ofxBaseGui.cpp in Sources */,
+				9935445D4BC4DCD6ACCB170B /* ofxButton.cpp in Sources */,
+				8791B16C1220964E5E82363B /* ofxColorPicker.cpp in Sources */,
+				BE1758CB3090B8684EFD05BA /* ofxGuiGroup.cpp in Sources */,
+				9041B71CDA653AEE1CF96D72 /* ofxInputField.cpp in Sources */,
+				17819D6F620DD9535D03A3BC /* ofxLabel.cpp in Sources */,
+				06461537AF161CF2158325C5 /* ofxPanel.cpp in Sources */,
+				BE7FD2CB0740B8655D0AEBAD /* ofxSlider.cpp in Sources */,
+				7A367330CDDE92899B1F65BB /* ofxSliderGroup.cpp in Sources */,
+				7DB96F601C672C0FDAFB4514 /* ofxToggle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		431D99CF239815E4009FA11E /* Debug */ = {
+		431EFFFA239A3281000CD310 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
@@ -1114,36 +1167,46 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/CalculationUtil/interface,
+					src/CalculationUtil/interface/Operations,
+					src/CalculationUtil/src,
+					src/CalculationUtil/src/Operation,
+					src/MatrixUtil/interface,
+					src/MatrixUtil/interface/Decomposers,
+					src/MatrixUtil/interface/Exceptions,
+					src/MatrixUtil/src,
+					src/RandomUtils/interface,
+					src/RandomUtils/src,
+					src/Tests,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/components,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/core,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/themes,
+					../../of_v20191107_osx_release/addons/ofxGui/src,
 					/usr/local/include,
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
-				INFOPLIST_FILE = "Mattrix copy-Info.plist";
+				INFOPLIST_FILE = "Mattrix copy2-Info.plist";
 				INSTALL_PATH = /Applications;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/lib,
 				);
-				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					"$(OF_CORE_FRAMEWORKS)",
-					"$(LIB_OF_DEBUG)",
 					"-larmadillo",
+					"$(LIB_OF_DEBUG)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cc.openFrameworks.MattrixTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		431D99D0239815E4009FA11E /* Release */ = {
+		431EFFFB239A3281000CD310 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
@@ -1157,42 +1220,52 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/CalculationUtil/interface,
+					src/CalculationUtil/interface/Operations,
+					src/CalculationUtil/src,
+					src/CalculationUtil/src/Operation,
+					src/MatrixUtil/interface,
+					src/MatrixUtil/interface/Decomposers,
+					src/MatrixUtil/interface/Exceptions,
+					src/MatrixUtil/src,
+					src/RandomUtils/interface,
+					src/RandomUtils/src,
+					src/Tests,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/components,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/core,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/themes,
+					../../of_v20191107_osx_release/addons/ofxGui/src,
 					/usr/local/include,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
-				INFOPLIST_FILE = "Mattrix copy-Info.plist";
+				INFOPLIST_FILE = "Mattrix copy2-Info.plist";
 				INSTALL_PATH = /Applications;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/lib,
 				);
-				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
-					"$(OF_CORE_LIBS)",
-					"$(OF_CORE_FRAMEWORKS)",
-					"$(LIB_OF)",
-				);
-				"OTHER_LDFLAGS[arch=*]" = (
 					"$(OF_CORE_LIBS)",
 					"$(OF_CORE_FRAMEWORKS)",
 					"$(LIB_OF)",
 					"-larmadillo",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cc.openFrameworks.MattrixTest;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
 			};
 			name = Release;
 		};
-		431D99D1239815E4009FA11E /* AppStore */ = {
+		431EFFFC239A3281000CD310 /* AppStore */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
@@ -1207,30 +1280,40 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/CalculationUtil/interface,
+					src/CalculationUtil/interface/Operations,
+					src/CalculationUtil/src,
+					src/CalculationUtil/src/Operation,
+					src/MatrixUtil/interface,
+					src/MatrixUtil/interface/Decomposers,
+					src/MatrixUtil/interface/Exceptions,
+					src/MatrixUtil/src,
+					src/RandomUtils/interface,
+					src/RandomUtils/src,
+					src/Tests,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/components,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/core,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/themes,
+					../../of_v20191107_osx_release/addons/ofxGui/src,
 					/usr/local/include,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
-				INFOPLIST_FILE = "Mattrix copy-Info.plist";
+				INFOPLIST_FILE = "Mattrix copy2-Info.plist";
 				INSTALL_PATH = /Applications;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/lib,
 				);
-				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					"$(OF_CORE_FRAMEWORKS)",
 					"$(LIB_OF)",
 					"-larmadillo",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cc.openFrameworks.MattrixTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
@@ -1262,12 +1345,24 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/CalculationUtil/interface,
+					src/CalculationUtil/interface/Operations,
+					src/CalculationUtil/src,
+					src/CalculationUtil/src/Operation,
+					src/MatrixUtil/interface,
+					src/MatrixUtil/interface/Decomposers,
+					src/MatrixUtil/interface/Exceptions,
+					src/MatrixUtil/src,
+					src/RandomUtils/interface,
+					src/RandomUtils/src,
+					src/Tests,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/components,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/core,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/themes,
+					../../of_v20191107_osx_release/addons/ofxGui/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CODE_SIGN_FLAGS = "--deep";
@@ -1294,12 +1389,24 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/CalculationUtil/interface,
+					src/CalculationUtil/interface/Operations,
+					src/CalculationUtil/src,
+					src/CalculationUtil/src/Operation,
+					src/MatrixUtil/interface,
+					src/MatrixUtil/interface/Decomposers,
+					src/MatrixUtil/interface/Exceptions,
+					src/MatrixUtil/src,
+					src/RandomUtils/interface,
+					src/RandomUtils/src,
+					src/Tests,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/components,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/core,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/themes,
+					../../of_v20191107_osx_release/addons/ofxGui/src,
 					/usr/local/include,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
@@ -1310,7 +1417,6 @@
 					"$(inherited)",
 					/usr/local/lib,
 				);
-				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					"$(OF_CORE_FRAMEWORKS)",
@@ -1346,12 +1452,24 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/CalculationUtil/interface,
+					src/CalculationUtil/interface/Operations,
+					src/CalculationUtil/src,
+					src/CalculationUtil/src/Operation,
+					src/MatrixUtil/interface,
+					src/MatrixUtil/interface/Decomposers,
+					src/MatrixUtil/interface/Exceptions,
+					src/MatrixUtil/src,
+					src/RandomUtils/interface,
+					src/RandomUtils/src,
+					src/Tests,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/components,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/core,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/themes,
+					../../of_v20191107_osx_release/addons/ofxGui/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1388,12 +1506,24 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/CalculationUtil/interface,
+					src/CalculationUtil/interface/Operations,
+					src/CalculationUtil/src,
+					src/CalculationUtil/src/Operation,
+					src/MatrixUtil/interface,
+					src/MatrixUtil/interface/Decomposers,
+					src/MatrixUtil/interface/Exceptions,
+					src/MatrixUtil/src,
+					src/RandomUtils/interface,
+					src/RandomUtils/src,
+					src/Tests,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/components,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/core,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/themes,
+					../../of_v20191107_osx_release/addons/ofxGui/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CODE_SIGN_FLAGS = "--deep";
@@ -1420,12 +1550,24 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/CalculationUtil/interface,
+					src/CalculationUtil/interface/Operations,
+					src/CalculationUtil/src,
+					src/CalculationUtil/src/Operation,
+					src/MatrixUtil/interface,
+					src/MatrixUtil/interface/Decomposers,
+					src/MatrixUtil/interface/Exceptions,
+					src/MatrixUtil/src,
+					src/RandomUtils/interface,
+					src/RandomUtils/src,
+					src/Tests,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/components,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/core,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/themes,
+					../../of_v20191107_osx_release/addons/ofxGui/src,
 					/usr/local/include,
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
@@ -1436,7 +1578,6 @@
 					"$(inherited)",
 					/usr/local/lib,
 				);
-				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					"$(OF_CORE_FRAMEWORKS)",
@@ -1462,12 +1603,24 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
+					src/CalculationUtil/interface,
+					src/CalculationUtil/interface/Operations,
+					src/CalculationUtil/src,
+					src/CalculationUtil/src/Operation,
+					src/MatrixUtil/interface,
+					src/MatrixUtil/interface/Decomposers,
+					src/MatrixUtil/interface/Exceptions,
+					src/MatrixUtil/src,
+					src/RandomUtils/interface,
+					src/RandomUtils/src,
+					src/Tests,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/components,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/core,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/libs/ofxSmartFont,
 					../../of_v20191107_osx_release/addons/ofxDatGui/src/themes,
+					../../of_v20191107_osx_release/addons/ofxGui/src,
 					/usr/local/include,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
@@ -1478,13 +1631,7 @@
 					"$(inherited)",
 					/usr/local/lib,
 				);
-				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
-					"$(OF_CORE_LIBS)",
-					"$(OF_CORE_FRAMEWORKS)",
-					"$(LIB_OF)",
-				);
-				"OTHER_LDFLAGS[arch=*]" = (
 					"$(OF_CORE_LIBS)",
 					"$(OF_CORE_FRAMEWORKS)",
 					"$(LIB_OF)",
@@ -1499,12 +1646,12 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		431D99CE239815E4009FA11E /* Build configuration list for PBXNativeTarget "MattrixTest" */ = {
+		431EFFF9239A3281000CD310 /* Build configuration list for PBXNativeTarget "MattrixTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				431D99CF239815E4009FA11E /* Debug */,
-				431D99D0239815E4009FA11E /* Release */,
-				431D99D1239815E4009FA11E /* AppStore */,
+				431EFFFA239A3281000CD310 /* Debug */,
+				431EFFFB239A3281000CD310 /* Release */,
+				431EFFFC239A3281000CD310 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

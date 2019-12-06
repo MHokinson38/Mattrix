@@ -11,4 +11,5 @@
 ## External Libraries Used ##
 1. Open Frameworks 
 2. ofxDatGUI (openframeworks addon)
-3. Armadillo (Matrix/Scientific Computing Library)
+3. ofxGUI (openframeworks addon) 
+4. Armadillo (Matrix/Scientific Computing Library)

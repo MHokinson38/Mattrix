@@ -21,6 +21,7 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+    
     private:
     
         string getHex(int hex);
@@ -28,5 +29,12 @@ class ofApp : public ofBaseApp{
         vector<ofColor> colors;
         ofxDatGuiDropdown* menu;
         void onDropdownEvent(ofxDatGuiDropdownEvent e);
+    
+        ofxDatGuiTextInput* inputLine;
+        void onTextInputEvent(ofxDatGuiTextInputEvent e);
+    
+        ofxDatGuiLabel* textOutput;
+    
+        ofTrueTypeFont font;
 		//This is a test
 };

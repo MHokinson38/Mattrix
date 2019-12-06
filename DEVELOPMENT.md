@@ -19,3 +19,13 @@
 * December 3rd 
     * Wrote basics for Decomposition - Diagonolization 
     * Added COB Matrix file 
+    
+* December 4th 
+    * Integrated Exceptions - Got the command line working 
+
+* December 5th 
+    * More syntax checks for things that wouldn't make sense working 
+
+* December 6th 
+    * Started work on Graphics Side 
+        * Basically broke everything, spent day fixing the project 
