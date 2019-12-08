@@ -51,6 +51,8 @@ namespace GUIUtil {
         //================
         // Basic Getters / Setters
         //================
+        void setColor(ofColor c) {color = c;}
+        void setFont(ofTrueTypeFont f) {font = f;}
         
         //================
         // Draw / Update
@@ -60,14 +62,18 @@ namespace GUIUtil {
         //================
         // Add Input
         //================
-        void addInput(const std::string & inputLine) {}
+        void addInput(const std::string & inputLine);
+        
+        std::string getOutputString(const std::string & inputLine);
         
     private:
         //================
         // Graphics Members
         //================
-        ofRectangle background;
+        ofRectangle backgroundArea;
+        
         ofColor color;
+        ofTrueTypeFont font;
         
         //================
         // Data Members
