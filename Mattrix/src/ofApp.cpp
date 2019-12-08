@@ -23,6 +23,7 @@ void ofApp::setup(){
         
     // and position it in the middle of the screen //
         menu->setPosition(0, menu->getHeight());
+        menu->setWidth(ofGetWidth() * .25);
         
     // let's set the stripe of each option to its respective color //
         for (int i=0; i<menu->size(); i++) menu->getChildAt(i)->setStripeColor(colors[i]);
@@ -43,7 +44,10 @@ void ofApp::setup(){
     textOutput = new ofxDatGuiLabel("No Text Entered Yet");
     textOutput->setWidth(ofGetWidth());
     
-    font.load("ofxbraitsch/fonts/Verdana.ttf", 24);
+    console = new GUIUtil::OutputScreen(menu->getWidth(), textOutput->getHeight(), ofGetWidth() - menu->getWidth(), ofGetHeight() - 3*inputLine->getHeight());
+    
+    font.load("ofxbraitsch/fonts/Verdana.ttf", 12);
+    console->setFont(font);
 }
 
 //--------------------------------------------------------------
@@ -58,9 +62,7 @@ void ofApp::draw(){
     inputLine->draw();
     
     textOutput->draw();
-    
-    GUIUtil::OutputScreen* output = new GUIUtil::OutputScreen(1,1,1,1);
-    output->draw();
+    console->draw();
 }
 
 //--------------------------------------------------------------
@@ -147,6 +149,8 @@ void ofApp::onTextInputEvent(ofxDatGuiTextInputEvent e)
     textOutput = new ofxDatGuiLabel(output);
     textOutput->setWidth(ofGetWidth());
     textOutput->draw();
+    
+    console->addInput(e.text);
     
     inputLine->setText("");
     

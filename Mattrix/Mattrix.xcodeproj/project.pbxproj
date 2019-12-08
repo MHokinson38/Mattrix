@@ -39,6 +39,7 @@
 		431EFFF2239A3281000CD310 /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0BD8915A071D12EB64C73AC /* ofxSlider.cpp */; };
 		431EFFF3239A3281000CD310 /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB4A41F1CF18F9B93533C18F /* ofxSliderGroup.cpp */; };
 		431EFFF4239A3281000CD310 /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0797C48F82D8FCDFEE54643 /* ofxToggle.cpp */; };
+		43EC0926239D60FD00480E65 /* OutputScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 431E0005239C8E83000CD310 /* OutputScreen.cpp */; };
 		5BFE4CF783A143BD045698AD /* ofxSmartFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F26B3A537E22F654D99BAC19 /* ofxSmartFont.cpp */; };
 		5C375BC7D931091E6989E054 /* InputLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13782900E5E0D0C0AFDEAE84 /* InputLine.cpp */; };
 		7A367330CDDE92899B1F65BB /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB4A41F1CF18F9B93533C18F /* ofxSliderGroup.cpp */; };
@@ -1128,6 +1129,7 @@
 				431EFFE1239A3281000CD310 /* FunctionalOperation.cpp in Sources */,
 				431EFFE2239A3281000CD310 /* ArithmeticOperation.cpp in Sources */,
 				431EFFE3239A3281000CD310 /* InputLine.cpp in Sources */,
+				43EC0926239D60FD00480E65 /* OutputScreen.cpp in Sources */,
 				431EFFE4239A3281000CD310 /* Expression.cpp in Sources */,
 				431EFFE5239A3281000CD310 /* tests-main.cpp in Sources */,
 				431EFFE6239A3281000CD310 /* InputLineEvalTest.cpp in Sources */,

@@ -3,7 +3,11 @@
 #include "ofMain.h"
 #include "ofxDatGui.h"
 
-class ofApp : public ofBaseApp{
+//My Files
+#include <GUIUtil/interface/OutputScreen.h>
+#include <MatrixUtil/interface/Matrix.h>
+
+class ofApp : public ofBaseApp {
 
 	public:
 		void setup();
@@ -34,6 +38,8 @@ class ofApp : public ofBaseApp{
         void onTextInputEvent(ofxDatGuiTextInputEvent e);
     
         ofxDatGuiLabel* textOutput;
+    
+        GUIUtil::OutputScreen* console;
     
         ofTrueTypeFont font;
 		//This is a test

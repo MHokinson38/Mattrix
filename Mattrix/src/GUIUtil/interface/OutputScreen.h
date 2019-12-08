@@ -9,7 +9,6 @@
 #define OutputScreen_h
 
 //Libraries
-#include <../../ofApp.h>
 #include <../../openFrameworks/ofMain.h>
 
 #include <string>
@@ -51,7 +50,7 @@ namespace GUIUtil {
         //================
         // Basic Getters / Setters
         //================
-        void setColor(ofColor c) {color = c;}
+        void setBackgroundColor(ofColor c) {backgroundColor = c;}
         void setFont(ofTrueTypeFont f) {font = f;}
         
         //================
@@ -72,7 +71,8 @@ namespace GUIUtil {
         //================
         ofRectangle backgroundArea;
         
-        ofColor color;
+        ofColor backgroundColor;
+        ofColor fontColor;
         ofTrueTypeFont font;
         
         //================

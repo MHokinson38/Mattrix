@@ -26,7 +26,9 @@
 GUIUtil::OutputScreen::OutputScreen(int xPos, int yPos, int width, int height) {
     //Position is
     backgroundArea = ofRectangle(xPos, yPos, xPos + width, yPos + height);
-    color = ofColor(95, 95, 164);
+    backgroundColor = ofColor(178, 178, 178);
+    fontColor = backgroundColor;
+    fontColor.invert();
 }
 
 //===================
@@ -34,24 +36,28 @@ GUIUtil::OutputScreen::OutputScreen(int xPos, int yPos, int width, int height) {
 //===================
 void GUIUtil::OutputScreen::draw() {
     //Draw the background
-    ofSetColor(color);
+    ofSetColor(backgroundColor);
     ofDrawRectangle(backgroundArea.getX(), backgroundArea.getY(),
                     backgroundArea.getWidth(), backgroundArea.getHeight());
     
+    //Draw the Text output
+    ofSetColor(fontColor);
     int currentLine = 0;
     int pixelSpacing = 50;
-    //Draw the Text output
     for(int i = consoleIOs.size() - 1; i >= 0; --i) { //Newest are kept in the back
+        //Check for bounds
+        if(currentLine * pixelSpacing > backgroundArea.getHeight()) {break;}
+        
         //Draw the answer centered to the right
         font.drawString(consoleIOs[i].getAnswer(),
-                        backgroundArea.getX() + backgroundArea.getWidth() / 2,
-                        backgroundArea.getY() + backgroundArea.getHeight() - currentLine * pixelSpacing);
+                        backgroundArea.getX() + backgroundArea.getWidth() / 4,
+                        backgroundArea.getY() + backgroundArea.getHeight() - currentLine * pixelSpacing - 20);
         
         currentLine++;
         //Draw the question centered to the left
         font.drawString(consoleIOs[i].getQuestion(),
-                        backgroundArea.getX(),
-                        backgroundArea.getY() + backgroundArea.getHeight() - currentLine * pixelSpacing);
+                        backgroundArea.getX() + 10,
+                        backgroundArea.getY() + backgroundArea.getHeight() - currentLine * pixelSpacing - 20);
         
         currentLine++;
     }
