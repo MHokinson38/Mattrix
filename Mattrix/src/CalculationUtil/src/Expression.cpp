@@ -99,6 +99,10 @@ void CalculationUtil::Expression::getBaseOperation() {
                    OperationType(inputLine[i-1]).getOperation() == OperationType::OpType::exponent) {
                     continue;
                 }
+                else if(OperationType(inputLine[i]).getOperation() == OperationType::OpType::transpose &&
+                        i == 0) {
+                    continue;
+                }
                 
                 lowestOp = OperationType(inputLine[i]);
             }
