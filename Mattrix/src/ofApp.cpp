@@ -1,6 +1,9 @@
 #include "ofApp.h"
 #include "ofxDatGui.h"
 
+//My Files
+#include <GUIUtil/interface/OutputScreen.h>
+
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetWindowPosition(0, 0);
@@ -19,7 +22,7 @@ void ofApp::setup(){
         menu = new ofxDatGuiDropdown("SELECT A COLOR", options);
         
     // and position it in the middle of the screen //
-        menu->setPosition(ofGetWidth()/2 - menu->getWidth()/2, ofGetHeight()/2 - menu->getHeight()/2 - 100);
+        menu->setPosition(0, menu->getHeight());
         
     // let's set the stripe of each option to its respective color //
         for (int i=0; i<menu->size(); i++) menu->getChildAt(i)->setStripeColor(colors[i]);
@@ -55,6 +58,9 @@ void ofApp::draw(){
     inputLine->draw();
     
     textOutput->draw();
+    
+    GUIUtil::OutputScreen* output = new GUIUtil::OutputScreen(1,1,1,1);
+    output->draw();
 }
 
 //--------------------------------------------------------------
@@ -137,13 +143,12 @@ void ofApp::onTextInputEvent(ofxDatGuiTextInputEvent e)
 // although you can also retrieve it from the event target //
     std::cout << "From Event Target: " << e.target->getText() << std::endl;
     
-    inputLine->setText("");
-    
     string output = "Text input: " + e.text;
-    std::cout << output << std::endl;
     textOutput = new ofxDatGuiLabel(output);
     textOutput->setWidth(ofGetWidth());
     textOutput->draw();
+    
+    inputLine->setText("");
     
 //    std::string str = "Text Input: " + e.target->getText();
 //    ofSetColor(ofColor::blue);

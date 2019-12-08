@@ -14,6 +14,7 @@
 		17819D6F620DD9535D03A3BC /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF792B0C594D4E7AE13058EE /* ofxLabel.cpp */; };
 		2562037A9F4E81F82BCF375F /* ArithmeticOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6230642C44948FE37AB02613 /* ArithmeticOperation.cpp */; };
 		3F0E121936709DA23DAD0B28 /* Operation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C503A7A6A3FF5CACCDC60 /* Operation.cpp */; };
+		431E0006239C8E83000CD310 /* OutputScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 431E0005239C8E83000CD310 /* OutputScreen.cpp */; };
 		431EFFDD239A3281000CD310 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
 		431EFFDE239A3281000CD310 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E5DFF7D68E1481E5F90EA2F /* Matrix.cpp */; };
 		431EFFDF239A3281000CD310 /* Operation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C503A7A6A3FF5CACCDC60 /* Operation.cpp */; };
@@ -98,6 +99,8 @@
 		39A646DF01DC66C182A93B77 /* ofxGuiGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGuiGroup.h; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxGuiGroup.h; sourceTree = SOURCE_ROOT; };
 		3F2AB15435E962639E619592 /* ofxDatGuiSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiSlider.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiSlider.h; sourceTree = SOURCE_ROOT; };
 		431E0000239A3714000CD310 /* DEVELOPMENT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = DEVELOPMENT.md; path = ../DEVELOPMENT.md; sourceTree = "<group>"; };
+		431E0004239B0FEB000CD310 /* OutputScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OutputScreen.h; sourceTree = "<group>"; };
+		431E0005239C8E83000CD310 /* OutputScreen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OutputScreen.cpp; sourceTree = "<group>"; };
 		431EFFFD239A3281000CD310 /* MattrixTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MattrixTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		431EFFFE239A3281000CD310 /* Mattrix copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Mattrix copy2-Info.plist"; path = "/Users/Mr.Awesome/Desktop/SoftwareDesignStudioWork/fantastic-finale-MHokinson38/Mattrix/Mattrix copy2-Info.plist"; sourceTree = "<absolute>"; };
 		431EFFFF239A3708000CD310 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -389,6 +392,31 @@
 				13AC046C1A4DB87CBB5A4333 /* Operation.h */,
 			);
 			name = Operations;
+			sourceTree = "<group>";
+		};
+		4331DFAD239C9054007C9A92 /* GUIUtil */ = {
+			isa = PBXGroup;
+			children = (
+				4331DFAE239C9054007C9A92 /* interface */,
+				4331DFAF239C9054007C9A92 /* src */,
+			);
+			path = GUIUtil;
+			sourceTree = "<group>";
+		};
+		4331DFAE239C9054007C9A92 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				431E0004239B0FEB000CD310 /* OutputScreen.h */,
+			);
+			path = interface;
+			sourceTree = "<group>";
+		};
+		4331DFAF239C9054007C9A92 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				431E0005239C8E83000CD310 /* OutputScreen.cpp */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		477FF00DD753DF1C5747EC54 /* interface */ = {
@@ -889,6 +917,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				4331DFAD239C9054007C9A92 /* GUIUtil */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
@@ -1133,6 +1162,7 @@
 				5C375BC7D931091E6989E054 /* InputLine.cpp in Sources */,
 				C1B8E4E354044F81C7B9A2D2 /* Expression.cpp in Sources */,
 				BBBE927DC14C817C3DB336C9 /* CoolUtilities.cpp in Sources */,
+				431E0006239C8E83000CD310 /* OutputScreen.cpp in Sources */,
 				930095D51DE2A0D7FCA77830 /* ofxDatGuiComponent.cpp in Sources */,
 				5BFE4CF783A143BD045698AD /* ofxSmartFont.cpp in Sources */,
 				0FB39E9820869121EA0494EE /* ofxDatGui.cpp in Sources */,
