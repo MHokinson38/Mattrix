@@ -109,12 +109,7 @@ Matrix Matrix::operator^(const Matrix & exp) {
     }
     
     if(RandomUtils::doubleEqual(exp.getScalarValue(), -1)) {
-        try {
-            return inverse();
-        }
-        catch(std::runtime_error& er) {
-            throw ComputationalLogicException(er.what());
-        }
+        return inverse();
     }
     else if(exp.getScalarValue() < 0) {
         *this = inverse();
@@ -149,6 +144,9 @@ Matrix Matrix::inverse() {
         return Matrix(arma::inv(matrix));
     }
     catch(std::runtime_error& er) {
+        throw ComputationalLogicException(er.what());
+    }
+    catch(std::logic_error& er) {
         throw ComputationalLogicException(er.what());
     }
 }
