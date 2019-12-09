@@ -56,6 +56,7 @@ namespace CalculationUtil {
         //==============
         bool solveEquation;
         Expression exp;
+        Equation eq;
         
         MatrixUtil::Matrix output; //To make sure we only evaluate one time
     };
