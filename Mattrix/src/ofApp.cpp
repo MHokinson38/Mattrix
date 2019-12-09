@@ -8,25 +8,21 @@
 void ofApp::setup(){
     ofSetWindowPosition(0, 0);
 
-    // create a vector of colors to populate our dropdown //
-        colors.push_back(ofColor::fromHex(0xFFD00B));
-        colors.push_back(ofColor::fromHex(0x2FA1D6));
-        colors.push_back(ofColor::fromHex(0x1ED36F));
-        colors.push_back(ofColor::fromHex(0xC63256));
-        
-    // convert the hex values of those colors to strings for the menu labels //
-        vector<string> options;
-        for (int i=0; i<colors.size(); i++) options.push_back(getHex(colors[i].getHex()));
+    //Create Options Menu
+    for(std::map<std::string, CalculationUtil::InputLine::Mode>::iterator it = nameModeMap.begin();
+        it != nameModeMap.end(); ++it) {
+        menuOptions.push_back(it->first);
+    }
 
-    // instantiate the dropdown //
-        menu = new ofxDatGuiDropdown("SELECT A COLOR", options);
+    // instantiate the dropdown
+        menu = new ofxDatGuiDropdown("SELECT MODE", menuOptions);
         
-    // and position it in the middle of the screen //
+    // Put it to the side of the screen
         menu->setPosition(0, menu->getHeight());
         menu->setWidth(ofGetWidth() * .25);
         
-    // let's set the stripe of each option to its respective color //
-        for (int i=0; i<menu->size(); i++) menu->getChildAt(i)->setStripeColor(colors[i]);
+    // Set the stripe colors
+        for (int i=0; i<menu->size(); i++) menu->getChildAt(i)->setStripeColor(0xFFFFFF);
 
     // register to listen for change events //
         menu->onDropdownEvent(this, &ofApp::onDropdownEvent);
@@ -41,10 +37,10 @@ void ofApp::setup(){
     
     inputLine->onTextInputEvent(this, &ofApp::onTextInputEvent);
     
-    textOutput = new ofxDatGuiLabel("No Text Entered Yet");
-    textOutput->setWidth(ofGetWidth());
+    titleBar = new ofxDatGuiLabel("Mattrix: A Matrix Calculator by Matt");
+    titleBar->setWidth(ofGetWidth());
     
-    console = new GUIUtil::OutputScreen(menu->getWidth(), textOutput->getHeight(), ofGetWidth() - menu->getWidth(), ofGetHeight() - 3*inputLine->getHeight());
+    console = new GUIUtil::OutputScreen(menu->getWidth(), titleBar->getHeight(), ofGetWidth() - menu->getWidth(), ofGetHeight() - 3*inputLine->getHeight());
     
     font.load("ofxbraitsch/fonts/Verdana.ttf", 12);
     console->setFont(font);
@@ -61,7 +57,7 @@ void ofApp::draw(){
     menu->draw();
     inputLine->draw();
     
-    textOutput->draw();
+    titleBar->draw();
     console->draw();
 }
 
@@ -134,29 +130,38 @@ std::string ofApp::getHex(int hex)
 
 void ofApp::onDropdownEvent(ofxDatGuiDropdownEvent e)
 {
-    ofSetBackgroundColor(colors[e.child]);
-    menu->setStripeColor(ofColor::white);
+    switch(nameModeMap.at(menuOptions[e.child])) {
+        case CalculationUtil::InputLine::Mode::EXPRESSION:
+            console->expressionMode();
+            break;
+        case CalculationUtil::InputLine::Mode::EQUATION:
+            console->equationMode();
+            break;
+        case CalculationUtil::InputLine::Mode::APPROXEQUATION:
+            console->approxMode();
+            break;
+        case CalculationUtil::InputLine::Mode::DETERMINANT:
+            console->determinantMode();
+            break;
+    }
+    
+    //Recreate the Input line with the correct label
+    inputLine = new ofxDatGuiTextInput(menuOptions[e.child], "Enter Text Here");
+    inputLine->setWidth(ofGetWidth(), .25);
+    inputLine->setPosition(ofGetWidth() - inputLine->getWidth(), ofGetHeight() - inputLine->getHeight());
+    
+    inputLine->onTextInputEvent(this, &ofApp::onTextInputEvent);
 }
 
 void ofApp::onTextInputEvent(ofxDatGuiTextInputEvent e)
 {
 // text input events carry the text of the input field //
-    std::cout << "From Event Object: " << e.text << std::endl;
+//    std::cout << "From Event Object: " << e.text << std::endl;
 // although you can also retrieve it from the event target //
-    std::cout << "From Event Target: " << e.target->getText() << std::endl;
-    
-    string output = "Text input: " + e.text;
-    textOutput = new ofxDatGuiLabel(output);
-    textOutput->setWidth(ofGetWidth());
-    textOutput->draw();
+//    std::cout << "From Event Target: " << e.target->getText() << std::endl;
     
     console->addInput(e.text);
     
     inputLine->setText("");
-    
-//    std::string str = "Text Input: " + e.target->getText();
-//    ofSetColor(ofColor::blue);
-//    ofRectangle bounds = font.getStringBoundingBox(str, ofGetWidth()/2, ofGetHeight()/4);
-//    font.drawString(str, bounds.x-bounds.width/2, bounds.y-bounds.height/2);
 }
 

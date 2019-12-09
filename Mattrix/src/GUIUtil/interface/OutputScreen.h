@@ -54,6 +54,14 @@ namespace GUIUtil {
         void setFont(ofTrueTypeFont f) {font = f;}
         
         //================
+        // For Mode Updates
+        //================
+        void expressionMode() {processor.expressionMode();}
+        void equationMode() {processor.equationMode();}
+        void determinantMode() {processor.determinantMode();}
+        void approxMode() {processor.approxMode();}
+        
+        //================
         // Draw / Update
         //================
         void draw();

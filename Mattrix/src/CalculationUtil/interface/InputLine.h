@@ -26,9 +26,18 @@ namespace CalculationUtil {
     class InputLine {
     public:
         //==============
+        // Mode
+        //==============
+        enum Mode {
+            EXPRESSION,
+            EQUATION,
+            APPROXEQUATION,
+            DETERMINANT
+        };
+        //==============
         //Constructor
         //==============
-        InputLine() : solveEquation(false) {}
+        InputLine() : mode(Mode::EXPRESSION) {}
         InputLine(const std::string & input);
         
         //==============
@@ -36,8 +45,10 @@ namespace CalculationUtil {
         //==============
         void setInput(const std::string & input);
         
-        void equationMode() {solveEquation = true;}
-        void expressionMode() {solveEquation = false;}
+        void equationMode() {mode = Mode::EQUATION;}
+        void expressionMode() {mode = Mode::EXPRESSION;}
+        void approxMode() {mode = Mode::APPROXEQUATION;}
+        void determinantMode() {mode = Mode::DETERMINANT;}
         
         //==============
         // Getters
@@ -55,10 +66,11 @@ namespace CalculationUtil {
         //==============
         // Data Members
         //==============
-        bool solveEquation;
+        Mode mode;
         Expression exp;
         Equation eq;
         
+        std::string rawInput;
         MatrixUtil::Matrix output; //To make sure we only evaluate one time
     };
 }

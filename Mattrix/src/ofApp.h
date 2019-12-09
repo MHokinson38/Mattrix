@@ -30,14 +30,20 @@ class ofApp : public ofBaseApp {
     
         string getHex(int hex);
         
-        vector<ofColor> colors;
+        std::map<std::string, CalculationUtil::InputLine::Mode> nameModeMap = {
+            {"Expression Mode", CalculationUtil::InputLine::Mode::EXPRESSION},
+            {"Equation Mode", CalculationUtil::InputLine::Mode::EQUATION},
+            {"Approx Equation Mode", CalculationUtil::InputLine::Mode::APPROXEQUATION},
+            {"Determinant Mode", CalculationUtil::InputLine::Mode::DETERMINANT}};
+    
         ofxDatGuiDropdown* menu;
+        std::vector<std::string> menuOptions;
         void onDropdownEvent(ofxDatGuiDropdownEvent e);
     
         ofxDatGuiTextInput* inputLine;
         void onTextInputEvent(ofxDatGuiTextInputEvent e);
     
-        ofxDatGuiLabel* textOutput;
+        ofxDatGuiLabel* titleBar;
     
         GUIUtil::OutputScreen* console;
     

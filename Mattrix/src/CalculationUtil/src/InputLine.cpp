@@ -16,7 +16,7 @@
 //===================
 // Constructors
 //===================
-CalculationUtil::InputLine::InputLine(const std::string & input) {
+CalculationUtil::InputLine::InputLine(const std::string & input) : mode(Mode::EXPRESSION) {
     setInput(input);
 }
 
@@ -24,13 +24,21 @@ CalculationUtil::InputLine::InputLine(const std::string & input) {
 // Calculator
 //===================
 void CalculationUtil::InputLine::setInput(const std::string& input) {
-    if(solveEquation) {
-        eq.setInput(input);
-        output = eq.solve();
-    }
-    else {
-        exp.setInputLine(input);
-        output = exp.evaluate();
+    rawInput = input;
+    
+    switch (mode) {
+        case Mode::EQUATION:
+            eq.setInput(input);
+            output = eq.solve();
+            break;
+        case Mode::EXPRESSION:
+            exp.setInputLine(input);
+            output = exp.evaluate();
+            break;
+        case Mode::APPROXEQUATION:
+            break;
+        case Mode::DETERMINANT:
+            break;
     }
 }
 
