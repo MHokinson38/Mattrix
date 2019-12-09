@@ -40,7 +40,7 @@ namespace CalculationUtil {
         // Getters and Setters
         //=============
         std::string getInputLine() {return inputLine;}
-        void setInputLine(const std::string & input) {inputLine = input;}
+        void setInputLine(const std::string & input);
         
         //=============
         // Evaluation

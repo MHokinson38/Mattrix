@@ -39,9 +39,16 @@ std::ostream& CalculationUtil::operator<<(std::ostream& os, const InputLine& lin
 }
 
 std::istream& CalculationUtil::operator>>(std::istream& is, InputLine& line) {
-    is >> line.exp;
+    std::string input = "";
+    std::getline(is, input);
     
-    line.output = line.exp.evaluate();
+    if(line.solveEquation) {
+        
+    }
+    else {
+        line.exp.setInputLine(input);
+        line.output = line.exp.evaluate();
+    }
     
     return is;
 }

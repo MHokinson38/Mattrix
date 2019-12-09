@@ -40,6 +40,8 @@
 		431EFFF3239A3281000CD310 /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB4A41F1CF18F9B93533C18F /* ofxSliderGroup.cpp */; };
 		431EFFF4239A3281000CD310 /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0797C48F82D8FCDFEE54643 /* ofxToggle.cpp */; };
 		43EC0926239D60FD00480E65 /* OutputScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 431E0005239C8E83000CD310 /* OutputScreen.cpp */; };
+		43EC0929239DB2AE00480E65 /* Equation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43EC0928239DB2AE00480E65 /* Equation.cpp */; };
+		43EC092A239DB2AE00480E65 /* Equation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43EC0928239DB2AE00480E65 /* Equation.cpp */; };
 		5BFE4CF783A143BD045698AD /* ofxSmartFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F26B3A537E22F654D99BAC19 /* ofxSmartFont.cpp */; };
 		5C375BC7D931091E6989E054 /* InputLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13782900E5E0D0C0AFDEAE84 /* InputLine.cpp */; };
 		7A367330CDDE92899B1F65BB /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB4A41F1CF18F9B93533C18F /* ofxSliderGroup.cpp */; };
@@ -105,6 +107,8 @@
 		431EFFFD239A3281000CD310 /* MattrixTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MattrixTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		431EFFFE239A3281000CD310 /* Mattrix copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Mattrix copy2-Info.plist"; path = "/Users/Mr.Awesome/Desktop/SoftwareDesignStudioWork/fantastic-finale-MHokinson38/Mattrix/Mattrix copy2-Info.plist"; sourceTree = "<absolute>"; };
 		431EFFFF239A3708000CD310 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		43EC0928239DB2AE00480E65 /* Equation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Equation.cpp; path = CalculationUtil/src/Equation.cpp; sourceTree = "<group>"; };
+		43EC092B239DB3B400480E65 /* Equation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Equation.h; path = CalculationUtil/interface/Equation.h; sourceTree = "<group>"; };
 		4BE228DF5B5907FAD285A5BC /* InvalidSyntaxException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = InvalidSyntaxException.h; path = src/MatrixUtil/interface/Exceptions/InvalidSyntaxException.h; sourceTree = SOURCE_ROOT; };
 		5376C4EA4AE0338F4920B9CF /* Matrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Matrix.h; path = src/MatrixUtil/interface/Matrix.h; sourceTree = SOURCE_ROOT; };
 		53F32F7981E3F4F7F703550B /* ofxInputField.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxInputField.cpp; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxInputField.cpp; sourceTree = SOURCE_ROOT; };
@@ -118,7 +122,6 @@
 		6344EE77AECC620870A64474 /* ofxDatGuiButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDatGuiButton.h; path = ../../of_v20191107_osx_release/addons/ofxDatGui/src/components/ofxDatGuiButton.h; sourceTree = SOURCE_ROOT; };
 		6872EA8A76F0787F969D6E2A /* COBMatrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = COBMatrix.h; path = src/MatrixUtil/interface/COBMatrix.h; sourceTree = SOURCE_ROOT; };
 		6B1CEF3DC629472C9D0C4F4D /* InputLine.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = InputLine.h; path = src/CalculationUtil/interface/InputLine.h; sourceTree = SOURCE_ROOT; };
-		83503D5E8744A568E40C7C3F /* BasicOperation.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = BasicOperation.h; path = src/CalculationUtil/interface/BasicOperation.h; sourceTree = SOURCE_ROOT; };
 		8499A3B9C7FDA9AF914A8863 /* Expression.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Expression.cpp; path = src/CalculationUtil/src/Expression.cpp; sourceTree = SOURCE_ROOT; };
 		8758867C66012DA5F21A592F /* ofxButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxButton.cpp; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxButton.cpp; sourceTree = SOURCE_ROOT; };
 		87A877519864DDB83B46B01B /* ofxBaseGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxBaseGui.h; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxBaseGui.h; sourceTree = SOURCE_ROOT; };
@@ -423,10 +426,10 @@
 		477FF00DD753DF1C5747EC54 /* interface */ = {
 			isa = PBXGroup;
 			children = (
-				6B1CEF3DC629472C9D0C4F4D /* InputLine.h */,
 				361989FA9739ED0FF1128239 /* Operations */,
 				2A4D8E4897B837D60B03206F /* Expression.h */,
-				83503D5E8744A568E40C7C3F /* BasicOperation.h */,
+				43EC092B239DB3B400480E65 /* Equation.h */,
+				6B1CEF3DC629472C9D0C4F4D /* InputLine.h */,
 			);
 			name = interface;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				F78307BA078A63E903ECBA62 /* Operation */,
 				13782900E5E0D0C0AFDEAE84 /* InputLine.cpp */,
 				8499A3B9C7FDA9AF914A8863 /* Expression.cpp */,
+				43EC0928239DB2AE00480E65 /* Equation.cpp */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -1123,6 +1127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				431EFFDD239A3281000CD310 /* ofApp.cpp in Sources */,
+				43EC092A239DB2AE00480E65 /* Equation.cpp in Sources */,
 				431EFFDE239A3281000CD310 /* Matrix.cpp in Sources */,
 				431EFFDF239A3281000CD310 /* Operation.cpp in Sources */,
 				431EFFE0239A3281000CD310 /* OperationType.cpp in Sources */,
@@ -1163,6 +1168,7 @@
 				2562037A9F4E81F82BCF375F /* ArithmeticOperation.cpp in Sources */,
 				5C375BC7D931091E6989E054 /* InputLine.cpp in Sources */,
 				C1B8E4E354044F81C7B9A2D2 /* Expression.cpp in Sources */,
+				43EC0929239DB2AE00480E65 /* Equation.cpp in Sources */,
 				BBBE927DC14C817C3DB336C9 /* CoolUtilities.cpp in Sources */,
 				431E0006239C8E83000CD310 /* OutputScreen.cpp in Sources */,
 				930095D51DE2A0D7FCA77830 /* ofxDatGuiComponent.cpp in Sources */,

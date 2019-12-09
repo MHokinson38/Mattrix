@@ -54,11 +54,14 @@ namespace MatrixUtil {
         //====================
         // Getters and Setters
         //====================
-        double getElement(int row, int col) {return matrix(row, col);}
+        double getElement(int row, int col) const {return matrix(row, col);}
         void setElement(int row, int col, double el) {matrix(row, col) = el;}
         
-        bool getIsScalar() {return isScalar;}
+        bool getIsScalar() const {return isScalar;}
         double getScalarValue() const;
+        
+        int getNumCols() const {return matrix.n_cols;}
+        int getNumRows() const {return matrix.n_rows;}
 
         //====================
         // Operator Overloads

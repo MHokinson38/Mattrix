@@ -117,12 +117,7 @@ Matrix Matrix::operator^(const Matrix & exp) {
         }
     }
     else if(exp.getScalarValue() < 0) {
-        try {
-            *this = inverse();
-        }
-        catch(std::runtime_error& er) {
-            throw ComputationalLogicException(er.what());
-        }
+        *this = inverse();
     }
     
     Matrix returnMat(matrix);
@@ -150,7 +145,12 @@ Matrix Matrix::scalarMultiply(double scalar) const {
 // Functional Operations
 //=================
 Matrix Matrix::inverse() {
-    return Matrix(arma::inv(matrix));
+    try {
+        return Matrix(arma::inv(matrix));
+    }
+    catch(std::runtime_error& er) {
+        throw ComputationalLogicException(er.what());
+    }
 }
 
 Matrix Matrix::transpose() {

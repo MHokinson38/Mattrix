@@ -35,6 +35,9 @@ namespace CalculationUtil {
         //==============
         void setInput(const std::string & input);
         
+        void equationMode() {solveEquation = true;}
+        void expressionMode() {solveEquation = false;}
+        
         //==============
         // Getters
         //==============
@@ -51,6 +54,7 @@ namespace CalculationUtil {
         //==============
         // Data Members
         //==============
+        bool solveEquation;
         Expression exp;
         
         MatrixUtil::Matrix output; //To make sure we only evaluate one time

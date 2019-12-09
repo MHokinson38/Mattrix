@@ -27,7 +27,16 @@
 //==================
 // Constructors
 //==================
-CalculationUtil::Expression::Expression(const std::string & input) : inputLine(input) {
+CalculationUtil::Expression::Expression(const std::string & input) {
+    setInputLine(input);
+}
+
+//==================
+// Setup
+//==================
+void CalculationUtil::Expression::setInputLine(const std::string &input) {
+    inputLine = input;
+    
     RandomUtils::removeWhiteSpace(inputLine);
     RandomUtils::removeExcessParentheses(inputLine); //Takes off parentheses in from and back in needed
     
