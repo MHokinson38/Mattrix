@@ -17,18 +17,21 @@
 // Constructors
 //===================
 CalculationUtil::InputLine::InputLine(const std::string & input) {
-    std::istrstream(input.c_str()) >> exp;
-    
-    output = exp.evaluate();
+    setInput(input);
 }
 
 //===================
 // Calculator
 //===================
 void CalculationUtil::InputLine::setInput(const std::string& input) {
-    std::istrstream(input.c_str()) >> exp;
-    
-    output = exp.evaluate();
+    if(solveEquation) {
+        eq.setInput(input);
+        output = eq.solve();
+    }
+    else {
+        exp.setInputLine(input);
+        output = exp.evaluate();
+    }
 }
 
 //===================
@@ -42,13 +45,7 @@ std::istream& CalculationUtil::operator>>(std::istream& is, InputLine& line) {
     std::string input = "";
     std::getline(is, input);
     
-    if(line.solveEquation) {
-        
-    }
-    else {
-        line.exp.setInputLine(input);
-        line.output = line.exp.evaluate();
-    }
+    line.setInput(input);
     
     return is;
 }

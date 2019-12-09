@@ -72,6 +72,7 @@ void CalculationUtil::Equation::parseInput(const std::string &input) {
         }
         else if(c == EQUALS_SIGN) {
             onLHS = false;
+            continue;
         }
         
         if(onLHS) {

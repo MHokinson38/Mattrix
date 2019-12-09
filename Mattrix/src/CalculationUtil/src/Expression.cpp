@@ -35,6 +35,7 @@ CalculationUtil::Expression::Expression(const std::string & input) {
 // Setup
 //==================
 void CalculationUtil::Expression::setInputLine(const std::string &input) {
+    reset();
     inputLine = input;
     
     RandomUtils::removeWhiteSpace(inputLine);
@@ -42,6 +43,11 @@ void CalculationUtil::Expression::setInputLine(const std::string &input) {
     
     getBaseOperation();
     parseInputLine();
+}
+
+void CalculationUtil::Expression::reset() {
+    internalExpressions.clear();
+    operations.clear();
 }
 
 //==================

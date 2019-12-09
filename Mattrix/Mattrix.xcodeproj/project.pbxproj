@@ -42,6 +42,7 @@
 		43EC0926239D60FD00480E65 /* OutputScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 431E0005239C8E83000CD310 /* OutputScreen.cpp */; };
 		43EC0929239DB2AE00480E65 /* Equation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43EC0928239DB2AE00480E65 /* Equation.cpp */; };
 		43EC092A239DB2AE00480E65 /* Equation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43EC0928239DB2AE00480E65 /* Equation.cpp */; };
+		43EC092D239DE1DA00480E65 /* InputLineEquationSolveTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43EC092C239DE1DA00480E65 /* InputLineEquationSolveTest.cpp */; };
 		5BFE4CF783A143BD045698AD /* ofxSmartFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F26B3A537E22F654D99BAC19 /* ofxSmartFont.cpp */; };
 		5C375BC7D931091E6989E054 /* InputLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13782900E5E0D0C0AFDEAE84 /* InputLine.cpp */; };
 		7A367330CDDE92899B1F65BB /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB4A41F1CF18F9B93533C18F /* ofxSliderGroup.cpp */; };
@@ -109,6 +110,7 @@
 		431EFFFF239A3708000CD310 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		43EC0928239DB2AE00480E65 /* Equation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Equation.cpp; path = CalculationUtil/src/Equation.cpp; sourceTree = "<group>"; };
 		43EC092B239DB3B400480E65 /* Equation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Equation.h; path = CalculationUtil/interface/Equation.h; sourceTree = "<group>"; };
+		43EC092C239DE1DA00480E65 /* InputLineEquationSolveTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputLineEquationSolveTest.cpp; sourceTree = "<group>"; };
 		4BE228DF5B5907FAD285A5BC /* InvalidSyntaxException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = InvalidSyntaxException.h; path = src/MatrixUtil/interface/Exceptions/InvalidSyntaxException.h; sourceTree = SOURCE_ROOT; };
 		5376C4EA4AE0338F4920B9CF /* Matrix.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Matrix.h; path = src/MatrixUtil/interface/Matrix.h; sourceTree = SOURCE_ROOT; };
 		53F32F7981E3F4F7F703550B /* ofxInputField.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxInputField.cpp; path = ../../of_v20191107_osx_release/addons/ofxGui/src/ofxInputField.cpp; sourceTree = SOURCE_ROOT; };
@@ -457,6 +459,7 @@
 				BF20DE2013DD9E978A60D3E9 /* catch.hpp */,
 				1809507B0B81716829CB5BF0 /* tests-main.cpp */,
 				E0E03E713E52E67F432AA457 /* InputLineEvalTest.cpp */,
+				43EC092C239DE1DA00480E65 /* InputLineEquationSolveTest.cpp */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -567,9 +570,9 @@
 		BA41297227E06B3CB0C8C13E /* interface */ = {
 			isa = PBXGroup;
 			children = (
+				FA42E9A4233704B9CE89EDCA /* Exceptions */,
 				34F7869F9733AAA2FAFA51DD /* Decomposers */,
 				5376C4EA4AE0338F4920B9CF /* Matrix.h */,
-				FA42E9A4233704B9CE89EDCA /* Exceptions */,
 				6872EA8A76F0787F969D6E2A /* COBMatrix.h */,
 			);
 			name = interface;
@@ -1142,6 +1145,7 @@
 				431EFFE8239A3281000CD310 /* ofxDatGuiComponent.cpp in Sources */,
 				431EFFE9239A3281000CD310 /* ofxSmartFont.cpp in Sources */,
 				431EFFEA239A3281000CD310 /* ofxDatGui.cpp in Sources */,
+				43EC092D239DE1DA00480E65 /* InputLineEquationSolveTest.cpp in Sources */,
 				431EFFEB239A3281000CD310 /* ofxBaseGui.cpp in Sources */,
 				431EFFEC239A3281000CD310 /* ofxButton.cpp in Sources */,
 				431EFFED239A3281000CD310 /* ofxColorPicker.cpp in Sources */,

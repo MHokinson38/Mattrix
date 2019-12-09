@@ -69,6 +69,7 @@ TEST_CASE("Testing Valid Matrix Calculations") {
     // Input Line
     //=================
     CalculationUtil::InputLine inLine;
+    inLine.expressionMode();
 
     SECTION("Simple Matrice (One operation)") {
         inLine.setInput(noOperation);

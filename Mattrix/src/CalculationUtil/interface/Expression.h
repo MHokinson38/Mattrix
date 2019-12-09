@@ -42,6 +42,7 @@ namespace CalculationUtil {
         std::string getInputLine() {return inputLine;}
         void setInputLine(const std::string & input);
         
+        void reset();
         //=============
         // Evaluation
         //=============

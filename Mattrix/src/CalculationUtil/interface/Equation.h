@@ -23,6 +23,7 @@ namespace CalculationUtil {
         //==============
         // Constructor
         //==============
+        Equation() = default;
         Equation(const std::string & equInput);
         
         //==============

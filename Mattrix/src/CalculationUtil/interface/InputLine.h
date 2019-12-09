@@ -15,6 +15,7 @@
 //My files
 #include <MatrixUtil/interface/Matrix.h>
 #include <CalculationUtil/interface/Expression.h>
+#include <CalculationUtil/interface/Equation.h>
 
 namespace CalculationUtil {
     /**
@@ -27,7 +28,7 @@ namespace CalculationUtil {
         //==============
         //Constructor
         //==============
-        InputLine() = default;
+        InputLine() : solveEquation(false) {}
         InputLine(const std::string & input);
         
         //==============
