@@ -36,8 +36,12 @@ void CalculationUtil::InputLine::setInput(const std::string& input) {
             output = exp.evaluate();
             break;
         case Mode::APPROXEQUATION:
+            eq.setInput(input);
+            output = eq.leastSquaresSolve();
             break;
         case Mode::DETERMINANT:
+            exp.setInputLine(input);
+            output = (exp.evaluate()).getDeterminant();
             break;
     }
 }

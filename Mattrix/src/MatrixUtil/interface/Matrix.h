@@ -62,6 +62,9 @@ namespace MatrixUtil {
         
         int getNumCols() const {return matrix.n_cols;}
         int getNumRows() const {return matrix.n_rows;}
+        
+        //Returns Scalar Matrix with Determinant 
+        Matrix getDeterminant() const;
 
         //====================
         // Operator Overloads

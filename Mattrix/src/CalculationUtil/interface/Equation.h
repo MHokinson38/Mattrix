@@ -36,6 +36,8 @@ namespace CalculationUtil {
         //==============
         MatrixUtil::Matrix solve();
         
+        MatrixUtil::Matrix leastSquaresSolve();
+        
     private:
         //==============
         // Solving Functions

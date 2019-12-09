@@ -99,3 +99,12 @@ MatrixUtil::Matrix CalculationUtil::Equation::solve() {
         
     return MatrixUtil::Matrix(aInverse * b);
 }
+
+MatrixUtil::Matrix CalculationUtil::Equation::leastSquaresSolve() {
+    //Find Normalizations
+    a = a.transpose() * a;
+    b = a.transpose() * b;
+    
+    //Go through the same solving procedures
+    return solve();
+}

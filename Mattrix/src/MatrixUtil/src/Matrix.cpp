@@ -53,6 +53,15 @@ double Matrix::getScalarValue() const {
         throw ComputationalLogicException("Non-Scalar in Invalid Location!");
 }
 
+Matrix Matrix::getDeterminant() const {
+    try {
+        return Matrix(arma::det(matrix));
+    }
+    catch(std::logic_error& er) {
+        throw ComputationalLogicException(er.what());
+    }
+}
+
 //==================
 // Operator Overloads
 //==================

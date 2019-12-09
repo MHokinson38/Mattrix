@@ -67,6 +67,9 @@ void GUIUtil::OutputScreen::draw() {
 // Add Function
 //=====================
 void GUIUtil::OutputScreen::addInput(const std::string &inputLine) {
+    //Ignore any null/blank inputs
+    if(inputLine.compare("") == 0) {return;}
+    
     //Find the output string
     std::string output = getOutputString(inputLine);
     
