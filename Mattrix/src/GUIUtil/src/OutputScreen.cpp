@@ -49,12 +49,13 @@ void GUIUtil::OutputScreen::draw() {
     //Draw the Text output
     ofSetColor(fontColor);
     int currentLine = 0;
-    for(int i = 0; i < consoleIOs.size(); ++i) { //Newest are kept in the back
-        //Check for bounds
-        if(currentLine * LINE_SPACING > (backgroundArea.getHeight() - BORDER_PADDING)) {break;}
-        
+    for(int i = 0; i < consoleIOs.size(); ++i) {
         std::string answer = consoleIOs[i].getAnswer();
         currentLine += fitLineToScreen(answer);
+        
+        //Check for bounds
+        if(((currentLine * LINE_SPACING) + BORDER_PADDING) >
+           (backgroundArea.getHeight() - BORDER_PADDING)) {break;}
         //Draw the answer centered to the right
         font.drawString(answer,
                         backgroundArea.getX() + backgroundArea.getWidth() / 4,
@@ -63,6 +64,10 @@ void GUIUtil::OutputScreen::draw() {
         
         std::string question = consoleIOs[i].getQuestion();
         currentLine += fitLineToScreen(question) + 1;
+        
+        //Check for bounds
+        if(((currentLine * LINE_SPACING) + BORDER_PADDING) >
+           (backgroundArea.getHeight() - BORDER_PADDING)) {break;}
         //Draw the question centered to the left
         font.drawString(question,
                         backgroundArea.getX() + 10,
