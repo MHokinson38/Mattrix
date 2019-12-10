@@ -29,3 +29,16 @@
 * December 6th 
     * Started work on Graphics Side 
         * Basically broke everything, spent day fixing the project 
+        
+* December 8th 
+    * Got basic Graphics working and organized 
+    * Integrated basic Expression work 
+    * Wrote and tested the equation solver, did not integrate to user interface 
+    
+* December 9th 
+    * Integrated Equation solver 
+    * Added and integrated Determinants and least squares approximation 
+    
+* December 10th 
+    *  Cleaned up console printing 
+    * Added console saves so that you can see recent operations after closing 
