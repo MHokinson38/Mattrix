@@ -24,6 +24,7 @@ namespace GUIUtil {
         //===============
         // Constructor
         //===============
+        InputOutput() = default;
         InputOutput(const std::string & q, const std::string & ans) : question(q), answer(ans) {}
         
         //===============
@@ -35,8 +36,8 @@ namespace GUIUtil {
         //===============
         // Stream overloads for saving
         //================
-        friend std::ostream& operator<<(std::ostream& os, const InputOutput& io) {}
-        friend std::istream& operator>>(std::istream& is, const InputOutput& io) {}
+        friend std::ostream& operator<<(std::ostream& os, const InputOutput& io);
+        friend std::istream& operator>>(std::istream& is, InputOutput& io);
         
     private:
         //===============
@@ -55,10 +56,12 @@ namespace GUIUtil {
         inline static const int BORDER_PADDING = 20; //Pixels
         inline static const int LINE_SPACING = 30; //Pixels
         
+        inline static const int MAX_OUTPUT_COUNT = 12;
+        
         //================
         // Constructor
         //================
-        OutputScreen(int xPos, int yPos, int width, int height);
+        OutputScreen(int xPos, int yPos, int width, int height, std::string saveFilePath);
         
         //================
         // Basic Getters / Setters
@@ -86,6 +89,12 @@ namespace GUIUtil {
         
         std::string getOutputString(const std::string & inputLine);
         
+        //================
+        // Reading/Writing Saves
+        //================
+        void writeSave();
+        void readSave();
+        
     private:
         //================
         // Line Padding
@@ -106,6 +115,7 @@ namespace GUIUtil {
         //================
         std::vector<InputOutput> consoleIOs;
         
+        std::string outputFilePath;
         //================
         // Data Processors
         //================

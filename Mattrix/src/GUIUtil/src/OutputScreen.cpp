@@ -10,6 +10,7 @@
 #include <iostream>
 #include <vector>
 #include <strstream>
+#include <fstream>
 
 //My Files
 #include <GUIUtil/interface/OutputScreen.h>
@@ -23,12 +24,17 @@
 //===================
 // Constructor
 //===================
-GUIUtil::OutputScreen::OutputScreen(int xPos, int yPos, int width, int height) {
-    //Position is
+GUIUtil::OutputScreen::OutputScreen(int xPos, int yPos, int width, int height, std::string saveFilePath) :
+outputFilePath(saveFilePath)
+{
+    //Positioning and color
     backgroundArea = ofRectangle(xPos, yPos, xPos + width, yPos + height);
     backgroundColor = ofColor(178, 178, 178);
     fontColor = backgroundColor;
     fontColor.invert();
+    
+    //Read the save (if there is one)
+    readSave();
 }
 
 //===================
@@ -43,9 +49,9 @@ void GUIUtil::OutputScreen::draw() {
     //Draw the Text output
     ofSetColor(fontColor);
     int currentLine = 0;
-    for(int i = consoleIOs.size() - 1; i >= 0; --i) { //Newest are kept in the back
+    for(int i = 0; i < consoleIOs.size(); ++i) { //Newest are kept in the back
         //Check for bounds
-        if(currentLine * LINE_SPACING > backgroundArea.getHeight()) {break;}
+        if(currentLine * LINE_SPACING > (backgroundArea.getHeight() - BORDER_PADDING)) {break;}
         
         std::string answer = consoleIOs[i].getAnswer();
         currentLine += fitLineToScreen(answer);
@@ -96,7 +102,12 @@ void GUIUtil::OutputScreen::addInput(const std::string &inputLine) {
     //Find the output string
     std::string output = getOutputString(inputLine);
     
-    consoleIOs.push_back(InputOutput(inputLine, output));
+    consoleIOs.insert(consoleIOs.begin(), InputOutput(inputLine, output));
+    if(consoleIOs.size() >= MAX_OUTPUT_COUNT) {
+        consoleIOs.pop_back();
+    }
+    
+    writeSave();
 }
 
 std::string GUIUtil::OutputScreen::getOutputString(const std::string & inputLine) {
@@ -119,4 +130,49 @@ std::string GUIUtil::OutputScreen::getOutputString(const std::string & inputLine
     catch(...) {
         return "Something has gone terribly wrong!";
     }
+}
+
+//==================
+// Reading/Writing
+//==================
+void GUIUtil::OutputScreen::writeSave() {
+    std::ofstream saveFile(outputFilePath);
+    
+    for(auto& outputPair : consoleIOs) {
+        saveFile << outputPair;
+    }
+}
+
+void GUIUtil::OutputScreen::readSave() {
+    std::ifstream saveFile(outputFilePath);
+    consoleIOs.clear();
+    
+    while(saveFile) {
+        InputOutput nextIO;
+        saveFile >> nextIO;
+        
+        consoleIOs.push_back(nextIO);
+        
+        if(saveFile.eof()) {break;}
+    }
+}
+
+//=====================
+// InputOutput IOs
+//=====================
+std::ostream& GUIUtil::operator<<(std::ostream& os, const InputOutput& io) {
+    return os << io.question << std::endl << io.answer << std::endl;
+}
+
+std::istream& GUIUtil::operator>>(std::istream& is, InputOutput& io) {
+    std::string currentLine = "";
+    //Get the question
+    std::getline(is, currentLine);
+    io.question = currentLine;
+    
+    //Get the answer
+    std::getline(is, currentLine);
+    io.answer = currentLine;
+    
+    return is;
 }

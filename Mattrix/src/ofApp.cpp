@@ -40,7 +40,7 @@ void ofApp::setup(){
     titleBar = new ofxDatGuiLabel("Mattrix: A Matrix Calculator by Matt");
     titleBar->setWidth(ofGetWidth());
     
-    console = new GUIUtil::OutputScreen(menu->getWidth(), titleBar->getHeight(), ofGetWidth() - menu->getWidth(), ofGetHeight() - 3*inputLine->getHeight());
+    console = new GUIUtil::OutputScreen(menu->getWidth(), titleBar->getHeight(), ofGetWidth() - menu->getWidth(), ofGetHeight() - 3*inputLine->getHeight(), CONSOLE_SAVE_FILE_PATH);
     
     font.load("ofxbraitsch/fonts/Verdana.ttf", 12);
     console->setFont(font);
