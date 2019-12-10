@@ -109,6 +109,9 @@ Matrix Matrix::operator^(const Matrix & exp) {
         throw InvalidSyntaxException(
                 "You cannot raise to a non-scalar power!");
     }
+    if(isScalar) {
+        return Matrix(pow(getScalarValue(), exp.getScalarValue()));
+    }
     if(!RandomUtils::isIntegerValue(exp.getScalarValue())) {
         throw UnsupportedComputationException(
                 "Non-Integer powers are not currently supported");
@@ -191,6 +194,8 @@ std::string Matrix::prettyPrint() const {
 
 std::string Matrix::regularPrint() const {
     std::string returnString = "";
+    
+    if(isScalar) {return RandomUtils::getStringFromDouble(getScalarValue());}
     
     returnString += Matrix::OPENING_BRACKET;
     
