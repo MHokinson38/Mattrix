@@ -52,7 +52,19 @@ double RandomUtils::getDoubleFromString(const std::string & str) {
 }
 
 std::string RandomUtils::getStringFromDouble(double num) {
-    return std::to_string(num);
+    std::string numString = std::to_string(num);
+    std::string returnString = "";
+    
+    bool nonZeroHit = false;
+    int lastRelevantIndex = 0;
+    for(int i = numString.size() - 1; i >= 0; --i) {
+        if(!nonZeroHit && numString[i] != ZERO_CHARACTER) {
+            nonZeroHit = true;
+            lastRelevantIndex = i;
+        }
+    }
+    
+    return numString.substr(0,lastRelevantIndex+1);
 }
 
 //==============

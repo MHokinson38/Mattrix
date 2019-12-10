@@ -43,24 +43,47 @@ void GUIUtil::OutputScreen::draw() {
     //Draw the Text output
     ofSetColor(fontColor);
     int currentLine = 0;
-    int pixelSpacing = 50;
     for(int i = consoleIOs.size() - 1; i >= 0; --i) { //Newest are kept in the back
         //Check for bounds
-        if(currentLine * pixelSpacing > backgroundArea.getHeight()) {break;}
+        if(currentLine * LINE_SPACING > backgroundArea.getHeight()) {break;}
         
+        std::string answer = consoleIOs[i].getAnswer();
+        currentLine += fitLineToScreen(answer);
         //Draw the answer centered to the right
-        font.drawString(consoleIOs[i].getAnswer(),
+        font.drawString(answer,
                         backgroundArea.getX() + backgroundArea.getWidth() / 4,
-                        backgroundArea.getY() + backgroundArea.getHeight() - currentLine * pixelSpacing - 20);
+                        backgroundArea.getY() + backgroundArea.getHeight() -
+                        (currentLine) * LINE_SPACING - BORDER_PADDING);
         
-        currentLine++;
+        std::string question = consoleIOs[i].getQuestion();
+        currentLine += fitLineToScreen(question) + 1;
         //Draw the question centered to the left
-        font.drawString(consoleIOs[i].getQuestion(),
+        font.drawString(question,
                         backgroundArea.getX() + 10,
-                        backgroundArea.getY() + backgroundArea.getHeight() - currentLine * pixelSpacing - 20);
+                        backgroundArea.getY() + backgroundArea.getHeight() -
+                        currentLine * LINE_SPACING - BORDER_PADDING);
         
         currentLine++;
     }
+}
+
+//=====================
+// Line Padding
+//=====================
+int GUIUtil::OutputScreen::fitLineToScreen(std::string& input) {
+    std::string fittedString = "";
+    int numLines = 0;
+    
+    for(int i = 0; i < input.size(); ++i) {
+        if((i % OUTPUT_CONSOLE_LINE_LENGTH) == 0 && i != 0) {
+            fittedString += "\n";
+            numLines++;
+        }
+        fittedString += input[i];
+    }
+    
+    input = fittedString;
+    return numLines;
 }
 
 //=====================

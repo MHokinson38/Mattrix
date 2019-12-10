@@ -32,6 +32,12 @@ namespace GUIUtil {
         std::string getQuestion() {return question;}
         std::string getAnswer() {return answer;}
         
+        //===============
+        // Stream overloads for saving
+        //================
+        friend std::ostream& operator<<(std::ostream& os, const InputOutput& io) {}
+        friend std::istream& operator>>(std::istream& is, const InputOutput& io) {}
+        
     private:
         //===============
         // Data members
@@ -42,6 +48,13 @@ namespace GUIUtil {
 
     class OutputScreen {
     public:
+        //================
+        //Constants
+        //================
+        inline static const int OUTPUT_CONSOLE_LINE_LENGTH = 55;
+        inline static const int BORDER_PADDING = 20; //Pixels
+        inline static const int LINE_SPACING = 30; //Pixels
+        
         //================
         // Constructor
         //================
@@ -74,6 +87,11 @@ namespace GUIUtil {
         std::string getOutputString(const std::string & inputLine);
         
     private:
+        //================
+        // Line Padding
+        //================
+        int fitLineToScreen(std::string & input);
+        
         //================
         // Graphics Members
         //================

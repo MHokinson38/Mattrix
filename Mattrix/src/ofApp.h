@@ -10,6 +10,11 @@
 class ofApp : public ofBaseApp {
 
 	public:
+        //====================
+        // COnstants
+        //=====================
+        inline static const std::string CONSOLE_SAVE_FILE_PATH = "ConsoleOutput.txt";
+    
 		void setup();
 		void update();
 		void draw();

@@ -17,6 +17,9 @@ namespace RandomUtils {
     //=============
     static const inline double DOUBLE_EPSILON = .0001;
 
+    inline static const char DECIMAL = '.';
+    inline static const char ZERO_CHARACTER = '0';
+
     //=============
     // Casting
     //=============
