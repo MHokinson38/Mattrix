@@ -7,11 +7,22 @@
 ## Uses ## 
 #### Mattrix #####
 This is a Matrix calculator that can handle basic arithmetic operations, along with some other functionality like equation solving, with more features to come in the future. It uses a command line input style to parse through an expression string to either simplify an expression or complete some other operation as given above. It can also suppose regular scalar math in the same way it computes matrix operations. 
+#### Supported Operations / Uses ####
 Currently, the supported operations are:
 1. Expression Simplification 
 2. Determinants 
 3. Linear Equation Solving
 4. Least Square Approximation Solving 
+#### Input Examples ####
+1. Expression Solving 
+    * "[1,0;0,1]" => Identity Matrix in M2
+    * "[1,2;3,4]^T" => Transpose 
+    * "[1,2;3,4]^-1" => Inverse
+    * "+, -, *, /" => Supported Arithmetic Operations 
+2. Equation Solving 
+    * "[1,2;3,4]x = [3;4]" => Prints answer 
+    * Important** must use "x" as the variable 
+    * Only solves linear equations 
 
 <br/>
 
